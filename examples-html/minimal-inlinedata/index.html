@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+    <title>Hyperbolic tree</title>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael">
+    
+    <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
+
+    <script src="d3-hypertree.js"></script>
+    </head>
+    <body>
+        <script>            
+            const hmodel = hypertree.presets.generatorModel()            
+            hmodel.onNodeSelect = ()=> {}
+            hmodel.layout = hypertree.layouts.layoutBergé
+            hmodel.caption = (ht, n)=> {                
+                n.precalc.txt2 = n.data.name
+                return n.data.name
+            }
+            hmodel.dataloader = ok => ok({ 
+                name:'A',
+                children:[
+                    { name: 'B' },
+                    { name: 'C' },
+                    { name: 'D' },
+                    { 
+                        name: 'E',
+                        children:[
+                            { name: 'F' },
+                            { name: 'G' },
+                        ]
+                    },
+                ]
+            })
+            hmodel.langloader = ok=> ok()
+            new hypertree.Hypertree({ parent: document.body },hmodel)            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,3321 @@
+{
+    "name": "fs",
+    "birthtime": "2018-04-22T15:05:43.855Z",
+    "size": 4096,
+    "type": "dir",
+    "children": [
+        {
+            "name": "isr",
+            "birthtime": "2018-04-20T14:56:47.161Z",
+            "size": 4096,
+            "type": "dir",
+            "children": [
+                {
+                    "name": "abgabe",
+                    "birthtime": "2017-11-29T00:56:46.557Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "g10.zip",
+                            "birthtime": "2017-11-29T00:56:46.557Z",
+                            "size": 2255,
+                            "type": "file"
+                        },
+                        {
+                            "name": "input-output1.txt",
+                            "birthtime": "2017-11-29T00:55:17.769Z",
+                            "size": 680,
+                            "type": "file"
+                        },
+                        {
+                            "name": "input-output2.txt",
+                            "birthtime": "2017-11-29T00:55:15.617Z",
+                            "size": 846,
+                            "type": "file"
+                        },
+                        {
+                            "name": "ridx.py",
+                            "birthtime": "2017-11-29T00:55:48.625Z",
+                            "size": 3021,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "dist",
+                    "birthtime": "2017-10-25T22:34:05.196Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "d",
+                            "birthtime": "2017-10-26T18:57:49.147Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "js",
+                            "birthtime": "2017-10-26T18:57:49.147Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "index-browser.css",
+                            "birthtime": "2018-04-20T14:56:51.617Z",
+                            "size": 143,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser.html",
+                            "birthtime": "2018-04-20T14:56:51.613Z",
+                            "size": 492,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser.js",
+                            "birthtime": "2018-04-20T14:56:51.689Z",
+                            "size": 22589,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser.js.map",
+                            "birthtime": "2018-04-20T14:56:51.689Z",
+                            "size": 28980,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "node_modules",
+                    "birthtime": "2017-10-28T15:11:53.070Z",
+                    "size": 32768,
+                    "type": "dir"
+                },
+                {
+                    "name": "abgabecrawler",
+                    "birthtime": "2017-12-20T01:14:58.729Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "G10-crawler.zip",
+                            "birthtime": "2017-12-20T01:14:58.729Z",
+                            "size": 3174,
+                            "type": "file"
+                        },
+                        {
+                            "name": "blacklist.txt",
+                            "birthtime": "2017-12-20T01:12:33.034Z",
+                            "size": 375,
+                            "type": "file"
+                        },
+                        {
+                            "name": "crawler.py",
+                            "birthtime": "2017-12-20T01:12:42.934Z",
+                            "size": 5261,
+                            "type": "file"
+                        },
+                        {
+                            "name": "out.txt",
+                            "birthtime": "2017-12-20T00:55:10.345Z",
+                            "size": 2794,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "res",
+                    "birthtime": "2017-10-25T22:18:57.055Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "space.json",
+                            "birthtime": "2017-10-26T17:58:13.886Z",
+                            "size": 7188,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "src",
+                    "birthtime": "2017-10-31T11:53:50.511Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "index-browser.html",
+                            "birthtime": "2017-10-28T14:58:46.479Z",
+                            "size": 492,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser.scss",
+                            "birthtime": "2017-10-26T16:57:05.680Z",
+                            "size": 170,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser.ts",
+                            "birthtime": "2017-10-31T11:53:50.511Z",
+                            "size": 8661,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-server.ts",
+                            "birthtime": "2017-10-25T22:18:57.023Z",
+                            "size": 1121,
+                            "type": "file"
+                        },
+                        {
+                            "name": "space.ts",
+                            "birthtime": "2018-04-20T14:56:49.781Z",
+                            "size": 12149,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "blacklist.txt",
+                    "birthtime": "2017-12-20T01:12:49.174Z",
+                    "size": 375,
+                    "type": "file"
+                },
+                {
+                    "name": "crawler.py",
+                    "birthtime": "2017-12-20T01:12:25.378Z",
+                    "size": 5261,
+                    "type": "file"
+                },
+                {
+                    "name": "plt.py",
+                    "birthtime": "2018-04-20T14:56:43.613Z",
+                    "size": 1842,
+                    "type": "file"
+                },
+                {
+                    "name": "plt.pyc",
+                    "birthtime": "2018-04-20T14:56:47.165Z",
+                    "size": 1800,
+                    "type": "file"
+                },
+                {
+                    "name": "readme.md",
+                    "birthtime": "2018-01-06T23:19:10.845Z",
+                    "size": 2057,
+                    "type": "file"
+                },
+                {
+                    "name": "vs.py",
+                    "birthtime": "2018-04-20T14:56:26.125Z",
+                    "size": 3503,
+                    "type": "file"
+                },
+                {
+                    "name": "ridx.py",
+                    "birthtime": "2017-11-29T00:52:45.621Z",
+                    "size": 3021,
+                    "type": "file"
+                },
+                {
+                    "name": "gulpfile.js",
+                    "birthtime": "2017-10-28T22:25:25.371Z",
+                    "size": 2972,
+                    "type": "file"
+                },
+                {
+                    "name": "package.json",
+                    "birthtime": "2017-10-28T15:12:21.650Z",
+                    "size": 918,
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "ducd",
+            "birthtime": "2018-05-06T13:35:34.125Z",
+            "size": 4096,
+            "type": "dir",
+            "children": [
+                {
+                    "name": "dist",
+                    "birthtime": "2017-11-18T00:43:35.232Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "d",
+                            "birthtime": "2018-05-07T17:59:04.920Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "js",
+                            "birthtime": "2018-05-07T17:59:04.920Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "index.js",
+                            "birthtime": "2018-05-07T17:59:05.360Z",
+                            "size": 6128,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index.js.map",
+                            "birthtime": "2018-05-07T17:59:05.360Z",
+                            "size": 7246,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "node_modules",
+                    "birthtime": "2018-05-04T20:20:11.040Z",
+                    "size": 20480,
+                    "type": "dir"
+                },
+                {
+                    "name": "src",
+                    "birthtime": "2018-01-08T22:22:11.344Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "html.ts",
+                            "birthtime": "2018-05-02T14:47:45.094Z",
+                            "size": 750,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index.ts",
+                            "birthtime": "2017-12-22T03:58:37.218Z",
+                            "size": 845,
+                            "type": "file"
+                        },
+                        {
+                            "name": "mvp.ts",
+                            "birthtime": "2018-01-08T22:22:18.012Z",
+                            "size": 390,
+                            "type": "file"
+                        },
+                        {
+                            "name": "util.ts",
+                            "birthtime": "2018-02-07T01:35:04.975Z",
+                            "size": 1810,
+                            "type": "file"
+                        },
+                        {
+                            "name": "visitor.ts",
+                            "birthtime": "2017-11-02T15:40:31.755Z",
+                            "size": 13,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "gulpfile.js",
+                    "birthtime": "2017-11-02T15:54:46.287Z",
+                    "size": 1727,
+                    "type": "file"
+                },
+                {
+                    "name": "package-lock.json",
+                    "birthtime": "2018-05-04T20:17:51.927Z",
+                    "size": 292010,
+                    "type": "file"
+                },
+                {
+                    "name": "package.json",
+                    "birthtime": "2018-05-04T20:17:51.859Z",
+                    "size": 825,
+                    "type": "file"
+                },
+                {
+                    "name": "readme.md",
+                    "birthtime": "2018-01-06T23:19:01.405Z",
+                    "size": 2071,
+                    "type": "file"
+                },
+                {
+                    "name": "tsconfig.json",
+                    "birthtime": "2017-11-02T15:38:18.051Z",
+                    "size": 236,
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "ducd-templates",
+            "birthtime": "2017-11-15T01:07:56.506Z",
+            "size": 4096,
+            "type": "dir",
+            "children": [
+                {
+                    "name": "client-server",
+                    "birthtime": "2017-10-25T22:18:42.447Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": []
+                },
+                {
+                    "name": "client1",
+                    "birthtime": "2018-01-06T16:26:16.825Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "dist",
+                            "birthtime": "2017-11-10T20:38:05.524Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": []
+                        },
+                        {
+                            "name": "node_modules",
+                            "birthtime": "2017-10-28T22:51:30.436Z",
+                            "size": 20480,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "src",
+                            "birthtime": "2017-10-30T20:27:59.852Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "index-browser.html",
+                                    "birthtime": "2017-10-28T22:47:11.005Z",
+                                    "size": 492,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-browser.scss",
+                                    "birthtime": "2017-10-28T22:47:11.001Z",
+                                    "size": 170,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-browser.ts",
+                                    "birthtime": "2017-10-30T20:27:59.852Z",
+                                    "size": 8662,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-server.ts",
+                                    "birthtime": "2017-10-28T22:47:11.005Z",
+                                    "size": 1121,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "space.ts",
+                                    "birthtime": "2017-10-28T22:47:11.005Z",
+                                    "size": 12149,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "gulpfile.js",
+                            "birthtime": "2017-10-28T22:47:11.005Z",
+                            "size": 2972,
+                            "type": "file"
+                        },
+                        {
+                            "name": "package.json",
+                            "birthtime": "2017-10-28T22:47:11.009Z",
+                            "size": 918,
+                            "type": "file"
+                        },
+                        {
+                            "name": "readme.md",
+                            "birthtime": "2018-01-06T23:19:25.093Z",
+                            "size": 2057,
+                            "type": "file"
+                        },
+                        {
+                            "name": "tsconfig.json",
+                            "birthtime": "2018-01-06T16:17:08.253Z",
+                            "size": 270,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "client2",
+                    "birthtime": "2017-12-13T23:49:48.588Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "dist",
+                            "birthtime": "2017-11-10T20:37:59.852Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": []
+                        },
+                        {
+                            "name": "node_modules",
+                            "birthtime": "2017-10-30T20:26:16.084Z",
+                            "size": 28672,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "src",
+                            "birthtime": "2017-10-30T20:17:21.872Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "index-browser.html",
+                                    "birthtime": "2017-10-29T21:07:14.255Z",
+                                    "size": 482,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-browser.scss",
+                                    "birthtime": "2017-10-29T22:13:12.935Z",
+                                    "size": 170,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-browser.ts",
+                                    "birthtime": "2017-10-30T20:17:21.872Z",
+                                    "size": 8279,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-server.ts",
+                                    "birthtime": "2017-10-28T22:53:52.544Z",
+                                    "size": 1121,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "space.ts",
+                                    "birthtime": "2017-10-28T22:53:52.544Z",
+                                    "size": 12149,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "gulpfile.js",
+                            "birthtime": "2017-10-31T11:57:57.111Z",
+                            "size": 2429,
+                            "type": "file"
+                        },
+                        {
+                            "name": "package.json",
+                            "birthtime": "2017-10-29T21:15:36.637Z",
+                            "size": 981,
+                            "type": "file"
+                        },
+                        {
+                            "name": "readme.md",
+                            "birthtime": "2018-01-06T23:18:37.757Z",
+                            "size": 2057,
+                            "type": "file"
+                        },
+                        {
+                            "name": "tsconfig.json",
+                            "birthtime": "2017-10-29T22:27:52.673Z",
+                            "size": 270,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "lib",
+                    "birthtime": "2017-10-25T22:18:42.447Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": []
+                },
+                {
+                    "name": "snipps",
+                    "birthtime": "2017-10-28T22:55:59.947Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "gitignore",
+                            "birthtime": "2017-10-28T22:54:45.091Z",
+                            "size": 2,
+                            "type": "file"
+                        },
+                        {
+                            "name": "gulpfile-ts.js",
+                            "birthtime": "2017-10-28T22:54:45.091Z",
+                            "size": 2,
+                            "type": "file"
+                        },
+                        {
+                            "name": "gulpfile-watch.js",
+                            "birthtime": "2017-10-28T22:54:45.091Z",
+                            "size": 2,
+                            "type": "file"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "hypertree-of-life",
+            "birthtime": "2018-05-06T15:16:44.582Z",
+            "size": 4096,
+            "type": "dir",
+            "children": [
+                {
+                    "name": "doc",
+                    "birthtime": "2018-02-17T16:13:42.002Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "Escher-bats.jpg",
+                            "birthtime": "2018-02-09T15:54:10.772Z",
+                            "size": 451512,
+                            "type": "file"
+                        },
+                        {
+                            "name": "FireShot Capture 3 - Hyperbolic tree - http___localhost_3000_.png",
+                            "birthtime": "2017-12-18T04:51:59.773Z",
+                            "size": 332996,
+                            "type": "file"
+                        },
+                        {
+                            "name": "FireShot Capture 4 - Hyperbolic tree - http___localhost_3000_.png",
+                            "birthtime": "2017-12-18T04:53:11.213Z",
+                            "size": 350249,
+                            "type": "file"
+                        },
+                        {
+                            "name": "FireShot Capture 5 - Hyperbolic tree - http___localhost_3000_.png",
+                            "birthtime": "2017-12-18T04:53:53.160Z",
+                            "size": 546145,
+                            "type": "file"
+                        },
+                        {
+                            "name": "FireShot Capture 6 - Hyperbolic tree - http___localhost_3000_.png",
+                            "birthtime": "2017-12-18T04:54:30.792Z",
+                            "size": 601949,
+                            "type": "file"
+                        },
+                        {
+                            "name": "FireShot Capture 7 - Hyperbolic tree - http___localhost_3000_.png",
+                            "birthtime": "2017-12-18T04:56:32.524Z",
+                            "size": 589932,
+                            "type": "file"
+                        },
+                        {
+                            "name": "ivis.vpp",
+                            "birthtime": "2018-02-13T03:57:43.053Z",
+                            "size": 666624,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "node_modules",
+                    "birthtime": "2018-05-06T15:17:21.486Z",
+                    "size": 28672,
+                    "type": "dir"
+                },
+                {
+                    "name": "dist",
+                    "birthtime": "2018-05-06T12:34:15.003Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "js",
+                            "birthtime": "2018-05-07T17:53:01.928Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "d",
+                            "birthtime": "2018-05-07T17:53:01.928Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "hierarchies",
+                            "birthtime": "2018-04-03T15:05:50.778Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "Example-files",
+                                    "birthtime": "2018-03-20T16:58:48.549Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "carnivora-zh.treeml.xml",
+                                            "birthtime": "2018-03-20T16:58:48.553Z",
+                                            "size": 35352,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "flare.d3.csv",
+                                            "birthtime": "2018-03-20T16:58:48.553Z",
+                                            "size": 7989,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "fs.d3.json",
+                                            "birthtime": "2018-03-20T16:58:48.577Z",
+                                            "size": 158774,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "primates-de.treeml.xml",
+                                            "birthtime": "2018-03-20T16:58:48.553Z",
+                                            "size": 21342,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "sample.skos.xml",
+                                            "birthtime": "2018-03-20T16:58:48.553Z",
+                                            "size": 1270700,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Open-Tree-of-Life",
+                                    "birthtime": "2018-05-07T18:02:56.620Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "laurasiatheria.d3.json",
+                                            "birthtime": "2018-03-20T17:29:26.359Z",
+                                            "size": 4146528,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "afrotheria.d3.json",
+                                            "birthtime": "2018-03-20T17:28:57.647Z",
+                                            "size": 73550,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "araneae.d3.json_",
+                                            "birthtime": "2018-04-01T20:57:16.352Z",
+                                            "size": 24115129,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "aves.d3.json",
+                                            "birthtime": "2018-05-07T18:02:56.836Z",
+                                            "size": 40104831,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "carnivora.d3.json",
+                                            "birthtime": "2018-03-20T17:28:50.127Z",
+                                            "size": 399392,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "embryophyta.d3.json",
+                                            "birthtime": "2018-03-23T00:51:32.110Z",
+                                            "size": 47722354,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "eukaryota.d3.json",
+                                            "birthtime": "2018-03-23T00:54:59.582Z",
+                                            "size": 60162984,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "hymenoptera.d3.json",
+                                            "birthtime": "2018-05-07T18:02:54.884Z",
+                                            "size": 12161014,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "hymenoptera.d3.json_",
+                                            "birthtime": "2018-04-01T20:57:14.209Z",
+                                            "size": 12161014,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "insecta.d3.json",
+                                            "birthtime": "2018-05-07T18:02:53.376Z",
+                                            "size": 127801359,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "insecta.d3.json_",
+                                            "birthtime": "2018-04-01T20:57:09.493Z",
+                                            "size": 127801359,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "araneae.d3.json",
+                                            "birthtime": "2018-05-07T18:02:55.172Z",
+                                            "size": 24115129,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "magnoliidae.d3.json_",
+                                            "birthtime": "2018-04-03T17:30:08.866Z",
+                                            "size": 5325343,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "mammalia.d3.json",
+                                            "birthtime": "2018-03-20T17:29:53.982Z",
+                                            "size": 13443633,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "metatheria.d3.json",
+                                            "birthtime": "2018-03-20T17:28:56.127Z",
+                                            "size": 521794,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "metazoa.d3.json",
+                                            "birthtime": "2018-03-23T00:37:52.761Z",
+                                            "size": 109320174,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "metazoa.d3.json_",
+                                            "birthtime": "2018-03-22T17:52:43.583Z",
+                                            "size": 97034787,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "primates.d3.json",
+                                            "birthtime": "2018-03-20T17:28:50.751Z",
+                                            "size": 681241,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "rodentia.d3.json",
+                                            "birthtime": "2018-03-20T17:29:34.474Z",
+                                            "size": 4723792,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "rosaceae.d3.json",
+                                            "birthtime": "2018-03-18T21:21:03.850Z",
+                                            "size": 3558382,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "tetrapoda.d3.json",
+                                            "birthtime": "2018-03-20T17:33:38.798Z",
+                                            "size": 93837151,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "vertebrata.d3.json",
+                                            "birthtime": "2018-03-21T23:55:19.807Z",
+                                            "size": 177541402,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "vertebrata.d3.json_",
+                                            "birthtime": "2018-03-21T23:25:38.940Z",
+                                            "size": 177541402,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "img",
+                            "birthtime": "2018-04-01T17:57:34.032Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "vscode-great-icons",
+                                    "birthtime": "2018-02-18T19:21:04.832Z",
+                                    "size": 4096,
+                                    "type": "dir"
+                                },
+                                {
+                                    "name": "vscode-icons",
+                                    "birthtime": "2018-02-05T21:00:50.335Z",
+                                    "size": 36864,
+                                    "type": "dir"
+                                },
+                                {
+                                    "name": "Poincare-tiling-3d.png",
+                                    "birthtime": "2018-03-20T16:58:48.509Z",
+                                    "size": 1276071,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Escher-circle-limits-III.jpg",
+                                    "birthtime": "2018-03-20T16:58:48.493Z",
+                                    "size": 473465,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MVC-Process.svg",
+                                    "birthtime": "2018-03-20T16:58:48.493Z",
+                                    "size": 14121,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Poincare-3-parallel.svg",
+                                    "birthtime": "2018-03-20T16:58:48.493Z",
+                                    "size": 10586,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Poincare-n-parallel.svg",
+                                    "birthtime": "2018-03-20T16:58:48.501Z",
+                                    "size": 562863,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Escher-bats-edit.jpg",
+                                    "birthtime": "2018-03-20T16:58:48.481Z",
+                                    "size": 430332,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Poincare-tiling.png",
+                                    "birthtime": "2018-03-20T16:58:48.513Z",
+                                    "size": 113912,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "ViewModel.svg",
+                                    "birthtime": "2018-03-20T16:58:48.521Z",
+                                    "size": 21091,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "chrome-perf.png",
+                                    "birthtime": "2018-03-20T16:58:48.521Z",
+                                    "size": 69727,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "favicon.png",
+                                    "birthtime": "2018-03-20T16:58:48.521Z",
+                                    "size": 1447,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "C_pauCKUwAAbIoY.jpg",
+                                    "birthtime": "2018-04-01T17:57:34.036Z",
+                                    "size": 332847,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Escher-bats.jpg",
+                                    "birthtime": "2018-03-20T16:58:48.489Z",
+                                    "size": 451512,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "weight-culling-explained.png",
+                                    "birthtime": "2018-03-20T16:58:48.525Z",
+                                    "size": 262306,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "min-maps",
+                            "birthtime": "2018-04-03T23:16:04.180Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "vs",
+                                    "birthtime": "2018-04-03T23:16:04.184Z",
+                                    "size": 4096,
+                                    "type": "dir"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "langmaps",
+                            "birthtime": "2018-04-02T19:21:36.510Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "de.lang.json",
+                                    "birthtime": "2018-04-02T16:32:10.934Z",
+                                    "size": 5202210,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "de.lang.json_",
+                                    "birthtime": "2018-03-31T23:07:07.797Z",
+                                    "size": 4452710,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "de.lang.json__",
+                                    "birthtime": "2018-04-01T16:11:55.052Z",
+                                    "size": 2961578,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "en.lang.json",
+                                    "birthtime": "2018-04-02T16:32:11.506Z",
+                                    "size": 4546254,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "es.lang.json",
+                                    "birthtime": "2018-04-02T16:32:09.958Z",
+                                    "size": 28319,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "nl.lang.json",
+                                    "birthtime": "2018-04-02T16:32:09.410Z",
+                                    "size": 12452,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "ro.lang.json",
+                                    "birthtime": "2018-04-02T16:32:10.402Z",
+                                    "size": 1965075,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "ru.lang.json",
+                                    "birthtime": "2018-04-02T16:32:12.322Z",
+                                    "size": 4301969,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "sci.lang.json",
+                                    "birthtime": "2018-04-02T19:21:36.510Z",
+                                    "size": 6,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "zh.lang.json",
+                                    "birthtime": "2018-04-02T16:32:12.978Z",
+                                    "size": 4350448,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "fonts",
+                            "birthtime": "2018-03-20T16:58:48.433Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "roboto",
+                                    "birthtime": "2018-03-20T16:58:48.437Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "Roboto-Bold.woff",
+                                            "birthtime": "2018-03-20T16:58:48.453Z",
+                                            "size": 90308,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Bold.woff2",
+                                            "birthtime": "2018-03-20T16:58:48.453Z",
+                                            "size": 64800,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Light.woff",
+                                            "birthtime": "2018-03-20T16:58:48.453Z",
+                                            "size": 89672,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Light.woff2",
+                                            "birthtime": "2018-03-20T16:58:48.453Z",
+                                            "size": 64268,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Medium.woff",
+                                            "birthtime": "2018-03-20T16:58:48.453Z",
+                                            "size": 90560,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Medium.woff2",
+                                            "birthtime": "2018-03-20T16:58:48.457Z",
+                                            "size": 65412,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Regular.woff",
+                                            "birthtime": "2018-03-20T16:58:48.457Z",
+                                            "size": 89828,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Regular.woff2",
+                                            "birthtime": "2018-03-20T16:58:48.473Z",
+                                            "size": 64832,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Thin.woff",
+                                            "birthtime": "2018-03-20T16:58:48.473Z",
+                                            "size": 88132,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Thin.woff2",
+                                            "birthtime": "2018-03-20T16:58:48.473Z",
+                                            "size": 63056,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "bitstreamvera",
+                                    "birthtime": "2018-03-20T16:58:48.437Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "VeraMono-webfont.woff",
+                                            "birthtime": "2018-03-20T16:58:48.437Z",
+                                            "size": 20928,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "materialicons",
+                                    "birthtime": "2018-03-20T16:58:48.437Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "materialicons.woff2",
+                                            "birthtime": "2018-03-20T16:58:48.437Z",
+                                            "size": 48536,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "noto",
+                                    "birthtime": "2018-03-20T16:58:48.437Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "NotoColorEmoji.ttf",
+                                            "birthtime": "2018-03-20T16:58:48.453Z",
+                                            "size": 7253060,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "NotoEmoji.ttf",
+                                            "birthtime": "2018-03-20T16:58:48.453Z",
+                                            "size": 418804,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.woff",
+                                    "birthtime": "2018-02-09T00:20:11.507Z",
+                                    "size": 57620,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.ijmap",
+                                    "birthtime": "2018-02-09T00:20:11.503Z",
+                                    "size": 28416,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.eot",
+                                    "birthtime": "2018-02-09T00:20:11.503Z",
+                                    "size": 143258,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "material-icons.css",
+                                    "birthtime": "2018-02-09T00:20:11.499Z",
+                                    "size": 970,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.svg",
+                                    "birthtime": "2018-02-09T00:20:11.507Z",
+                                    "size": 281658,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.ttf",
+                                    "birthtime": "2018-02-09T00:20:11.507Z",
+                                    "size": 128180,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.woff2",
+                                    "birthtime": "2018-02-09T00:20:11.511Z",
+                                    "size": 44300,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "vs",
+                            "birthtime": "2018-03-20T16:58:48.285Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "index-browser.js",
+                            "birthtime": "2018-05-07T17:53:06.692Z",
+                            "size": 2720736,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index.html",
+                            "birthtime": "2018-05-07T17:52:59.576Z",
+                            "size": 499,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser.html",
+                            "birthtime": "2018-03-27T17:06:58.765Z",
+                            "size": 499,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser-light.css",
+                            "birthtime": "2018-05-07T17:53:01.936Z",
+                            "size": 185174,
+                            "type": "file"
+                        },
+                        {
+                            "name": "materialize.js",
+                            "birthtime": "2018-02-07T21:41:15.524Z",
+                            "size": 355068,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser.js.map",
+                            "birthtime": "2018-05-07T17:53:06.696Z",
+                            "size": 2642573,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser-dark.css",
+                            "birthtime": "2018-05-07T17:53:01.932Z",
+                            "size": 184880,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.html",
+                            "birthtime": "2018-05-07T17:52:59.584Z",
+                            "size": 19324,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.min.css",
+                            "birthtime": "2018-04-11T12:22:06.768Z",
+                            "size": 57641,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.min.js",
+                            "birthtime": "2018-04-11T12:22:07.264Z",
+                            "size": 76846,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.min.js.map",
+                            "birthtime": "2018-04-11T12:22:08.720Z",
+                            "size": 89332,
+                            "type": "file"
+                        },
+                        {
+                            "name": "materialize.min.js",
+                            "birthtime": "2018-02-07T21:32:04.311Z",
+                            "size": 172782,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "res",
+                    "birthtime": "2018-04-11T12:20:52.473Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "downloads",
+                            "birthtime": "2018-03-22T17:55:46.582Z",
+                            "size": 1130496,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "fonts",
+                            "birthtime": "2017-12-10T11:43:03.827Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "bitstreamvera",
+                                    "birthtime": "2017-11-04T19:09:50.031Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "VeraMono-webfont.woff",
+                                            "birthtime": "2017-11-04T19:09:50.003Z",
+                                            "size": 20928,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "materialicons",
+                                    "birthtime": "2017-12-10T11:43:03.827Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "materialicons.woff2",
+                                            "birthtime": "2017-12-10T11:40:30.243Z",
+                                            "size": 48536,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "noto",
+                                    "birthtime": "2017-11-04T19:09:50.031Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "NotoColorEmoji.ttf",
+                                            "birthtime": "2017-11-04T19:09:50.019Z",
+                                            "size": 7253060,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "NotoEmoji.ttf",
+                                            "birthtime": "2017-11-04T19:09:50.007Z",
+                                            "size": 418804,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "roboto",
+                                    "birthtime": "2017-10-31T22:48:53.342Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "Roboto-Bold.woff",
+                                            "birthtime": "2017-10-31T22:48:53.070Z",
+                                            "size": 90308,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Bold.woff2",
+                                            "birthtime": "2017-10-31T22:48:53.066Z",
+                                            "size": 64800,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Light.woff",
+                                            "birthtime": "2017-10-31T22:48:53.066Z",
+                                            "size": 89672,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Light.woff2",
+                                            "birthtime": "2017-10-31T22:48:53.070Z",
+                                            "size": 64268,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Medium.woff",
+                                            "birthtime": "2017-10-31T22:48:53.074Z",
+                                            "size": 90560,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Medium.woff2",
+                                            "birthtime": "2017-10-31T22:48:53.070Z",
+                                            "size": 65412,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Regular.woff",
+                                            "birthtime": "2017-10-31T22:48:53.070Z",
+                                            "size": 89828,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Regular.woff2",
+                                            "birthtime": "2017-10-31T22:48:53.066Z",
+                                            "size": 64832,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Thin.woff",
+                                            "birthtime": "2017-10-31T22:48:53.070Z",
+                                            "size": 88132,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "Roboto-Thin.woff2",
+                                            "birthtime": "2017-10-31T22:48:53.074Z",
+                                            "size": 63056,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hierarchies",
+                            "birthtime": "2018-04-03T15:06:00.146Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "Example-files",
+                                    "birthtime": "2018-01-06T23:20:34.356Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "carnivora-zh.treeml.xml",
+                                            "birthtime": "2017-11-02T21:24:18.794Z",
+                                            "size": 35352,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "flare.d3.csv",
+                                            "birthtime": "2017-10-31T22:48:53.122Z",
+                                            "size": 7989,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "primates-de.treeml.xml",
+                                            "birthtime": "2017-11-02T21:26:15.614Z",
+                                            "size": 21342,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "sample.skos.xml",
+                                            "birthtime": "2017-10-31T22:48:53.118Z",
+                                            "size": 1270700,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "img",
+                            "birthtime": "2018-02-18T18:57:06.663Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "Poincare-tiling-3d.png",
+                                    "birthtime": "2018-02-18T18:57:06.659Z",
+                                    "size": 1276071,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Escher-bats-edit.jpg",
+                                    "birthtime": "2018-02-18T18:57:03.651Z",
+                                    "size": 430332,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Escher-circle-limits-III.jpg",
+                                    "birthtime": "2018-02-18T18:57:03.655Z",
+                                    "size": 473465,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MVC-Process.svg",
+                                    "birthtime": "2018-02-18T18:57:06.627Z",
+                                    "size": 14121,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Poincare-3-parallel.svg",
+                                    "birthtime": "2018-02-18T18:57:06.627Z",
+                                    "size": 10586,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Poincare-n-parallel.svg",
+                                    "birthtime": "2018-02-18T18:57:06.659Z",
+                                    "size": 562863,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Escher-bats.jpg",
+                                    "birthtime": "2018-02-18T18:57:03.655Z",
+                                    "size": 451512,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "Poincare-tiling.png",
+                                    "birthtime": "2018-02-18T18:57:06.663Z",
+                                    "size": 113912,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "ViewModel.svg",
+                                    "birthtime": "2018-02-18T18:57:06.663Z",
+                                    "size": 21091,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "chrome-perf.png",
+                                    "birthtime": "2018-02-18T18:57:03.647Z",
+                                    "size": 69727,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "favicon.png",
+                                    "birthtime": "2018-01-17T00:46:16.125Z",
+                                    "size": 1447,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "weight-culling-explained.png",
+                                    "birthtime": "2018-02-18T18:57:06.663Z",
+                                    "size": 262306,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "langmaps",
+                            "birthtime": "2018-04-02T19:21:17.530Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "de.lang.json",
+                                    "birthtime": "2018-04-02T22:32:03.208Z",
+                                    "size": 5541650,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "en.lang.json",
+                                    "birthtime": "2018-04-02T21:39:12.628Z",
+                                    "size": 4847660,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "es.lang.json",
+                                    "birthtime": "2018-04-06T08:05:01.627Z",
+                                    "size": 1985758,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "nl.lang.json",
+                                    "birthtime": "2018-04-06T08:05:04.199Z",
+                                    "size": 1981515,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "ro.lang.json",
+                                    "birthtime": "2018-04-03T15:37:16.104Z",
+                                    "size": 2144373,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "ru.lang.json",
+                                    "birthtime": "2018-04-03T11:19:50.218Z",
+                                    "size": 4445296,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "sci.lang.json",
+                                    "birthtime": "2018-04-02T19:21:28.050Z",
+                                    "size": 6,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "zh.lang.json",
+                                    "birthtime": "2018-04-02T21:39:13.696Z",
+                                    "size": 4602215,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "rslidy.min.css",
+                            "birthtime": "2018-04-11T12:20:50.305Z",
+                            "size": 57641,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.min.js",
+                            "birthtime": "2018-04-11T12:20:52.473Z",
+                            "size": 76846,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.min.js.map",
+                            "birthtime": "2018-02-17T16:11:41.694Z",
+                            "size": 89332,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "src",
+                    "birthtime": "2018-04-03T23:23:50.387Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "components",
+                            "birthtime": "2018-01-31T22:56:05.316Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "auto",
+                                    "birthtime": "2018-01-31T22:03:16.923Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": []
+                                },
+                                {
+                                    "name": "navigation",
+                                    "birthtime": "2018-04-17T21:28:32.484Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "navigation-dark.scss",
+                                            "birthtime": "2018-01-06T11:58:56.307Z",
+                                            "size": 527,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "navigation-light.scss",
+                                            "birthtime": "2017-12-01T23:35:38.756Z",
+                                            "size": 541,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "navigation-sidebar.html.ts",
+                                            "birthtime": "2017-12-19T01:18:26.010Z",
+                                            "size": 3698,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "navigation.html.ts",
+                                            "birthtime": "2018-05-07T17:44:59.208Z",
+                                            "size": 6026,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "navigation.scss",
+                                            "birthtime": "2018-04-23T21:38:06.256Z",
+                                            "size": 2133,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "navigation.ts",
+                                            "birthtime": "2018-04-23T22:00:19.237Z",
+                                            "size": 7882,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "primitive",
+                                    "birthtime": "2017-12-01T19:21:35.640Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "index.ts",
+                                            "birthtime": "2018-04-03T17:16:11.995Z",
+                                            "size": 3875,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "splitter",
+                                    "birthtime": "2017-12-01T23:40:39.584Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "splitter-dark.scss",
+                                            "birthtime": "2017-12-01T23:35:45.556Z",
+                                            "size": 213,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "splitter-light.scss",
+                                            "birthtime": "2017-12-02T01:05:32.043Z",
+                                            "size": 208,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "splitter.scss",
+                                            "birthtime": "2018-02-08T19:36:59.384Z",
+                                            "size": 1272,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "splitter.ts",
+                                            "birthtime": "2018-02-08T19:28:15.857Z",
+                                            "size": 2184,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "css",
+                            "birthtime": "2018-02-07T03:57:06.920Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "index-browser-dark.scss",
+                                    "birthtime": "2017-12-01T23:35:12.372Z",
+                                    "size": 152,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-browser-light.scss",
+                                    "birthtime": "2017-12-01T23:35:16.000Z",
+                                    "size": 150,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "index-browser.scss",
+                                    "birthtime": "2017-12-01T19:21:35.640Z",
+                                    "size": 131,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "material-dark.scss",
+                                    "birthtime": "2017-12-18T14:29:54.247Z",
+                                    "size": 877,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "material-light.scss",
+                                    "birthtime": "2018-02-07T03:57:08.860Z",
+                                    "size": 639,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "material.scss",
+                                    "birthtime": "2018-05-05T16:03:59.366Z",
+                                    "size": 1112,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "typography.scss",
+                                    "birthtime": "2018-05-01T20:19:24.422Z",
+                                    "size": 1238,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "models",
+                            "birthtime": "2017-12-13T22:04:46.935Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "icons",
+                                    "birthtime": "2017-12-13T22:04:57.479Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "icons.ts",
+                                            "birthtime": "2018-04-02T20:17:55.980Z",
+                                            "size": 39189,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "navigation",
+                                    "birthtime": "2018-04-04T21:40:11.791Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "demos-fs.ts",
+                                            "birthtime": "2018-04-04T23:10:25.896Z",
+                                            "size": 4343,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "model.ts",
+                                            "birthtime": "2018-04-23T22:02:24.458Z",
+                                            "size": 5069,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "preprocessing",
+                            "birthtime": "2018-04-04T21:34:39.599Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "fs2res.js",
+                                    "birthtime": "2018-02-05T21:25:21.322Z",
+                                    "size": 1470,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "langmap.js",
+                                    "birthtime": "2017-12-01T19:21:35.640Z",
+                                    "size": 594,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "otol.js",
+                                    "birthtime": "2018-03-23T20:29:51.375Z",
+                                    "size": 6001,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "otolfromfile.js",
+                                    "birthtime": "2018-05-07T18:02:34.196Z",
+                                    "size": 3780,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "translate.js",
+                                    "birthtime": "2018-04-02T21:38:50.024Z",
+                                    "size": 5296,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "index-browser.ts",
+                            "birthtime": "2018-05-02T14:24:51.791Z",
+                            "size": 2167,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index.html",
+                            "birthtime": "2018-03-27T17:07:55.865Z",
+                            "size": 499,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.html",
+                            "birthtime": "2018-04-17T20:49:32.926Z",
+                            "size": 19324,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "package.json",
+                    "birthtime": "2018-05-06T15:15:30.186Z",
+                    "size": 1758,
+                    "type": "file"
+                },
+                {
+                    "name": "gulpfile.js",
+                    "birthtime": "2018-05-06T15:16:32.210Z",
+                    "size": 7096,
+                    "type": "file"
+                },
+                {
+                    "name": "readme.md",
+                    "birthtime": "2018-04-05T19:35:13.818Z",
+                    "size": 1238,
+                    "type": "file"
+                },
+                {
+                    "name": "LICENSE",
+                    "birthtime": "2018-02-04T02:03:00.272Z",
+                    "size": 1075,
+                    "type": "file"
+                },
+                {
+                    "name": "package-lock.json",
+                    "birthtime": "2018-05-06T15:15:30.286Z",
+                    "size": 362023,
+                    "type": "file"
+                },
+                {
+                    "name": "stats.html",
+                    "birthtime": "2018-05-07T17:53:06.568Z",
+                    "size": 7174557,
+                    "type": "file"
+                },
+                {
+                    "name": "tsconfig.json",
+                    "birthtime": "2018-05-06T12:20:10.702Z",
+                    "size": 285,
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "d3-hypertree",
+            "birthtime": "2018-05-04T20:18:48.987Z",
+            "size": 4096,
+            "type": "dir",
+            "children": [
+                {
+                    "name": "doc",
+                    "birthtime": "2018-02-09T15:50:30.029Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "berge-jgaa-submitted.pdf",
+                            "birthtime": "2018-02-09T15:50:30.029Z",
+                            "size": 13034145,
+                            "type": "file"
+                        },
+                        {
+                            "name": "lamping-chi1995-hyperbolic.pdf",
+                            "birthtime": "2018-02-09T15:50:30.029Z",
+                            "size": 481973,
+                            "type": "file"
+                        },
+                        {
+                            "name": "lamping-rao-jvlc-1996.pdf",
+                            "birthtime": "2018-02-09T15:50:30.033Z",
+                            "size": 1339757,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "node_modules",
+                    "birthtime": "2018-05-04T20:20:24.404Z",
+                    "size": 20480,
+                    "type": "dir"
+                },
+                {
+                    "name": "dist",
+                    "birthtime": "2017-12-01T23:26:40.677Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "d",
+                            "birthtime": "2018-02-03T22:46:16.897Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "js",
+                            "birthtime": "2018-02-03T22:46:16.897Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "index-browser-dark.css",
+                            "birthtime": "2018-05-07T17:52:53.984Z",
+                            "size": 12544,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index-browser-light.css",
+                            "birthtime": "2018-05-07T17:52:53.976Z",
+                            "size": 12996,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index.js",
+                            "birthtime": "2018-05-07T17:52:59.492Z",
+                            "size": 1374924,
+                            "type": "file"
+                        },
+                        {
+                            "name": "index.js.map",
+                            "birthtime": "2018-05-07T17:52:59.496Z",
+                            "size": 1330858,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "res",
+                    "birthtime": "2018-05-02T17:53:35.307Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "img",
+                            "birthtime": "2018-05-02T17:53:45.839Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "screenshot.png",
+                                    "birthtime": "2018-05-02T17:53:45.839Z",
+                                    "size": 338179,
+                                    "type": "file"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "src",
+                    "birthtime": "2018-02-03T22:43:04.894Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "components",
+                            "birthtime": "2018-01-08T16:48:56.619Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "hypertree",
+                                    "birthtime": "2018-02-07T22:08:14.049Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "hypertree-dark.scss",
+                                            "birthtime": "2018-01-26T17:46:37.358Z",
+                                            "size": 53,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "hypertree-light.scss",
+                                            "birthtime": "2018-01-26T17:46:46.302Z",
+                                            "size": 52,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "hypertree.scss",
+                                            "birthtime": "2018-04-04T23:04:03.089Z",
+                                            "size": 1927,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "hypertree.ts",
+                                            "birthtime": "2018-05-07T17:39:25.817Z",
+                                            "size": 28985,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "options.ts",
+                                            "birthtime": "2018-01-17T22:02:51.534Z",
+                                            "size": 0,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "layers",
+                                    "birthtime": "2018-03-10T19:19:13.214Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "label-force-layer.ts",
+                                            "birthtime": "2018-04-19T20:50:25.194Z",
+                                            "size": 6856,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "background-layer.ts",
+                                            "birthtime": "2018-01-08T22:22:24.812Z",
+                                            "size": 1442,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "focus-layer.ts",
+                                            "birthtime": "2018-05-06T14:56:42.322Z",
+                                            "size": 1620,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "image-layer.ts",
+                                            "birthtime": "2018-01-31T23:39:58.892Z",
+                                            "size": 1742,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "interaction-layer-2.ts",
+                                            "birthtime": "2018-05-06T15:13:25.543Z",
+                                            "size": 11352,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "interaction-layer.ts",
+                                            "birthtime": "2018-03-04T22:10:51.822Z",
+                                            "size": 10611,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "cell-layer.ts",
+                                            "birthtime": "2018-04-05T12:02:29.527Z",
+                                            "size": 2195,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "label-layer.ts",
+                                            "birthtime": "2018-03-17T19:59:28.036Z",
+                                            "size": 3540,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "link-layer.ts",
+                                            "birthtime": "2018-05-05T20:37:08.244Z",
+                                            "size": 5769,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "node-layer.ts",
+                                            "birthtime": "2018-01-31T23:40:51.140Z",
+                                            "size": 2654,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "symbol-layer.ts",
+                                            "birthtime": "2018-03-29T18:08:55.236Z",
+                                            "size": 2440,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "trace-layer.ts",
+                                            "birthtime": "2018-02-20T01:49:25.456Z",
+                                            "size": 1605,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "layerstack",
+                                    "birthtime": "2018-04-04T16:35:26.695Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "d3updatePattern.ts",
+                                            "birthtime": "2018-05-07T17:52:53.856Z",
+                                            "size": 4984,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "layer.ts",
+                                            "birthtime": "2018-01-31T23:40:51.140Z",
+                                            "size": 581,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "layerstack.ts",
+                                            "birthtime": "2018-02-19T16:17:13.953Z",
+                                            "size": 2542,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "meta",
+                                    "birthtime": "2018-01-14T02:18:36.195Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "hypertree-meta",
+                                            "birthtime": "2018-02-07T21:48:33.687Z",
+                                            "size": 4096,
+                                            "type": "dir",
+                                            "children": [
+                                                {
+                                                    "name": "hypertree-meta.ts",
+                                                    "birthtime": "2018-05-05T15:35:07.766Z",
+                                                    "size": 5370,
+                                                    "type": "file"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "layerstack-meta",
+                                            "birthtime": "2018-01-08T16:48:56.631Z",
+                                            "size": 4096,
+                                            "type": "dir",
+                                            "children": [
+                                                {
+                                                    "name": "layerstack-meta-dark.scss",
+                                                    "birthtime": "2018-02-07T00:33:56.068Z",
+                                                    "size": 298,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "layerstack-meta-light.scss",
+                                                    "birthtime": "2018-02-08T19:45:39.999Z",
+                                                    "size": 425,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "layerstack-meta.scss",
+                                                    "birthtime": "2018-05-05T16:00:37.806Z",
+                                                    "size": 2124,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "layerstack-meta.ts",
+                                                    "birthtime": "2018-05-05T15:55:31.970Z",
+                                                    "size": 9086,
+                                                    "type": "file"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "transformation-meta",
+                                            "birthtime": "2018-01-13T20:54:10.881Z",
+                                            "size": 4096,
+                                            "type": "dir",
+                                            "children": [
+                                                {
+                                                    "name": "transformation-meta-dark.scss",
+                                                    "birthtime": "2018-01-13T20:53:42.753Z",
+                                                    "size": 0,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "transformation-meta-light.scss",
+                                                    "birthtime": "2018-01-13T20:53:54.649Z",
+                                                    "size": 0,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "transformation-meta.scss",
+                                                    "birthtime": "2018-01-13T20:54:00.913Z",
+                                                    "size": 0,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "transformation-meta.ts",
+                                                    "birthtime": "2018-01-13T20:54:10.881Z",
+                                                    "size": 0,
+                                                    "type": "file"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "unitdisk-meta",
+                                            "birthtime": "2018-01-08T16:48:56.627Z",
+                                            "size": 4096,
+                                            "type": "dir",
+                                            "children": [
+                                                {
+                                                    "name": "unitdisk-meta-dark.scss",
+                                                    "birthtime": "2018-02-07T02:53:56.094Z",
+                                                    "size": 831,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "unitdisk-meta-light.scss",
+                                                    "birthtime": "2018-02-08T19:45:33.679Z",
+                                                    "size": 1022,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "unitdisk-meta.scss",
+                                                    "birthtime": "2018-02-07T06:28:51.159Z",
+                                                    "size": 3235,
+                                                    "type": "file"
+                                                },
+                                                {
+                                                    "name": "unitdisk-meta.ts",
+                                                    "birthtime": "2018-03-31T21:09:22.837Z",
+                                                    "size": 17809,
+                                                    "type": "file"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "meta-grid.ts",
+                                            "birthtime": "2018-01-14T02:19:12.903Z",
+                                            "size": 1019,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "unitdisk",
+                                    "birthtime": "2018-02-05T19:42:36.355Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "layers-background.ts",
+                                            "birthtime": "2018-02-19T16:13:53.478Z",
+                                            "size": 4682,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "layers-parameter.ts",
+                                            "birthtime": "2018-03-19T17:23:31.560Z",
+                                            "size": 2745,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "unitdisk-dark.scss",
+                                            "birthtime": "2018-04-02T01:26:48.120Z",
+                                            "size": 5793,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "unitdisk-light.scss",
+                                            "birthtime": "2018-04-05T11:37:01.624Z",
+                                            "size": 5952,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "unitdisk.scss",
+                                            "birthtime": "2018-04-04T22:20:45.660Z",
+                                            "size": 4221,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "unitdisk.ts",
+                                            "birthtime": "2018-04-03T14:58:30.753Z",
+                                            "size": 9546,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "models",
+                            "birthtime": "2018-02-19T23:02:19.515Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "hypertree",
+                                    "birthtime": "2018-02-16T12:48:32.346Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "model.ts",
+                                            "birthtime": "2018-05-05T20:11:17.076Z",
+                                            "size": 1571,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "preset-base.ts",
+                                            "birthtime": "2018-05-05T20:10:29.996Z",
+                                            "size": 6014,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "preset-filter.ts",
+                                            "birthtime": "2018-05-05T15:35:48.430Z",
+                                            "size": 8358,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "preset-layers.ts",
+                                            "birthtime": "2018-05-06T15:11:48.724Z",
+                                            "size": 11835,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "preset-process.ts",
+                                            "birthtime": "2018-04-04T19:04:39.335Z",
+                                            "size": 3480,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "n",
+                                    "birthtime": "2018-01-08T16:48:56.627Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "n-layouts.ts",
+                                            "birthtime": "2018-05-05T20:12:31.899Z",
+                                            "size": 7996,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "n-loaders.ts",
+                                            "birthtime": "2018-03-29T18:57:45.972Z",
+                                            "size": 4986,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "n-tree.ts",
+                                            "birthtime": "2017-12-03T00:26:10.109Z",
+                                            "size": 15420,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "n-util.ts",
+                                            "birthtime": "2017-12-03T00:26:12.885Z",
+                                            "size": 3783,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "n.ts",
+                                            "birthtime": "2018-05-06T14:30:30.275Z",
+                                            "size": 2319,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "path",
+                                    "birthtime": "2018-02-04T01:44:32.924Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "path.ts",
+                                            "birthtime": "2018-02-19T23:03:30.098Z",
+                                            "size": 209,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "trace",
+                                    "birthtime": "2018-02-19T23:02:27.399Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "trace.ts",
+                                            "birthtime": "2018-02-20T00:46:10.167Z",
+                                            "size": 141,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "transformation",
+                                    "birthtime": "2018-02-03T22:43:04.894Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "hyperbolic-math.ts",
+                                            "birthtime": "2018-02-24T16:26:54.831Z",
+                                            "size": 8533,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "hyperbolic-transformation.ts",
+                                            "birthtime": "2018-03-16T16:54:15.966Z",
+                                            "size": 3905,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "unitdisk",
+                                    "birthtime": "2018-02-12T22:01:30.056Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "unitdisk-model.ts",
+                                            "birthtime": "2018-02-19T16:53:35.588Z",
+                                            "size": 1177,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "index.ts",
+                            "birthtime": "2018-03-10T19:40:43.444Z",
+                            "size": 2686,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "package-lock.json",
+                    "birthtime": "2018-05-04T20:18:48.987Z",
+                    "size": 289656,
+                    "type": "file"
+                },
+                {
+                    "name": "package.json",
+                    "birthtime": "2018-05-04T20:18:48.895Z",
+                    "size": 1082,
+                    "type": "file"
+                },
+                {
+                    "name": "readme.md",
+                    "birthtime": "2018-05-03T22:03:02.451Z",
+                    "size": 11363,
+                    "type": "file"
+                },
+                {
+                    "name": "LICENSE",
+                    "birthtime": "2018-02-04T02:02:58.648Z",
+                    "size": 1075,
+                    "type": "file"
+                },
+                {
+                    "name": "gulpfile.js",
+                    "birthtime": "2018-05-06T15:15:38.634Z",
+                    "size": 2164,
+                    "type": "file"
+                },
+                {
+                    "name": "tsconfig.json",
+                    "birthtime": "2017-11-01T16:08:02.794Z",
+                    "size": 249,
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "rslidy",
+            "birthtime": "2018-02-05T15:19:56.590Z",
+            "size": 4096,
+            "type": "dir",
+            "children": [
+                {
+                    "name": "dist",
+                    "birthtime": "2018-02-03T17:41:12.520Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "d",
+                            "birthtime": "2018-01-16T21:10:36.882Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "demos",
+                            "birthtime": "2018-01-29T23:48:26.647Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "fonts",
+                                    "birthtime": "2018-01-23T19:00:52.717Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "MaterialIcons-Regular.eot",
+                                            "birthtime": "2018-02-09T04:41:04.004Z",
+                                            "size": 143258,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.ijmap",
+                                            "birthtime": "2018-02-09T04:41:04.008Z",
+                                            "size": 28416,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.svg",
+                                            "birthtime": "2018-02-09T04:41:04.016Z",
+                                            "size": 281658,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.ttf",
+                                            "birthtime": "2018-02-09T04:41:04.016Z",
+                                            "size": 128180,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.woff",
+                                            "birthtime": "2018-02-09T04:41:04.016Z",
+                                            "size": 57620,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.woff2",
+                                            "birthtime": "2018-02-09T04:41:04.020Z",
+                                            "size": 44300,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "material-icons.css",
+                                            "birthtime": "2018-02-09T04:41:04.028Z",
+                                            "size": 970,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "images",
+                                    "birthtime": "2018-01-10T15:38:06.260Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "eurostat.png",
+                                            "birthtime": "2018-02-09T04:41:04.140Z",
+                                            "size": 168035,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "breakpoint.svg",
+                                            "birthtime": "2018-02-09T04:41:04.032Z",
+                                            "size": 40538,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-multidim.svg",
+                                            "birthtime": "2018-02-09T04:41:04.096Z",
+                                            "size": 449547,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-network.svg",
+                                            "birthtime": "2018-02-09T04:41:04.132Z",
+                                            "size": 969097,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-object.svg",
+                                            "birthtime": "2018-02-09T04:41:04.136Z",
+                                            "size": 604975,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "dist.png",
+                                            "birthtime": "2018-02-09T04:41:04.140Z",
+                                            "size": 412251,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-hier.svg",
+                                            "birthtime": "2018-02-09T04:41:04.064Z",
+                                            "size": 1482726,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "skos-burglary.png",
+                                            "birthtime": "2018-02-09T04:41:04.140Z",
+                                            "size": 61962,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "skos-faculty.png",
+                                            "birthtime": "2018-02-09T04:41:04.140Z",
+                                            "size": 80361,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "southwest-2012-10-23-scroll.png",
+                                            "birthtime": "2018-02-09T04:41:04.144Z",
+                                            "size": 792784,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "southwest-m-2012-04-12.png",
+                                            "birthtime": "2018-02-09T04:41:04.144Z",
+                                            "size": 66213,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "southwest-m-ie-2012-10-23.png",
+                                            "birthtime": "2018-02-09T04:41:04.144Z",
+                                            "size": 67789,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "src.png",
+                                            "birthtime": "2018-02-09T04:41:04.144Z",
+                                            "size": 397984,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "datavis.html",
+                                    "birthtime": "2018-02-09T04:41:02.220Z",
+                                    "size": 20404,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "demo.html",
+                                    "birthtime": "2018-02-09T04:41:02.228Z",
+                                    "size": 20690,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "demo_notes.html",
+                                    "birthtime": "2018-02-09T04:41:02.232Z",
+                                    "size": 20843,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "eurostat.rdf",
+                                    "birthtime": "2018-02-09T04:41:02.236Z",
+                                    "size": 71336,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "faculty.rdf",
+                                    "birthtime": "2018-02-09T04:41:02.248Z",
+                                    "size": 58444,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "iaweb-p2-g1.html",
+                                    "birthtime": "2018-02-09T04:41:04.000Z",
+                                    "size": 7680,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "mail.html",
+                                    "birthtime": "2018-02-09T04:41:04.000Z",
+                                    "size": 4114,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "fonts",
+                            "birthtime": "2018-02-03T17:41:15.064Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "MaterialIcons-Regular.eot",
+                                    "birthtime": "2018-02-09T04:41:02.220Z",
+                                    "size": 143258,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.ijmap",
+                                    "birthtime": "2018-02-09T04:41:02.224Z",
+                                    "size": 28416,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.svg",
+                                    "birthtime": "2018-02-09T04:41:02.232Z",
+                                    "size": 281658,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.ttf",
+                                    "birthtime": "2018-02-09T04:41:02.236Z",
+                                    "size": 128180,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.woff",
+                                    "birthtime": "2018-02-09T04:41:02.248Z",
+                                    "size": 57620,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "MaterialIcons-Regular.woff2",
+                                    "birthtime": "2018-02-09T04:41:04.000Z",
+                                    "size": 44300,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "material-icons.css",
+                                    "birthtime": "2018-02-09T04:41:04.000Z",
+                                    "size": 970,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "js",
+                            "birthtime": "2018-01-16T21:10:36.882Z",
+                            "size": 4096,
+                            "type": "dir"
+                        },
+                        {
+                            "name": "default.min.css",
+                            "birthtime": "2018-02-09T19:24:08.963Z",
+                            "size": 57641,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.min.js",
+                            "birthtime": "2018-02-09T04:41:04.128Z",
+                            "size": 76846,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.min.js.map",
+                            "birthtime": "2018-02-09T04:41:04.128Z",
+                            "size": 89332,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "doc",
+                    "birthtime": "2018-01-06T19:17:25.882Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "mschof-bsc.pdf",
+                            "birthtime": "2018-01-06T19:17:25.882Z",
+                            "size": 688652,
+                            "type": "file"
+                        },
+                        {
+                            "name": "todo.txt",
+                            "birthtime": "2018-01-06T19:17:25.882Z",
+                            "size": 1083,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "node_modules",
+                    "birthtime": "2018-01-23T18:47:50.647Z",
+                    "size": 20480,
+                    "type": "dir"
+                },
+                {
+                    "name": "src",
+                    "birthtime": "2018-02-03T17:39:39.456Z",
+                    "size": 4096,
+                    "type": "dir",
+                    "children": [
+                        {
+                            "name": "components",
+                            "birthtime": "2018-01-15T21:02:27.635Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "content",
+                                    "birthtime": "2018-03-07T16:52:25.777Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "content.scss",
+                                            "birthtime": "2018-01-30T03:45:10.877Z",
+                                            "size": 987,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "content.ts",
+                                            "birthtime": "2018-02-09T04:40:53.900Z",
+                                            "size": 11536,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "image-viewer.scss",
+                                            "birthtime": "2018-01-29T22:31:46.278Z",
+                                            "size": 2198,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "image-viewer.ts",
+                                            "birthtime": "2018-02-03T17:39:39.456Z",
+                                            "size": 8451,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "slide-transition.scss",
+                                            "birthtime": "2018-01-30T03:45:10.877Z",
+                                            "size": 1226,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "slide-transition.ts",
+                                            "birthtime": "2018-03-07T16:52:25.777Z",
+                                            "size": 3617,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "overview",
+                                    "birthtime": "2018-01-30T03:45:10.877Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "overview.scss",
+                                            "birthtime": "2018-01-30T03:45:10.877Z",
+                                            "size": 1569,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "overview.ts",
+                                            "birthtime": "2018-02-09T04:41:02.176Z",
+                                            "size": 7072,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "rslidy",
+                                    "birthtime": "2018-01-06T18:05:01.556Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "rslidy.scss",
+                                            "birthtime": "2018-01-06T18:05:01.556Z",
+                                            "size": 0,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "rslidy.ts",
+                                            "birthtime": "2018-01-06T18:04:48.196Z",
+                                            "size": 0,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "settings",
+                                    "birthtime": "2018-01-29T22:31:46.282Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "settings.scss",
+                                            "birthtime": "2018-01-30T04:04:33.513Z",
+                                            "size": 274,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "settings.ts",
+                                            "birthtime": "2018-01-30T04:00:29.673Z",
+                                            "size": 4724,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "statusbar",
+                                    "birthtime": "2018-02-03T17:39:39.456Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "statusbar.scss",
+                                            "birthtime": "2018-02-09T19:24:08.683Z",
+                                            "size": 4434,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "statusbar.ts",
+                                            "birthtime": "2018-01-30T03:45:10.877Z",
+                                            "size": 9389,
+                                            "type": "file"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "css",
+                            "birthtime": "2018-02-03T17:39:39.456Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "normalise.scss",
+                                    "birthtime": "2018-01-06T16:35:59.711Z",
+                                    "size": 7465,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "reset.scss",
+                                    "birthtime": "2018-01-06T16:36:02.399Z",
+                                    "size": 1092,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "rslidy.scss",
+                                    "birthtime": "2018-02-03T17:39:39.456Z",
+                                    "size": 3746,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "slides-default.scss",
+                                    "birthtime": "2018-02-03T18:10:10.866Z",
+                                    "size": 3200,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "demos",
+                            "birthtime": "2018-02-03T17:39:39.460Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "fonts",
+                                    "birthtime": "2018-01-23T18:59:47.049Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "MaterialIcons-Regular.eot",
+                                            "birthtime": "2018-01-23T18:58:57.529Z",
+                                            "size": 143258,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.ijmap",
+                                            "birthtime": "2018-01-23T18:58:57.533Z",
+                                            "size": 28416,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.svg",
+                                            "birthtime": "2018-01-23T18:58:57.537Z",
+                                            "size": 281658,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.ttf",
+                                            "birthtime": "2018-01-23T18:58:57.541Z",
+                                            "size": 128180,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.woff",
+                                            "birthtime": "2018-01-23T18:58:57.541Z",
+                                            "size": 57620,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "MaterialIcons-Regular.woff2",
+                                            "birthtime": "2018-01-23T18:58:57.545Z",
+                                            "size": 44300,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "material-icons.css",
+                                            "birthtime": "2018-01-23T18:58:57.525Z",
+                                            "size": 970,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "images",
+                                    "birthtime": "2018-01-10T15:40:52.452Z",
+                                    "size": 4096,
+                                    "type": "dir",
+                                    "children": [
+                                        {
+                                            "name": "eurostat.png",
+                                            "birthtime": "2018-01-06T16:42:45.866Z",
+                                            "size": 168035,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "breakpoint.svg",
+                                            "birthtime": "2018-01-06T16:42:49.594Z",
+                                            "size": 40538,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-multidim.svg",
+                                            "birthtime": "2018-01-06T16:42:47.666Z",
+                                            "size": 449547,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-network.svg",
+                                            "birthtime": "2018-01-06T16:42:48.074Z",
+                                            "size": 969097,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-object.svg",
+                                            "birthtime": "2018-01-06T16:42:49.922Z",
+                                            "size": 604975,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "dist.png",
+                                            "birthtime": "2018-01-10T15:40:48.228Z",
+                                            "size": 412251,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "collage-hier.svg",
+                                            "birthtime": "2018-01-06T16:42:46.606Z",
+                                            "size": 1482726,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "skos-burglary.png",
+                                            "birthtime": "2018-01-06T16:42:48.466Z",
+                                            "size": 61962,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "skos-faculty.png",
+                                            "birthtime": "2018-01-06T16:42:48.858Z",
+                                            "size": 80361,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "southwest-2012-10-23-scroll.png",
+                                            "birthtime": "2018-01-06T16:42:50.382Z",
+                                            "size": 792784,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "southwest-m-2012-04-12.png",
+                                            "birthtime": "2018-01-06T16:42:47.178Z",
+                                            "size": 66213,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "southwest-m-ie-2012-10-23.png",
+                                            "birthtime": "2018-01-06T16:42:49.226Z",
+                                            "size": 67789,
+                                            "type": "file"
+                                        },
+                                        {
+                                            "name": "src.png",
+                                            "birthtime": "2018-01-10T15:40:52.456Z",
+                                            "size": 397984,
+                                            "type": "file"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "datavis.html",
+                                    "birthtime": "2018-01-16T21:08:57.095Z",
+                                    "size": 20404,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "demo.html",
+                                    "birthtime": "2018-02-03T18:37:48.966Z",
+                                    "size": 20690,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "demo_notes.html",
+                                    "birthtime": "2018-01-06T17:21:28.370Z",
+                                    "size": 20843,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "eurostat.rdf",
+                                    "birthtime": "2018-01-06T16:42:43.994Z",
+                                    "size": 71336,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "faculty.rdf",
+                                    "birthtime": "2018-01-06T16:42:43.386Z",
+                                    "size": 58444,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "iaweb-p2-g1.html",
+                                    "birthtime": "2018-02-03T18:09:26.922Z",
+                                    "size": 7680,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "mail.html",
+                                    "birthtime": "2018-01-29T23:48:20.083Z",
+                                    "size": 4114,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "models",
+                            "birthtime": "2018-01-22T22:35:33.234Z",
+                            "size": 4096,
+                            "type": "dir",
+                            "children": [
+                                {
+                                    "name": "rslidy.ts",
+                                    "birthtime": "2018-01-10T16:05:50.209Z",
+                                    "size": 72,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "settings.ts",
+                                    "birthtime": "2018-01-09T15:49:25.098Z",
+                                    "size": 119,
+                                    "type": "file"
+                                },
+                                {
+                                    "name": "utils.ts",
+                                    "birthtime": "2018-01-22T22:35:33.234Z",
+                                    "size": 6988,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "rslidy-config.ts",
+                            "birthtime": "2018-01-16T21:19:05.468Z",
+                            "size": 1451,
+                            "type": "file"
+                        },
+                        {
+                            "name": "rslidy.ts",
+                            "birthtime": "2018-02-09T03:34:46.430Z",
+                            "size": 23789,
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "LICENCE.txt",
+                    "birthtime": "2018-01-06T16:04:06.501Z",
+                    "size": 1075,
+                    "type": "file"
+                },
+                {
+                    "name": "README.md",
+                    "birthtime": "2018-02-05T14:57:46.497Z",
+                    "size": 13200,
+                    "type": "file"
+                },
+                {
+                    "name": "gulpfile.js",
+                    "birthtime": "2018-02-03T19:25:24.136Z",
+                    "size": 2853,
+                    "type": "file"
+                },
+                {
+                    "name": "package.json",
+                    "birthtime": "2018-01-23T18:47:50.659Z",
+                    "size": 851,
+                    "type": "file"
+                },
+                {
+                    "name": "tsconfig.json",
+                    "birthtime": "2018-01-06T16:32:29.320Z",
+                    "size": 256,
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "dev-watch.sh",
+            "birthtime": "2018-02-18T00:10:42.605Z",
+            "size": 90,
+            "type": "file"
+        },
+        {
+            "name": "install.sh",
+            "birthtime": "2018-02-18T19:30:07.557Z",
+            "size": 155,
+            "type": "file"
+        },
+        {
+            "name": "alpha.zip",
+            "birthtime": "2018-04-05T11:30:51.858Z",
+            "size": 43078508,
+            "type": "file"
+        },
+        {
+            "name": "labelled_supertree.tre",
+            "birthtime": "2018-03-22T19:27:02.892Z",
+            "size": 31920440,
+            "type": "file"
+        },
+        {
+            "name": "labelled_supertree_ottnames.tre",
+            "birthtime": "2018-03-22T22:47:20.652Z",
+            "size": 93199009,
+            "type": "file"
+        },
+        {
+            "name": "lee-beliv2006-tasks.pdf",
+            "birthtime": "2018-02-25T15:16:15.292Z",
+            "size": 58742,
+            "type": "file"
+        },
+        {
+            "name": "package-lock.json",
+            "birthtime": "2018-04-22T15:05:43.855Z",
+            "size": 27,
+            "type": "file"
+        },
+        {
+            "name": "dev-install.sh",
+            "birthtime": "2018-02-18T00:10:38.769Z",
+            "size": 2,
+            "type": "file"
+        },
+        {
+            "name": "run.sh",
+            "birthtime": "2018-04-01T21:35:35.967Z",
+            "size": 714,
+            "type": "file"
+        },
+        {
+            "name": "shneiderman-vl1996-tasks.pdf",
+            "birthtime": "2018-02-25T15:16:15.296Z",
+            "size": 893228,
+            "type": "file"
+        },
+        {
+            "name": "taxonomy.tsv",
+            "birthtime": "2018-03-22T19:03:26.522Z",
+            "size": 325649385,
+            "type": "file"
+        }
+    ]
+}
