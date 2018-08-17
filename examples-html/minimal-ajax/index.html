@@ -12,12 +12,19 @@
     <script src="d3-hypertree.js"></script>
     </head>
     <body>
-        <script>
-            const hmodel = hypertree.presets.otolModel()              
-            hmodel.onNodeSelect = ()=> {}            
-            hmodel.dataloader = hypertree.loaders.fromFile('mammalia.d3.json')
-            hmodel.langloader = ok=> ok()
-            new hypertree.Hypertree({ parent: document.body },hmodel)     
+        <script>            
+            const ht = new hyt.Hypertree(
+                {
+                    parent: document.body             
+                },
+                {
+                    dataloader: hyt.loaders.fromFile('mammalia.d3.json'),                
+                    langInitBFS: (ht, n)=> n.precalc.label = n.data.name,
+                }
+            )
+            ht.initPromise
+                .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
+                .then(()=> ht.drawDetailFrame())
         </script>
     </body>
 </html>

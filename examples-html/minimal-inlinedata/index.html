@@ -12,31 +12,36 @@
     <script src="d3-hypertree.js"></script>
     </head>
     <body>
-        <script>            
-            const hmodel = hypertree.presets.generatorModel()            
-            hmodel.onNodeSelect = ()=> {}
-            hmodel.layout = hypertree.layouts.layoutBergé
-            hmodel.caption = (ht, n)=> {                
-                n.precalc.txt2 = n.data.name
-                return n.data.name
-            }
-            hmodel.dataloader = ok => ok({ 
-                name:'A',
-                children:[
-                    { name: 'B' },
-                    { name: 'C' },
-                    { name: 'D' },
-                    { 
-                        name: 'E',
-                        children:[
-                            { name: 'F' },
-                            { name: 'G' },
-                        ]
+        <script>  
+            const ht = new hyt.Hypertree(
+                { parent: document.body },
+                { 
+                    langInitBFS: (ht, n)=> {                
+                        n.precalc.label = n.data.name                        
                     },
-                ]
-            })
-            hmodel.langloader = ok=> ok()
-            new hypertree.Hypertree({ parent: document.body },hmodel)            
+                    dataloader: ok => ok({
+                        name:'A',
+                        children:[
+                            { name: 'B' },
+                            { name: 'C' },
+                            { name: 'D' },
+                            { 
+                                name: 'E',
+                                children: [
+                                    { name: 'F' },
+                                    { name: 'G' },
+                                ]
+                            },
+                        ]
+                    }),
+                    interaction: {
+                        λbounds: [ .4, .8 ],
+                    }                 
+                }
+            )
+            ht.initPromise
+                .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
+                .then(()=> ht.drawDetailFrame())               
         </script>
     </body>
 </html>

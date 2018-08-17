@@ -13,12 +13,13 @@
     </head>
     <body>
         <script>
-            const hmodel = hypertree.presets.generatorModel()            
-            hmodel.onNodeSelect = ()=> {}
-            hmodel.layout = hypertree.layouts.layoutBergé
-            hmodel.dataloader = hypertree.loaders.generators.nT1
-            hmodel.langloader = ok=> ok()
-            new hypertree.Hypertree({ parent: document.body },hmodel)            
+            const ht = new hyt.Hypertree(
+                { parent: document.body },
+                { dataloader: hyt.loaders.generators.nT1 }
+            )
+            ht.initPromise
+                .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
+                .then(()=> ht.drawDetailFrame())
         </script>
     </body>
 </html>
