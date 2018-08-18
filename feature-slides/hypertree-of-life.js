@@ -29237,7 +29237,6 @@ exports.presets = {
             n.precalc.label = l || id;
             n.precalc.clickable = Boolean(l);
         },
-        //},            
         geometry: {
             nodeRadius: nodeInitR(.0075)
         }
