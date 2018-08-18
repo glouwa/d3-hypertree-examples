@@ -25,8 +25,8 @@
     .unitdisk-nav .tool-bar .tool-active {
       background-color: #333; }
   .unitdisk-nav .path-bar {
-    top: .6em;
-    right: 1.5em;
+    top: .4em;
+    right: 1.65em;
     position: absolute; }
   .unitdisk-nav svg {
     top: 0;
@@ -108,12 +108,15 @@
       left: calc(100% - 15.5em); }
 
 #path {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 33em);
   font-size: .75em;
-  max-width: 80%;
   word-spacing: .3em;
   position: absolute;
   top: -1.6em;
-  left: 7em; }
+  left: 18em; }
 
 .absolute-center {
   margin: auto;
@@ -127,89 +130,127 @@
 #path {
   color: white; }
 
-.unitdisk-nav svg .cell {
-  pointer-events: none; }
+#query-input {
+  visibility: hidden;
+  pointer-events: all;
+  position: absolute;
+  top: calc(50% - 2em);
+  left: calc(50% - 8em);
+  width: 16.65em;
+  border-radius: .3em;
+  box-shadow: 0.1em 0.1em 1em #000000; }
 
-.unitdisk-nav svg .arc {
-  pointer-events: none; }
+#query-input > input {
+  width: 16em;
+  height: 2.5em;
+  border-radius: .2em;
+  text-indent: .5em;
+  outline: none;
+  border: none; }
 
-.unitdisk-nav svg .node {
-  pointer-events: none; }
+#query-input {
+  background-color: #333;
+  border: .35em solid #333; }
+
+.unitdisk-nav svg {
+  cursor: crosshair; }
+  .unitdisk-nav svg .cell {
+    pointer-events: none; }
+  .unitdisk-nav svg .arc {
+    pointer-events: none; }
+  .unitdisk-nav svg .node {
+    pointer-events: none; }
 
 @keyframes nodefadein {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
-.unitdisk-nav svg .caption {
-  font-size: .002em;
-  font-weight: 300;
-  user-select: none;
-  cursor: default;
-  pointer-events: none;
-  text-rendering: optimizeSpeed; }
-
-.unitdisk-nav svg .caption:lang(zh) {
-  font-size: .0025em; }
+  .unitdisk-nav svg .caption {
+    font-size: .002em;
+    font-weight: 300;
+    user-select: none;
+    pointer-events: none;
+    text-rendering: optimizeSpeed; }
+  .unitdisk-nav svg .caption:lang(zh) {
+    font-size: .0025em; }
 
 @keyframes fade-in {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
-
-.unitdisk-nav svg .caption-label {
-  /*
+  .unitdisk-nav svg .caption-label {
+    /*
             //transition-property: transform;
             //transition-duration: 250ms;
             transition-duration: 0ms;
             transition-timing-function: ease-in-out;
             transition-delay: 150ms;   
             */
-  animation: fade-in 750ms ease-in-out; }
+    animation: fade-in 750ms ease-in-out; }
+  .unitdisk-nav svg .caption-icon {
+    font-family: 'NotoColorEmoji', Roboto;
+    font-size: .8;
+    transition-property: none;
+    transition-duration: 0ms; }
+  .unitdisk-nav svg .caption-background {
+    pointer-events: none;
+    animation: fade-in 750ms ease-in-out; }
+  .unitdisk-nav svg .label-link {
+    stroke-width: .02;
+    stroke-dasharray: .001;
+    stroke-linecap: round;
+    animation: fade-in 750ms ease-in-out; }
+  .unitdisk-nav svg .background-circle {
+    pointer-events: none; }
+  .unitdisk-nav svg .mouse-circle {
+    pointer-events: visibleFill;
+    fill: none; }
+  .unitdisk-nav svg .mouse-circle-cursor {
+    pointer-events: visibleFill;
+    fill: none;
+    cursor: crosshair; }
+  .unitdisk-nav svg .ripple-world {
+    pointer-events: none;
+    cursor: crosshair; }
+  .unitdisk-nav svg .ripple-circle {
+    pointer-events: none;
+    cursor: crosshair;
+    opacity: 0;
+    animation: ripple 1000ms ease-out; }
 
-.unitdisk-nav svg .caption-icon {
-  font-family: 'NotoColorEmoji', Roboto;
-  font-size: .8;
-  transition-property: none;
-  transition-duration: 0ms; }
-
-.unitdisk-nav svg .caption-background {
-  pointer-events: none; }
-
-.unitdisk-nav svg .label-link {
-  stroke-width: .02;
-  stroke-dasharray: .001;
-  stroke-linecap: round; }
-
-.unitdisk-nav svg .background-circle {
-  pointer-events: none; }
-
-.unitdisk-nav svg .mouse-circle {
-  pointer-events: visibleFill;
-  cursor: crosshair; }
-
-.unitdisk-nav svg .focus-circle {
-  pointer-events: none; }
-
-.unitdisk-nav svg .ping-circle {
-  opacity: 1;
-  pointer-events: none; }
-
-.unitdisk-nav svg .trace-polyline {
-  opacity: .8;
-  stroke: orange;
-  stroke-width: .03;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  pointer-events: none; }
-
-.unitdisk-nav svg .center-node {
-  animation: centernodemove 500ms ease-out;
-  stroke: none;
-  stroke-width: .006; }
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: .8; }
+  12% {
+    transform: scale(0.45);
+    opacity: .8; }
+  100% {
+    opacity: 0;
+    transform: scale(3); } }
+  .unitdisk-nav svg #path-arcs {
+    opacity: .3; }
+  .unitdisk-nav svg #stem-path {
+    opacity: .3; }
+  .unitdisk-nav svg .focus-circle {
+    pointer-events: none; }
+  .unitdisk-nav svg .ping-circle {
+    opacity: 1;
+    pointer-events: none; }
+  .unitdisk-nav svg .trace-polyline {
+    opacity: .8;
+    stroke: orange;
+    stroke-width: .03;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    pointer-events: none; }
+  .unitdisk-nav svg .center-node {
+    animation: centernodemove 500ms ease-out;
+    stroke: none;
+    stroke-width: .006; }
 
 @keyframes centernodemove {
   0% {
@@ -220,34 +261,27 @@
   75% {
     transform: scale(0.1); }
   80%, 100% { } }
-
-.unitdisk-nav svg .nav-parameter-disc .caption {
-  dominant-baseline: middle;
-  text-anchor: middle;
-  font-size: .16pt; }
-
-.unitdisk-nav svg .nav-parameter-disc .caption.P {
-  font-size: .48pt;
-  font-weight: 100; }
-
-.unitdisk-nav svg .nav-parameter-disc .background-circle {
-  pointer-events: none; }
-
-.unitdisk-nav svg .nav-parameter-disc .mouse-circle {
-  pointer-events: visibleFill;
-  cursor: crosshair; }
-
-.unitdisk-nav svg .nav-background-disc .background-circle {
-  pointer-events: none; }
-
-.unitdisk-nav svg .nav-background-disc .caption {
-  font-size: .005em; }
-
-.unitdisk-nav svg .nav-background-disc .label-big {
-  font-size: .0095em;
-  font-weight: 300;
-  paint-order: stroke;
-  stroke-width: .04; }
+  .unitdisk-nav svg .nav-parameter-disc .caption {
+    dominant-baseline: middle;
+    text-anchor: middle;
+    font-size: .16pt; }
+  .unitdisk-nav svg .nav-parameter-disc .caption.P {
+    font-size: .48pt;
+    font-weight: 100; }
+  .unitdisk-nav svg .nav-parameter-disc .background-circle {
+    pointer-events: none; }
+  .unitdisk-nav svg .nav-parameter-disc .mouse-circle {
+    pointer-events: visibleFill;
+    cursor: crosshair; }
+  .unitdisk-nav svg .nav-background-disc .background-circle {
+    pointer-events: none; }
+  .unitdisk-nav svg .nav-background-disc .caption {
+    font-size: .005em; }
+  .unitdisk-nav svg .nav-background-disc .label-big {
+    font-size: .0095em;
+    font-weight: 300;
+    paint-order: stroke;
+    stroke-width: .04; }
 
 .unitdisk-nav svg .cell {
   fill: rgba(165, 214, 167, 0);
@@ -281,7 +315,7 @@
 .unitdisk-nav svg .label-link {
   stroke: #000;
   stroke-width: .001;
-  stroke-dasharray: .025, .01; }
+  stroke-dasharray: .018, .012; }
 
 .unitdisk-nav svg .root {
   stroke: #eed500;
@@ -322,7 +356,7 @@
   stroke: white; }
 
 .unitdisk-nav svg .hovered-path.arc {
-  stroke: rgba(255, 255, 255, 0.2); }
+  stroke: rgba(255, 255, 255, 0.8); }
 
 .unitdisk-nav svg .hovered-path-nav.arc {
   stroke: rgba(255, 0, 0, 0.65); }
@@ -334,8 +368,7 @@
   stroke: orange; }
 
 .unitdisk-nav svg .selected-path.arc {
-  stroke: rgba(255, 165, 0, 0.2);
-  stroke-opacity: .3; }
+  stroke: rgba(255, 165, 0, 0.2); }
 
 .unitdisk-nav svg .selected.cell {
   stroke: rgba(255, 165, 0, 0.2);
@@ -350,9 +383,6 @@
   stroke-width: .005;
   opacity: .125; }
 
-.unitdisk-nav svg .mouse-circle {
-  fill: none; }
-
 .unitdisk-nav svg .focus-circle {
   fill: none;
   stroke: #1790f2;
@@ -362,6 +392,9 @@
   fill: none;
   stroke: #000;
   stroke-width: .1; }
+
+.unitdisk-nav svg .ripple-circle {
+  fill: #fff; }
 
 .unitdisk-nav svg .nav-parameter-disc .node {
   fill: none;
@@ -389,10 +422,6 @@
   fill: #fff; }
 
 .unitdisk-nav svg .nav-parameter-disc .background-circle {
-  fill: none;
-  stroke: none; }
-
-.unitdisk-nav svg .nav-parameter-disc .mouse-circle {
   fill: none;
   stroke: none; }
 

@@ -4,7 +4,15 @@
   left: 0em;
   right: 0;
   position: absolute;
-  padding: .3em; }
+  padding: .3em;
+  /*
+    unitdisk-nav .spinner {
+    width: 10%;
+    height: 10%;
+    margin: 46% 45%;
+    position: relative;
+}
+    */ }
 
 .unitdisk-nav .tool-bar {
   width: 3em; }
@@ -23,14 +31,14 @@
   background-color: #333; }
 
 .unitdisk-nav .path-bar {
-  top: .6em;
-  right: 1.5em;
+  top: .4em;
+  right: 1.65em;
   position: absolute; }
 
 .unitdisk-nav svg {
   top: 0;
   bottom: 0;
-  left: 3em;
+  left: 0;
   right: 0;
   position: absolute; }
 
@@ -44,8 +52,49 @@
 
 .unitdisk-nav > .preloader > .preloader-wrapper {
   position: absolute;
-  left: calc(50% - .6em);
-  top: calc(50% - 1em); }
+  /*left: calc(50% - 1.5em);
+            top: calc(50% - 1.5em);*/
+  left: calc(50% - 3em);
+  top: calc(50% - .4em);
+  width: 3em;
+  height: 3em; }
+
+.unitdisk-nav .spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  margin: 0 50%; }
+
+.unitdisk-nav .double-bounce1, .unitdisk-nav .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  -webkit-animation: sk-bounce 1.0s infinite ease-in-out;
+  animation: sk-bounce 1.0s infinite ease-in-out; }
+
+.unitdisk-nav .double-bounce2 {
+  -webkit-animation-delay: -.5s;
+  animation-delay: -.5s; }
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
 
 .unitdisk-nav #meta {
   top: 0;
@@ -77,9 +126,15 @@
   left: calc(100% - 15.5em); }
 
 #path {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 33em);
   font-size: .75em;
-  max-width: 80%;
-  word-spacing: .3em; }
+  word-spacing: .3em;
+  position: absolute;
+  top: -1.6em;
+  left: 18em; }
 
 .absolute-center {
   margin: auto;
@@ -92,6 +147,31 @@
 
 #path {
   color: white; }
+
+#query-input {
+  visibility: hidden;
+  pointer-events: all;
+  position: absolute;
+  top: calc(50% - 2em);
+  left: calc(50% - 8em);
+  width: 16.65em;
+  border-radius: .3em;
+  box-shadow: 0.1em 0.1em 1em #000000; }
+
+#query-input > input {
+  width: 16em;
+  height: 2.5em;
+  border-radius: .2em;
+  text-indent: .5em;
+  outline: none;
+  border: none; }
+
+#query-input {
+  background-color: #333;
+  border: .35em solid #333; }
+
+.unitdisk-nav svg {
+  cursor: crosshair; }
 
 .unitdisk-nav svg .cell {
   pointer-events: none; }
@@ -112,7 +192,6 @@
   font-size: .002em;
   font-weight: 300;
   user-select: none;
-  cursor: default;
   pointer-events: none;
   text-rendering: optimizeSpeed; }
 
@@ -126,11 +205,14 @@
     opacity: 1; } }
 
 .unitdisk-nav svg .caption-label {
-  /*transition-property: transform;
+  /*
+            //transition-property: transform;
             //transition-duration: 250ms;
             transition-duration: 0ms;
             transition-timing-function: ease-in-out;
-            transition-delay: 150ms;   */ }
+            transition-delay: 150ms;   
+            */
+  animation: fade-in 750ms ease-in-out; }
 
 .unitdisk-nav svg .caption-icon {
   font-family: 'NotoColorEmoji', Roboto;
@@ -139,19 +221,53 @@
   transition-duration: 0ms; }
 
 .unitdisk-nav svg .caption-background {
-  pointer-events: none; }
+  pointer-events: none;
+  animation: fade-in 750ms ease-in-out; }
 
 .unitdisk-nav svg .label-link {
   stroke-width: .02;
   stroke-dasharray: .001;
-  stroke-linecap: round; }
+  stroke-linecap: round;
+  animation: fade-in 750ms ease-in-out; }
 
 .unitdisk-nav svg .background-circle {
   pointer-events: none; }
 
 .unitdisk-nav svg .mouse-circle {
   pointer-events: visibleFill;
+  fill: none; }
+
+.unitdisk-nav svg .mouse-circle-cursor {
+  pointer-events: visibleFill;
+  fill: none;
   cursor: crosshair; }
+
+.unitdisk-nav svg .ripple-world {
+  pointer-events: none;
+  cursor: crosshair; }
+
+.unitdisk-nav svg .ripple-circle {
+  pointer-events: none;
+  cursor: crosshair;
+  opacity: 0;
+  animation: ripple 1000ms ease-out; }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: .8; }
+  12% {
+    transform: scale(0.45);
+    opacity: .8; }
+  100% {
+    opacity: 0;
+    transform: scale(3); } }
+
+.unitdisk-nav svg #path-arcs {
+  opacity: .3; }
+
+.unitdisk-nav svg #stem-path {
+  opacity: .3; }
 
 .unitdisk-nav svg .focus-circle {
   pointer-events: none; }
@@ -242,9 +358,9 @@
   fill: rgba(17, 17, 17, 0.4); }
 
 .unitdisk-nav svg .label-link {
-  stroke: #666;
+  stroke: #000;
   stroke-width: .001;
-  stroke-dasharray: .01, .01; }
+  stroke-dasharray: .018, .012; }
 
 .unitdisk-nav svg .root {
   stroke: #eed500;
@@ -263,7 +379,8 @@
 
 .unitdisk-nav svg .lazy.cell {
   stroke: rgba(0, 0, 0, 0.15);
-  fill: rgba(255, 204, 188, 0.03); }
+  stroke-width: .0013;
+  fill: none; }
 
 .unitdisk-nav svg .lazy.node {
   stroke: #c5c5c5;
@@ -284,7 +401,7 @@
   stroke: white; }
 
 .unitdisk-nav svg .hovered-path.arc {
-  stroke: rgba(255, 255, 255, 0.2); }
+  stroke: rgba(255, 255, 255, 0.8); }
 
 .unitdisk-nav svg .hovered-path-nav.arc {
   stroke: rgba(255, 0, 0, 0.65); }
@@ -296,8 +413,7 @@
   stroke: orange; }
 
 .unitdisk-nav svg .selected-path.arc {
-  stroke: rgba(255, 165, 0, 0.2);
-  stroke-opacity: .3; }
+  stroke: rgba(255, 165, 0, 0.2); }
 
 .unitdisk-nav svg .selected.cell {
   stroke: rgba(255, 165, 0, 0.2);
@@ -312,13 +428,18 @@
   stroke-width: .005;
   opacity: .125; }
 
-.unitdisk-nav svg .mouse-circle {
-  fill: none; }
-
 .unitdisk-nav svg .focus-circle {
   fill: none;
   stroke: #1790f2;
   stroke-width: .0008; }
+
+.unitdisk-nav svg .zerozero-circle {
+  fill: none;
+  stroke: #000;
+  stroke-width: .1; }
+
+.unitdisk-nav svg .ripple-circle {
+  fill: #fff; }
 
 .unitdisk-nav svg .nav-parameter-disc .node {
   fill: none;
@@ -346,10 +467,6 @@
   fill: #fff; }
 
 .unitdisk-nav svg .nav-parameter-disc .background-circle {
-  fill: none;
-  stroke: none; }
-
-.unitdisk-nav svg .nav-parameter-disc .mouse-circle {
   fill: none;
   stroke: none; }
 
@@ -464,6 +581,16 @@
 
 .render-info.data {
   bottom: 1em; }
+
+#meta > .layer-info.data {
+  position: absolute;
+  bottom: 1.2em;
+  right: .75em; }
+
+#meta > .render-info.data {
+  position: absolute;
+  bottom: 1em;
+  left: .75em; }
 
 .render-info {
   z-index: 1000;
@@ -622,6 +749,18 @@ body {
   overflow: hidden;
   font-family: 'Roboto';
   font-weight: 300; }
+
+.unitdisk-nav #meta {
+  z-index: 21; }
+
+.splitter > .gutter {
+  z-index: 10; }
+
+.splitter > .left .unitdisk-nav .tool-bar {
+  z-index: 20; }
+
+.splitter > .right {
+  z-index: 30; }
 
 @font-face {
   font-family: 'NotoColorEmoji';
@@ -4795,6 +4934,8 @@ body.keyboard-focused .dropdown-content li:focus {
   overflow-y: auto;
   border-radius: 2px;
   will-change: top, opacity; }
+  .modal:focus {
+    outline: none; }
   @media only screen and (max-width: 992px) {
     .modal {
       width: 80%; } }
@@ -7257,11 +7398,11 @@ input[type=range]::-ms-thumb {
 .material-icons {
   color: #fff; }
 
-[type="checkbox"].filled-in:not(:checked) + label:after {
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
   background: #1f1f1f;
   border-color: #252525; }
 
-[type="checkbox"].filled-in:checked + label:after {
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
   background: #2e2e2e;
   border-color: #2e2e2e; }
 
@@ -7286,7 +7427,10 @@ input[type=range]::-ms-thumb {
     height: 3em;
     padding: .3em .3em .1em .3em; }
     .slides-header > .header > span > #breadcrumb {
-      margin-left: 1em; }
+      margin-left: .75em;
+      position: absolute;
+      top: -.2em;
+      font-size: 1.3em; }
     .slides-header > .header > span > input {
       width: auto;
       position: absolute;
@@ -7368,6 +7512,8 @@ input[type=range]::-ms-thumb {
         pointer-events: all; }
       .splitter > .left .unitdisk-nav #meta > .carousel {
         pointer-events: all; }
+      .splitter > .left .unitdisk-nav #meta > .data {
+        pointer-events: all; }
   .splitter > .right .wiki {
     width: 100%;
     height: 100%;
@@ -7392,7 +7538,7 @@ input[type=range]::-ms-thumb {
     pointer-events: none; }
 
 .splitter > .gutter {
-  background-color: #1e1e1e;
+  background-color: rgba(0, 0, 0, 0.1);
   border-right: #171717 solid 1pt; }
 
 .splitter > .right {

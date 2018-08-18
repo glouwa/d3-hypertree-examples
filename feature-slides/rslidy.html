@@ -20,11 +20,7 @@
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 </head>
-<body class="animated slidein" >
-  <script>
-    window.toinitialize = []
-    window.oninjected = ()=> window.toinitialize.forEach(e=> e())
-  </script>
+<body class="animated slidein" >  
   <style>
     .bottomh1 {
       position: absolute;
@@ -124,27 +120,25 @@
         [1] Henri Poincaré, 100 year ago...
       </footer>
   </div>
-
-  <!--
+  
   <div class="slide">      
     <h1 class="bottomh1">Unitvector Transformation</h1>
     <div id="hypertree-unitvector">        
-      <script>                    
-        window.toinitialize.push(()=>
+      <script>                            
           app.appendHypertree('#hypertree-unitvector', 
             options=> {
               const hmodel = options.presets.generatorModel()
               hmodel.iconmap = options.iconmap
               hmodel.onNodeSelect = ()=> {}
-              hmodel.layout = options.layouts.layoutUnitLines
+              hmodel.layout = {}
+              hmodel.layout.type = options.layouts.layoutUnitLines
               hmodel.dataloader = options.loaders.generators.star120
               hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
               return hmodel
-          }))        
+          })        
       </script>
     </div>     
   </div>
--->
 
   <div class="slide">
       <h1>Implementation</h1>
@@ -187,8 +181,7 @@
     <div class="slide">      
       <h1>ViewModel Hypertree</h1>
       <div id="viewmodel-ht1" style="height:85%;border: 1px solid #ddd;"></div>      
-      <script>
-          window.toinitialize.push(()=> 
+      <script>          
             app.appendTextUi('#viewmodel-ht1', 
 `export interface HypertreeModel
 {
@@ -209,16 +202,14 @@
         clipRadius:      number,                      
     }
 }`
-            )
-          )
+            )          
         </script>
     </div>
 
     <div class="slide">      
       <h1 class="bottomh1">SVG Limit (λ ~.1, no Weight Filter)</h1>
       <div id="hypertree2">
-        <script>                    
-          window.toinitialize.push(()=>
+        <script>                              
             app.appendHypertree('#hypertree2', 
               options=> {
                 const hmodel = options.presets.fsModel()
@@ -227,7 +218,7 @@
                 hmodel.dataloader = options.loaders.fromFile('./hierarchies/Example-files/fs.d3.json')
                 hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
                 return hmodel
-            }))
+            })
         </script>
       </div>     
     </div>
@@ -253,8 +244,7 @@
   <div class="slide">      
     <h1>ViewModel Hypertree</h1>
     <div id="viewmodel-ht2" style="height:85%;border: 1px solid #ddd;"></div>      
-    <script>
-        window.toinitialize.push(()=> 
+    <script>        
           app.appendTextUi('#viewmodel-ht2', 
 `export interface HypertreeModel
 {                     
@@ -282,16 +272,14 @@
         layers:          ((ls:IUnitDisk)=> ILayer)[]        
     }  
 }`
-              )
-            )
+              )            
           </script>
       </div>
 
   <div class="slide">      
     <h1 class="bottomh1">Perimeter Culling working (λ ~1)</h1>        
     <div id="hypertree-fulltree">      
-      <script>
-        window.toinitialize.push(()=>          
+      <script>        
         app.appendHypertree('#hypertree-fulltree', 
           options=> {
             const hmodel = options.presets.generatorModel()
@@ -301,7 +289,7 @@
             hmodel.dataloader = options.loaders.generators.nT1
             hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
             return hmodel
-        }))
+        })
       </script>
     </div>     
   </div>
@@ -323,8 +311,7 @@
   <div class="slide">
     <h1 class="bottomh1">Weight Culling working</h1>
     <div id="hypertree">
-      <script>        
-        window.toinitialize.push(()=>
+      <script>                
           app.appendHypertree('#hypertree', 
             options=> {
               const hmodel = options.presets.otolModel()
@@ -333,7 +320,7 @@
               hmodel.dataloader = options.loaders.fromFile('./hierarchies/Open-Tree-of-Life/carnivora.d3.json')
               hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
               return hmodel
-          }))
+          })
       </script>
     </div>
   </div>
@@ -341,8 +328,7 @@
   <div class="slide">      
     <h1 class="bottomh1">Weight Culling ~working<br>(Number of Nodes limited, User disorientated)</h1>
     <div id="hypertree3">
-      <script>                    
-        window.toinitialize.push(()=>
+      <script>        
           app.appendHypertree('#hypertree3', 
             options=> {
               const hmodel = options.presets.otolModel()
@@ -351,7 +337,7 @@
               hmodel.dataloader = options.loaders.fromFile('./hierarchies/Example-files/sample.skos.xml')
               hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
               return hmodel
-          }))
+          })
       </script>
     </div>     
   </div>
@@ -360,8 +346,7 @@
   <div class="slide">      
     <h1 class="bottomh1">Label Areas</h1>    
     <div id="hypertree-label-areas">
-        <script>        
-          window.toinitialize.push(()=>
+        <script>      
             app.appendHypertree('#hypertree-label-areas', 
               options=> {
                 const hmodel = options.presets.generatorModel()
@@ -371,7 +356,7 @@
                 hmodel.dataloader = options.loaders.generators.star501
                 hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
                 return hmodel
-            }))
+            })
         </script>
       </div>
   </div>
@@ -380,8 +365,7 @@
   <div class="slide">
     <h1 class="bottomh1">Interaction Traces</h1>    
     <div id="hypertree-interaction-traces">
-      <script>        
-        window.toinitialize.push(()=>
+      <script>                
           app.appendHypertree('#hypertree-interaction-traces', 
             options=> {
               const hmodel = options.presets.otolModel()
@@ -390,7 +374,7 @@
               hmodel.dataloader = options.loaders.fromFile('./hierarchies/Open-Tree-of-Life/carnivora.d3.json')
               hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
               return hmodel
-          }))
+          })
       </script>
     </div>
   </div>
@@ -399,8 +383,7 @@
   <div class="slide">
     <h1 class="bottomh1">Pathes</h1>    
     <div id="hypertree-pathes">
-      <script>        
-        window.toinitialize.push(()=>
+      <script>                
           app.appendHypertree('#hypertree-pathes', 
             options=> {
               const hmodel = options.presets.otolModel()
@@ -409,7 +392,7 @@
               hmodel.dataloader = options.loaders.fromFile('./hierarchies/Open-Tree-of-Life/carnivora.d3.json')
               hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
               return hmodel
-          }))
+          })
       </script>
     </div>
   </div>
@@ -417,8 +400,7 @@
   <div class="slide">      
     <h1 class="bottomh1">Finally</h1>
     <div id="hypertree4">
-      <script>                    
-        window.toinitialize.push(()=>
+      <script>        
           app.appendHypertree('#hypertree4', 
             options=> {
               const hmodel = options.presets.otolModel()
@@ -427,7 +409,7 @@
               hmodel.dataloader = options.loaders.fromFile('./hierarchies/Open-Tree-of-Life/laurasiatheria.d3.json')
               hmodel.langloader = options.loaders.fromLangFile('langmaps/de.lang.json')            
               return hmodel
-          }))
+          })
       </script>
     </div>     
   </div>
@@ -435,8 +417,7 @@
   <div class="slide">      
       <h1>ViewModel Hypertree</h1>
       <div id="viewmodel-ht3" style="height:85%;border: 1px solid #ddd;"></div>      
-      <script>
-          window.toinitialize.push(()=> 
+      <script>          
             app.appendTextUi('#viewmodel-ht3', 
 `export interface HypertreeModel
 {   
@@ -490,7 +471,6 @@
     }
 }`
           )
-        )
       </script>
   </div>
  

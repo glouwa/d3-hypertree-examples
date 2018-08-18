@@ -1,98 +1,66 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-
   <head>
-    <meta charset="UTF-8"/>    
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>d3-hypertree</title>     
-    <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael" />
-    
-    <link rel="stylesheet" href="rslidy.min.css"/>    
+    <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael" />    
+    <link rel="stylesheet" href="rslidy.min.css"/>
     <script src="rslidy.min.js"></script>
-
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
     <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
     <script src="d3-hypertree.js"></script>
   </head>
   <body>
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 200;
+            src: url('fonts/roboto/Roboto-Light.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'NotoColorEmoji';
+            src: url('fonts/noto/NotoColorEmoji.ttf') format('truetype');
+        }            
+    </style>
     <div class="slide" id="tree1">
       <script>
-        const hmodel1 = hyt.presets.otolModel()
-        hmodel1.dataloader = hyt.loaders.generators.nT1
-        hmodel1.langloader = ok=> ok()
-        hmodel1.iconmap = {
-            fileName2IconUrl: ()=>null,
-            emojimap: {
-                'Homo sapiens':'🧔🏽', 
-                Pan:'🐵', 
-                Gorilla:'🦍',
-                Haplorrhini:'🐒',
-                Alouatta:'🙉', 
-                Cacajao:'🙈', 
-                Macaca:'🙊'               
-            }                
-        }
         const component1 = new hyt.Hypertree(
           { parent: document.querySelector('#tree1') }, 
-          hmodel1
+          { dataloader: hyt.loaders.generators.nT1 }
         )
         component1.initPromise
-            .then(()=> new Promise((ok, err)=> component1.animateUp(ok, err)))
-            .then(()=> component1.drawDetailFrame())
-      </script>        
+          .then(()=> new Promise((ok, err)=> component1.animateUp(ok, err)))
+          .then(()=> component1.drawDetailFrame())
+      </script>
     </div>
     <div class="slide" id="tree2">
-        <script>
-          const hmodel2 = hyt.presets.otolModel()   
-          hmodel2.dataloader = hyt.loaders.generators.nT1
-          hmodel2.langloader = ok=> ok()
-          hmodel2.iconmap = {
-              fileName2IconUrl: ()=>null,
-              emojimap: {
-                  'Homo sapiens':'🧔🏽', 
-                  Pan:'🐵', 
-                  Gorilla:'🦍',
-                  Haplorrhini:'🐒',
-                  Alouatta:'🙉', 
-                  Cacajao:'🙈', 
-                  Macaca:'🙊'
-              }                
+      <script>        
+        const emojimap = {
+          'Homo sapiens':'🧔🏽', 
+          Pan:'🐵', 
+          Gorilla:'🦍',
+          Haplorrhini:'🐒',
+          Alouatta:'🙉', 
+          Cacajao:'🙈', 
+          Macaca:'🙊'
+        }
+        const component2 = new hyt.Hypertree(
+          { parent: document.querySelector('#tree2') }, 
+          {
+            langInitBFS: (ht, n)=> {
+              const id = n.data.name              
+              n.precalc.label = id
+              n.precalc.icon = emojimap[id]
+            },
+            dataloader: hyt.loaders.fromFile('primates.d3.json'),
           }
-          const component2 = new hyt.Hypertree(
-            { parent: document.querySelector('#tree2') }, 
-            hmodel2
-          )
-          component2.initPromise
-              .then(()=> new Promise((ok, err)=> component2.animateUp(ok, err)))
-              .then(()=> component2.drawDetailFrame())
-        </script>        
-      </div>
-      <div class="slide" id="tree3">
-          <script>
-            const hmodel3 = hyt.presets.otolModel()   
-            hmodel3.dataloader = hyt.loaders.generators.nT1
-            hmodel3.langloader = ok=> ok()
-            hmodel3.iconmap = {
-                fileName2IconUrl: ()=>null,
-                emojimap: {
-                    'Homo sapiens':'🧔🏽', 
-                    Pan:'🐵', 
-                    Gorilla:'🦍',
-                    Haplorrhini:'🐒',
-                    Alouatta:'🙉', 
-                    Cacajao:'🙈', 
-                    Macaca:'🙊'               
-                }                
-            }
-            const component3 = new hyt.Hypertree(
-              { parent: document.querySelector('#tree3') }, 
-              hmodel3
-            )
-            component3.initPromise
-                .then(()=> new Promise((ok, err)=> component3.animateUp(ok, err)))
-                .then(()=> component3.drawDetailFrame())
-          </script>        
-        </div>
+        )
+        component2.initPromise
+          .then(()=> new Promise((ok, err)=> component2.animateUp(ok, err)))
+          .then(()=> component2.drawDetailFrame())
+      </script>        
+    </div>   
   </body>
 </html>
