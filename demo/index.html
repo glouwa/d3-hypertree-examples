@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Hyperbolic tree</title>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael">
+
+        <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
+        <script src="d3-hypertree.js"></script>           
+    </head>
+    <body>
+        <script>    
+            var ua = window.navigator.userAgent
+            var msie = ua.indexOf("MSIE ")
+
+            const emojimap = {
+                'Homo sapiens':'🧔🏽', 
+                Pan:'🐵', 
+                Gorilla:'🦍',
+                Haplorrhini:'🐒',
+                Alouatta:'🙉', 
+                Cacajao:'🙈', 
+                Macaca:'🙊'
+            }            
+            const component = new hyt.Hypertree(
+                { parent: document.body },
+                {
+                    dataloader: hyt.loaders.fromFile('primates.d3.json'),
+                    langloader: hyt.loaders.fromLangFile('en.lang.json'),
+                    langInitBFS: (ht, n)=> {
+                        const id = n.data.name              
+                        n.precalc.label = id
+                        n.precalc.icon = emojimap[id]
+                    },
+                    filter: {
+                        maxlabels: 12
+                    },                    
+                    geometry: {
+                        captionFont: '12px Roboto',
+                        captionHeight: .09
+                    }
+                }
+            )
+            component.initPromise
+                .then(()=> new Promise((ok, err)=> component.animateUp(ok, err)))
+                .then(()=> component.drawDetailFrame())
+        </script>        
+        <style>
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 200;
+                src: url('fonts/roboto/Roboto-Light.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'NotoColorEmoji';
+                src: url('fonts/noto/NotoColorEmoji.ttf') format('truetype');
+            }
+            body {    
+                margin: 0;
+                overflow: hidden;
+                font-family: 'Roboto';
+                font-weight: 300;
+                font-size: 1.8em;
+            }
+            .unitdisk-nav svg {                
+                left: 0;                 
+                width: 100%;
+            }
+            .unitdisk-nav svg .lazy.cell {
+                stroke: #dedede;
+                stroke-width: .001;
+            }
+            .unitdisk-nav svg .focus-circle {    
+                stroke: none;
+            }            
+        </style>
+    </body>
+</html>
