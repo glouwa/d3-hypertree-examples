@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>d3-hypertree</title>     
+    <title>Hyperbolic Browsing</title>     
     <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael" />    
     <link rel="stylesheet" href="rslidy.min.css"/>
     <script src="rslidy.min.js"></script>
@@ -22,8 +22,212 @@
       @font-face {
         font-family: 'NotoColorEmoji';
         src: url('fonts/noto/NotoColorEmoji.ttf') format('truetype');
-      }            
+      }    
+      @font-face {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 200;    
+          src: url('fonts/roboto/Roboto-Light.woff2') format('woff2');
+      }
+      body {
+        font-family: 'Roboto';
+      } 
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;        
+      }
+      h1 {
+        font-size: 3em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+      ul {
+        margin-left: 5em;
+      }
+      li {
+        font-size: 2em;
+      }
+      footer {
+        position: absolute;
+        bottom: 2em;
+        right: 1em;
+      }
     </style>
+
+    <div class="slide">
+      <h1>Hyperbolic Browsing<h1>      
+      <h2>Michael Glatzhofer 2018</h2>    
+      <img height="75%" src="img/Escher-circle-limits-III.jpg" style="margin:-1em auto;display:block"></img>      
+      <footer class="reference">
+        [1] Circle Limit III, M.C. Escher 1959
+      </footer>
+    </div>    
+    <div class="slide">
+      <h1>Content</h1>
+        <ul>
+          <li>Hyperbolic Geometry</li>
+          <li>Early Systems</li>
+          <li>Implementations</li>
+        </ul>
+    </div>
+    <div class="slide">
+      <h1>Euclid 300 BC</h1>
+      <ul>
+        <li>To draw a straight line from any point to any point.</li>
+        <li>To produce [extend] a finite straight line continuously in a straight line.</li>
+        <li>To describe a circle with any centre and distance [radius].</li>
+        <li>That all right angles are equal to one another.</li>
+        <li>That, if a straight line falling on two straight lines <br>
+          make the interior angles on the same side less than two right angles, <br>
+          the two straight lines, if produced indefinitely, <br>
+          meet on that side on which the angles are less than two right angles.
+          </li>
+      </ul>
+    </div>
+    <div class="slide">
+      <h1>Playfair's axiom 1795</h1>
+      <ul>
+        <li>To draw a straight line from any point to any point.</li>
+        <li>To produce [extend] a finite straight line continuously in a straight line.</li>
+        <li>To describe a circle with any centre and distance [radius].</li>
+        <li>That all right angles are equal to one another.</li>
+        <li><s>That, if a straight line falling on two straight lines <br>
+            make the interior angles on the same side less than two right angles, <br>
+            the two straight lines, if produced indefinitely, <br> 
+            meet on that side on which the angles are less than two right angles.
+        </s></li>
+        <li>In a plane, through a point not on a given straight line, at most one line can be drawn that never meets the given line.</li>
+      </ul>  
+    </div>
+    <div class="slide">
+      <h1>Nikolai Lobachevsky 1823 (~Janos Bolyai 1823)</h1>
+      <ul>
+        <li>To draw a straight line from any point to any point.</li>
+        <li>To produce [extend] a finite straight line continuously in a straight line.</li>
+        <li>To describe a circle with any centre and distance [radius].</li>
+        <li>That all right angles are equal to one another.</li>
+        <li><s>In a plane, through a point not on a given straight line, at most one line can be drawn that never meets the given line.</s></li>
+        <li>For any given line R and point P not on R, in the plane containing both line R and point P there are at least two distinct lines through P that do not intersect R.</li>
+      </ul>
+    </div>    
+    <div class="slide">
+      <br><br><br><br><br><br>
+      <img src="img/curved-space.jpeg">
+      <footer class="reference">
+        Note: A Theorem of Hilbert states that it is not possible to place a full hyperbolc plane on ℝ<sup>3</sup>.
+      </footer>
+    </div>
+
+    <div class="slide">
+      <br><br>
+      <img src="img/construct-pos-curved.jpg">
+    </div>
+    
+    <div class="slide">
+      <img src="img/Folded_Coral_Flynn_Reef.jpg">      
+    </div>
+
+    <div class="slide">
+        <br><br><br><br><br><br>
+      <img src="img/hyperbolic-knit.jpg">      
+    </div>
+
+    <!--
+    <div class="slide">
+      <img src="img/always-overlap.jpg">
+    </div>
+    -->
+
+    <div class="slide">
+      <h1>Models (Projections)</h1>
+      <ul>
+        <li>Beltrami–Klein model (1871)</li>
+        <li><b>Poincaré disk model (1873)</b></li>
+        <li>Poincaré half-plane model (1873)</li>
+        <li>Hyperboloid model</li>
+        <li>Hemisphere model</li>
+        <li>Gans model (1966)</li>
+        <li>Band model</li>    
+      </ul>  
+    </div>
+
+
+    <div class="slide">
+      <h1>Poincaré Disk Model</h1>      
+      <br>
+      <p style="font-size:2em;">$$Focus\ point:\ P \in ℂ $$</p>
+      <p style="font-size:2em;">$$Rotaion:\ \theta \in ℂ $$</p>
+      <p style="font-size:2em;">$$Node\ layout:\ z \in ℂ $$</p>
+      <br>      
+      <p style="font-size:3em;">$$z_t = {\frac{\theta z + P}{1 + \bar{P} \theta z}}$$</p>
+      <br>      
+      <p style="font-size:2em;">$$Identity\ transformation:\ \Big(P=0, \theta=1\Big) $$</p>
+      <footer class="reference">
+        [1] Henri Poincaré, 100 year ago...
+      </footer>
+    </div>
+
+    <div class="slide">
+      <h1>Poincaré Disk Model</h1>
+      <img src="img/Poincare-n-parallel.svg"  width="450">      
+      <img src="img/Poincare-tiling.png" width="450">
+    </div>
+
+    
+
+    <div class="slide">       
+      <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/NN89X2u_eIU?start=7&end=16" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+   
+    <div class="slide">       
+      <h1>Early Systems</h1>
+      <ul>
+        <li>Hyperbolic Browser: Lamping, Rao (1995)</li>
+        <li>H3: Munzner (1998)</li>
+      </ul>  
+    </div>
+
+    <div class="slide">       
+      <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/8bhq08BQLDs" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+    </div>    
+    <div class="slide">       
+      <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/fhbQy_NCwWI" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+    
+    <div class="slide">       
+        <h1>Layout Algorithms</h1>
+        <ul>
+          <li>Rao Lamping</li>
+          <li>Munzner</li>
+          <li>Bergé</li>
+        </ul>        
+    </div>
+
+    <div class="slide">       
+      <h1>Interaction Concepts</h1>      
+    </div>
+
+    <div class="slide">       
+      <h1>Other Implementations</h1>      
+      <ul>
+        <li>HVS</li>
+        <li>Deep Green</li>
+        <li>Walrus</li>
+        <li>InfoVis Toolkit</li>
+        <li>https://github.com/ItsNickBarry/hyperbolic-canvas</li>
+        <li>https://unused.github.io/hyperbolic-tree-browser/</li>
+        
+      </ul>
+    </div>
+
+    <div class="slide">       
+        <iframe width="100%" height="100%" style="margin:auto auto" src="https://itsnickbarry.github.io/hyperbolic-canvas/example.html?script=mouse-interaction" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
+    </div>
+    
+
     <div class="slide" id="tree1">
       <script>
         const component1 = new hyt.Hypertree(
