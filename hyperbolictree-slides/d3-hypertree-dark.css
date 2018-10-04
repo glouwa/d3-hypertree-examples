@@ -21,7 +21,7 @@
     .unitdisk-nav .tool-bar .tool-seperator {
       margin-top: .6em; }
     .unitdisk-nav .tool-bar .tool-seperator:first-child {
-      margin-top: .32em; }
+      margin-top: 1em; }
     .unitdisk-nav .tool-bar .tool-active {
       background-color: #333; }
   .unitdisk-nav .path-bar {
@@ -116,7 +116,7 @@
   word-spacing: .3em;
   position: absolute;
   top: -1.6em;
-  left: 18em; }
+  left: 7em; }
 
 .absolute-center {
   margin: auto;
@@ -147,6 +147,9 @@
   text-indent: .5em;
   outline: none;
   border: none; }
+
+#path-toolbar {
+  visibility: hidden; }
 
 #query-input {
   background-color: #333;

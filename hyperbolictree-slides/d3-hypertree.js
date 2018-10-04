@@ -71,7 +71,8 @@ var hyt =
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-function dfs(n, fpre, idx = 0) {
+function dfs(n, fpre, idx) {
+    idx = idx || 0;
     if (!n)
         return [];
     if (fpre)
@@ -686,17 +687,19 @@ class D3UpdatePattern {
         this.mainSvgGroup.selectAll('rect').remove();
         var svgRootHere = this.mainSvgGroup;
         var T = this;
+        var geometry = T.args.layer.view.hypertree.args.geometry;
         if (T.args.layer.view.unitdisk) {
-            this.mainSvgGroup.selectAll("text").each(function (d, i, v) {
+            this.mainSvgGroup.selectAll("text")
+                .each(function (d, i, v) {
                 if (true) {
                     var view = v[i];
                     var w = d.precalc.labellen; //= d.precalc.labellen || view.getComputedTextLength()
-                    var h = 0.04;
+                    var h = geometry.captionHeight;
                     var paddingLeftRight = .08;
                     var paddingTopBottom = .02;
                     svgRootHere.insert('rect', d => this)
                         .attr("x", x => -paddingLeftRight / 2)
-                        .attr("y", x => -paddingTopBottom * 2)
+                        .attr("y", x => -paddingTopBottom - h / 2)
                         .attr("rx", x => .01) //.009
                         .attr("ry", x => .03) //.009
                         .attr("width", x => w + paddingLeftRight)
@@ -3404,11 +3407,13 @@ function layoutBergé(n, λ, noRecursion = false) {
         let resetCount = 0;
         let anglesum = 0;
         cl.forEach((cn, i) => {
+            const nlen = (n.children || []).length;
             const cnlen = (cn.children || []).length;
             //const angleWeight = (Math.log10(n.value  || cllen || 1))
             //                  / (Math.log10(cn.value || 1))
-            const angleWeight = (cn.precalc.layoutWeight || 1)
-                / (n.precalc.layoutWeight || cllen || 1);
+            //const angleWeight = (cn.precalc.layoutWeight || 1) / ( n.precalc.layoutWeight || cllen || 1)            
+            const angleWeight = cn.precalc.layoutWeight / n.precalc.layoutWeight;
+            //const angleWeight = .99 / nlen
             anglesum += angleWeight;
             //const angleWeight = 1 / cllen
             const angleOffset = angleWidth * angleWeight;
@@ -4679,6 +4684,7 @@ class UnitDiskNav {
             clipRadius: 1,
             captionBackground: args.captionBackground,
             captionFont: args.captionFont,
+            captionHeight: args.captionHeight,
         });
         var navTransformation = new hyperbolic_transformation_2.NegTransformation(new hyperbolic_transformation_1.PanTransformation(args.transformation.state));
         //var ncount = 1        
@@ -4723,6 +4729,7 @@ class UnitDiskNav {
             clipRadius: 1.7,
             captionBackground: args.captionBackground,
             captionFont: args.captionFont,
+            captionHeight: args.captionHeight
         });
     }
     get voronoiLayout() {
@@ -12688,7 +12695,7 @@ exports.layerSrc = [
     // interaction-hammer
     (v, ud) => new background_layer_1.BackgroundLayer(v, {}),
     (v, ud) => new cell_layer_1.CellLayer(v, {
-        invisible: false,
+        invisible: true,
         hideOnDrag: true,
         clip: '#circle-clip' + ud.args.clipRadius,
         data: () => ud.cache.cells,
@@ -12757,7 +12764,7 @@ exports.layerSrc = [
             + ` scale(${ud.args.nodeScale(d)})`,
     }),
     (v, ud) => new node_layer_1.NodeLayer(v, {
-        invisible: false,
+        invisible: true,
         hideOnDrag: true,
         name: 'center-node',
         className: 'center-node',
@@ -12767,6 +12774,7 @@ exports.layerSrc = [
         transform: d => d.transformStrCache
             + ` scale(${ud.args.nodeScale(d)})`,
     }),
+    // links 
     (v, ud) => new link_layer_1.ArcLayer(v, {
         invisible: false,
         hideOnDrag: false,
@@ -12822,6 +12830,7 @@ exports.layerSrc = [
             (((d.pathes && d.pathes.isPartOfAnySelectionPath) ||
                 (d.pathes && d.pathes.isPartOfAnyHoverPath)) ? .015 : 0)),
     }),
+    // nodes
     (v, ud) => new node_layer_1.NodeLayer(v, {
         invisible: false,
         hideOnDrag: true,
@@ -13176,6 +13185,7 @@ class Hypertree {
             offsetLabels: this.args.geometry.offsetLabels,
             captionBackground: this.args.geometry.captionBackground,
             captionFont: this.args.geometry.captionFont,
+            captionHeight: this.args.geometry.captionHeight,
         });
     }
     //########################################################################################################
@@ -18070,9 +18080,11 @@ const modelBase = () => ({
         weightFilter: {
             magic: 160,
             alpha: 1.05,
-            weight: n => (isLeaf(n) ? 1 : 0),
+            //weight:             n=> (isLeaf(n) ? 1 : 0),
+            //weight:             n=> (isLeaf(n) ? 1 : Math.pow(n.height, 5)),
+            weight: n => (isLeaf(n) ? 1 : n.height * n.height),
             rangeCullingWeight: { min: 4, max: 500 },
-            rangeNodes: { min: 300, max: 700 },
+            rangeNodes: { min: 150, max: 500 },
         },
         focusExtension: 1.6,
         maxFocusRadius: .85,
@@ -18094,6 +18106,7 @@ const modelBase = () => ({
         linkCurvature: '-',
         captionBackground: 'all',
         captionFont: '6.5px Roboto',
+        captionHeight: .04,
         transformation: new d3_hypertree_1.HyperbolicTransformation({
             P: { re: 0, im: 0 },
             θ: { re: 1, im: 0 },
@@ -18102,6 +18115,10 @@ const modelBase = () => ({
     },
     interaction: {
         mouseRadius: .9,
+        onNodeClick: (n, m) => { },
+        onCenterNodeChange: (n) => { },
+        onWikiCenterNodeChange: (n) => { },
+        onHoverNodeChange: (n) => { },
         onNodeSelect: () => { },
         onNodeHold: () => { },
         onNodeHover: () => { },
@@ -18119,9 +18136,18 @@ exports.presets = {
             n.precalc.label = l || id;
             n.precalc.clickable = Boolean(l);
         },
-        //},            
+        layout: {
+            weight: (n) => (isLeaf(n) ? 1 : 0),
+            rootWedge: {
+                orientation: 3 * π / 2,
+                angle: .7 * π / 2
+            }
+        },
         geometry: {
             nodeRadius: nodeInitR(.0075)
+        },
+        interaction: {
+            λbounds: [1 / 40, .55],
         }
     }),
     generatorModel: () => ({
@@ -18163,7 +18189,7 @@ exports.presets = {
             nodeRadius: nodeInitR(.0075)
         },
         interaction: {
-            λbounds: [1 / 7, .8]
+            λbounds: [1 / 7, .9]
         }
     }),
     fsModel: () => ({
@@ -18188,7 +18214,24 @@ exports.presets = {
                 maxlabels: 25,
             },
             layout: {
-                initSize: .85
+                initSize: .9,
+                weight: (n) => {
+                    if (isLeaf(n))
+                        return 1;
+                    else if (n.data && n.data.name == 'Open-Tree-of-Life')
+                        return 30;
+                    else
+                        return 0;
+                },
+                /*weight:   (n:N)=> (isLeaf(n)
+                    ?1
+                    :((n.data && n.data.name == 'Open-Tree-of-Life')
+                        ?30
+                        :0)),*/
+                rootWedge: {
+                    orientation: 3 * π / 2,
+                    angle: 3 * π / 2
+                }
             },
             geometry: {
                 nodeRadius: nodeInitRNoInner(.0001),
@@ -18196,7 +18239,8 @@ exports.presets = {
                 nodeFilter: n => true,
             },
             interaction: {
-                //onNodeSelect: s=> { console.log('###########', s) },
+                onNodeSelect: s => { console.log('###########', s); },
+                onNodeHover: s => { console.log('########onnodehover', s); },
                 λbounds: [1 / 5, .75],
             },
             langInitBFS: (ht, n) => {
@@ -20521,14 +20565,19 @@ class InteractionLayer2 {
         const n = q ? q.data : undefined;
         this.ripple(m, n);
         console.log('click', this.dist(this.panStart, m), n, this.view.unitdisk.args.transformation.cache.centerNode);
-        if (false) {
+        if (!this.view.hypertree.isAnimationRunning())
+            this.view.hypertree.args.interaction.onNodeClick(n, m, this);
+        /*
+        if (n.mergeId !== this.view.unitdisk.args.transformation.cache.centerNode.mergeId) {
             //console.log('not same --> goto node')
-            //this.view.hypertree.api.gotoNode(n)
-        }
+            this.view.hypertree.api.goto(CmulR({ re:n.layout.z.re, im:n.layout.z.im }, -1), null)
+                .then(()=> this.view.hypertree.drawDetailFrame())
+        }*/
+        /*
         else {
-            console.log('click on center');
-            this.args.onClick(n, m);
-        }
+            console.log('click on center')
+            this.args.onClick(n, m)
+        }*/
     }
     findTrace(pid) {
         return this.view.hypertree.args.objects.traces.find(e => e.id === pid);
@@ -39214,8 +39263,9 @@ const maintoobarHTML = `
     ${btn('btnupload', 'cloud_upload', 'disabled')}            
     -->
 
-    ${btn('btnhome', 'home', 'disabled tool-seperator')}
-    ${btn('btnquery', 'search')}
+    ${btn('btnquery', 'search', 'tool-seperator')}
+    ${btn('btnhome', 'home', 'disabled')}
+    
     
     <!--
     ,530, 470
@@ -39306,7 +39356,9 @@ class HypertreeEx extends hypertree_1.Hypertree {
                 const pathStr = centerNode
                     .ancestors()
                     .reduce((a, e) => `${e.precalc.label ? ("  " + e.precalc.label + "  ") : ''}${a ? "›" : ""}${a}`, '');
-                this.view_.path.innerText = pathStr; // todo: html m frame?
+                /*
+                            this.view_.path.innerText = pathStr // todo: html m frame?
+                */
                 if (centerNode === this.data && !this.view_.btnHome.classList.contains('disabled')) {
                     this.view_.btnHome.classList.add('disabled');
                     //this.view_.btnPathHome.classList.add('disabled')
@@ -39314,6 +39366,13 @@ class HypertreeEx extends hypertree_1.Hypertree {
                 if (centerNode !== this.data && this.view_.btnHome.classList.contains('disabled')) {
                     this.view_.btnHome.classList.remove('disabled');
                     //this.view_.btnPathHome.classList.remove('disabled')
+                }
+                if (!this.isAnimationRunning() && centerNode.data.name !== 'Root') {
+                    const find = this.unitdisk.cache.voronoiDiagram.find(0, 0);
+                    if (find) {
+                        //console.log('found centernode by voro', pathStr, find.data)
+                        this.args.interaction.onNodeSelect(find.data);
+                    }
                 }
             }
         };
