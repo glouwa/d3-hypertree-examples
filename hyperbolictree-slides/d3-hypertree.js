@@ -12009,7 +12009,10 @@ class HyperbolicTransformation {
         this.onDragEnd = (m) => this.dST = undefined;
         this.isMoving = () => this.dST !== undefined;
         this.onDragP = (s, e) => {
-            this.state.P = hyperbolic_math_3.compose(this.dST, hyperbolic_math_3.shift(this.dST, s, hyperbolic_math_4.maxR(e, this.maxMouseR))).P;
+            const nt = hyperbolic_math_3.compose(this.dST, hyperbolic_math_3.shift(this.dST, s, hyperbolic_math_4.maxR(e, this.maxMouseR)));
+            this.state.P = nt.P;
+            this.state.θ = nt.θ;
+            //this.state.θ = setR(nt.θ)
         };
         this.onDragθ = (s, e) => { };
         this.onDragλ = (l) => this.state.λ = l;

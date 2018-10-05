@@ -81,11 +81,12 @@
     </div>    
     <div class="slide">
       <h1>Content</h1>
-        <ul>
-          <li>A brief history of hyperbolic geometry</li>
-          <li>Early hyperbolic browsing systems</li>
-          <li>Available UI components and modules 2018</li>
-        </ul>
+      <br>
+      <ul>
+        <li>A brief history of hyperbolic geometry</li>
+        <li>Early hyperbolic browsing systems</li>
+        <li>Available UI components and modules 2018</li>
+      </ul>
     </div>
     <div class="slide">
       <h1>Euclid's Axioms 300 BC</h1>
@@ -305,7 +306,7 @@
           width: 95%;
           display: grid;          
           grid-column-gap: 2em;
-          grid-row-gap: 0em;
+          grid-row-gap: 1em;
           grid-template-columns: 15% 10% 28% auto auto auto auto auto;
           grid-template-rows: auto;          
         }
@@ -331,8 +332,8 @@
           margin: -.2em auto;
         }
         #bandimg {
-          height: 2.5em;
-          margin:.5em auto .3em auto;
+          height: 4em;
+          margin:.5em auto;
         }
         #halfimg {
           height: 4em;
@@ -375,21 +376,21 @@
         <div class="grid-item3">❌</div>
         <div class="grid-item3">✔️</div>
         <div class="grid-item3">❌️</div>
-        <div class="grid-item3"></div>
+        <div class="grid-item3">✔️</div>
        
-        <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageHypPoincare2.svg.png"></div>        
-        <div class="grid-item2">1966</div>
-        <div class="grid-item2">Gans model</div>
-        <div class="grid-item3">❌</div>     
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-
         <div class="grid-item2"><img src="img/heptagonaltiling/Band_Model.png" id="bandimg"></div>        
         <div class="grid-item2"></div>
         <div class="grid-item2">Band model</div>        
         <div class="grid-item3">〰️</div>     
+        <div class="grid-item3">❌️</div>
+        <div class="grid-item3">✔️️️️️️</div>
+        <div class="grid-item3">❌️</div>
+        <div class="grid-item3">✔️</div>
+
+        <div class="grid-item2"></div>        
+        <div class="grid-item2">1966</div>
+        <div class="grid-item2">Gans model</div>
+        <div class="grid-item3">❌</div>     
         <div class="grid-item3"></div>
         <div class="grid-item3"></div>
         <div class="grid-item3"></div>
@@ -434,11 +435,11 @@
     <div class="slide">
       <h1>Poincaré Disk Model 1873</h1>      
       <br>
-      <p style="font-size:2em;">$$z_h \mapsto z_e  \qquad z_h, z_e \in ℂ $$</p>
+      <p style="font-size:2em;">$$z_h \mapsto z_e \qquad z_h, z_e \in ℂ $$</p>
       <p style="font-size:2em;">$$translation:\ P \in ℂ $$</p>
       <p style="font-size:2em;">$$rotaion:\ \theta \in ℂ $$</p>      
-      <p style="font-size:2em;">$$z_e = {\frac{\theta z_h + P}{1 + \overline{P} \theta z_h}}$$</p>
-      <p style="font-size:2em;">$$inverse:\ z_h = {\frac{\overline{\theta} z_h + -\overline{\theta}P}{1 + \overline{-\overline{\theta}P} \overline{\theta} z_h}}$$</p>
+      <p style="font-size:2em;">$$transformation:\ z_e = {\frac{\theta z_h + P}{1 + \overline{P} \theta z_h}}$$</p>
+      <p style="font-size:2em;">$$inverse:\ z_h = {\frac{\overline{\theta} z_e + -\overline{\theta}P}{1 + \overline{-\overline{\theta}P} \overline{\theta} z_e}}$$</p>
       <p style="font-size:2em;">$$\Big(P_1,\theta_1\Big)\circ\Big(P_2,\theta_2\Big) = \Big(\frac{\theta_2 P_1 + P_2}{\theta_2 P_1 \overline{P_2} + 1}, \frac{\theta_1\theta_2+\theta_1\overline{P_1}P_2}{\theta_2 P_1 \overline{P_2}+1}\Big)$$</p>
       
       <br>      
@@ -450,8 +451,19 @@
     </div>
 
     <div class="slide">
-        <h1>Poincaré Disk Model Animation</h1>      
-      <iframe width="100%" height="80%" style="margin:auto auto" src="https://www.youtube.com/embed/NN89X2u_eIU?start=7&end=16" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      <style>      
+        #lserfvideo {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 10em;
+          bottom: 5em; 
+        }
+      </style>
+      <h1>Poincaré Disk Model Animation</h1>      
+      <div id="lserfvideo">
+        <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/NN89X2u_eIU?start=7&end=16" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
       <footer class="reference">
         <a href="https://www.youtube.com/watch?v=NN89X2u_eIU">Youtube: Loren Serfass</a>
       </footer>      
@@ -463,10 +475,10 @@
           visibility: hidden;
           height: 0;
           margin: 0;
-        }
+        }       
       </style>
-      <h1>lserf.shinyapps.io</h1>      
-      <iframe width="100%" height="95%" style="margin:auto auto" src="https://lserf.shinyapps.io/HyperbolicImagePicker/" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      <h1>lserf.shinyapps.io</h1>
+      <iframe width="100%" height="95%" style="margin:auto auto" src="https://lserf.shinyapps.io/HyperbolicImagePicker/" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>      
       <footer class="reference">
         <a href="https://lserf.shinyapps.io/HyperbolicImagePicker/">Shinyapps: Loren Serfass</a>
       </footer>      
@@ -474,8 +486,8 @@
 
     <div class="slide">
         <h1>Poincaré Disk Model of Schläfli {7,3} Tiling</h1>        
-        <br><br><br>
-        <img src="img/1024px-Heptagonal_tiling.svg.png" height="70%">
+        <br><br><br><br><br>
+        <img src="img/1024px-Heptagonal_tiling.svg.png" height="65%">
 
         <footer class="reference">
           CC0 Wikipedia
@@ -485,7 +497,7 @@
     <div class="slide">
       <h1>Poincaré Disk Model and Hierarchies</h1>        
       <br><br><br>
-      <img src="img/1024px-Heptagonal_tiling-withtree.svg" height="70%">
+      <img src="img/1024px-Heptagonal_tiling-withtree.svg" height="65%">
 
       <footer class="reference">        
         CC0 Wikipedia + Own work overlay
@@ -495,7 +507,7 @@
     <div class="slide">     
       <h1>Schläfli {∞,3} Tiling of ℍ²</h1>  
       <br><br><br>
-      <img src="img/1280px-H2_tiling_23i-1.png" height="70%"> 
+      <img src="img/1280px-H2_tiling_23i-1.png" height="65%"> 
       <footer class="reference">
           CC0 Wikipedia
         <!--https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds-->
@@ -504,7 +516,7 @@
 
       <div class="slide">    
         <h1>Schläfli {∞,3} Tiling Edges = Full binary Tree</h1>  
-        <br><br><br>
+        <br><br>
         <div id="tree1" style="position: relative;width: 75%;height: 75%;margin: auto;"></div>
         <script>          
           const component1 = new hyt.Hypertree(
@@ -535,12 +547,39 @@
       
     <div class="slide">       
       <h1>Early Systems</h1>
-      <ul>
-        <li>Hyperbolic Browser: Lamping, Rao (1994)</li>
-        <li>H3: Munzner (1998)</li>
-      </ul>        
-        <iframe width="49%" height="65%" style="margin:auto auto" src="https://www.youtube.com/embed/8bhq08BQLDs" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-        <iframe width="49%" height="65%" style="margin:auto auto" src="https://www.youtube.com/embed/fhbQy_NCwWI" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>      
+      <style>
+        h2 {
+          text-align: center;          
+          margin-bottom: 1em;
+          font-size: 2rem;
+          font-weight: 100;
+        }
+        #ramana {
+          position: absolute;
+          left: 0;
+          right: 50%;
+          top: 9em;
+          bottom: 10em;
+        }
+        #tamara {
+          position: absolute;
+          left: 50%;
+          right: 0%;
+          top: 9em;
+          bottom: 10em;
+        }    
+      </style>
+      
+      <div id="ramana">
+        <h2>Hyperbolic Browser: Lamping, Rao 1994</h2>
+        <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/8bhq08BQLDs" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div id="tamara">
+        <h2>H3: Munzner 1998</h2>
+        <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/fhbQy_NCwWI" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>              
+      </div>
+            
       <footer class="reference">
           <a href="https://www.youtube.com/channel/UCnuYznpiC6fO0XyLKGAGFng">YouTube: Tamara Munzner</a><br>
           <a href="https://www.youtube.com/user/treerao">Youtube: Ramana Rao</a>
@@ -549,6 +588,7 @@
 
     <div class="slide">       
         <h1>Layout Algorithms</h1>
+        <br><br>
         <ul>
           <li>Rao, Lamping</li>
           <li>Munzner</li>
@@ -558,7 +598,7 @@
 
     <div class="slide">       
       <h1>Transformation Modifications</h1>
-
+      <br><br>
       <ul>
           <li>Panning</li>
           <li>Zooming
@@ -569,9 +609,7 @@
           </li>
           <li>Rotation correction</li>          
           <li>Euclidean post transformations</li>
-        </ul>  
-      
-      
+        </ul>
     </div>
 
     <!--
@@ -582,10 +620,11 @@
 
     <div class="slide">             
       <h1>Known Implementations and Applications</h1>
+      <br><br>
       <div style="float:left;width:50%;margin-left:5em;">
           <h1>ℍ²</h1>
           <ul>             
-            <li>Xerox/Inxight <sub>(Java)</sub>
+            <li>Xerox/Inxight <sub>(Lisp, C, Java)</sub>
               <ul>
                   <li>Deep Green</li>    
                   <li>Lexisnexis</li>
@@ -703,7 +742,7 @@
     </div>   
 
     <div class="slide">
-      <h1>Thank You for Your Attention</h1>
+      <h1>Thank You For Your Attention</h1>
       <br><br>
       <ul style="list-style: none;">
         <li>
