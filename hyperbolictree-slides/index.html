@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="img/Uniform_tiling_532-t0.png"/>
+
     <title>Hyperbolic Browsing</title>     
     <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael" />    
+
     <link rel="stylesheet" href="rslidy.min.css"/>
     <script src="rslidy.min.js"></script>
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -67,6 +70,7 @@
         position: absolute;
         bottom: 2em;
         right: 1em;
+        text-align: right;
       }
     </style>
 
@@ -90,6 +94,7 @@
     </div>
     <div class="slide">
       <h1>Euclid's Axioms 300 BC</h1>
+      <br>
       <ul>
         <li>Any two points lie on a unique line.</li>
         <li>Any straight line can be continued indefinitely in either direction.</li>
@@ -105,6 +110,7 @@
     </div>
     <div class="slide">
       <h1>Playfair's Axiom 1795</h1>
+      <br>
       <ul>
           <li>Any two points lie on a unique line.</li>
           <li>Any straight line can be continued indefinitely in either direction.</li>
@@ -119,11 +125,12 @@
            at most one line can be drawn that never meets the given line.</li>
       </ul>  
       
-      <br><br>
+      <br><br><br><br>
       <img src="img/playfair.svg" style="height:10em;">
     </div>
     <div class="slide">
       <h1>Nikolai Lobachevsky 1823 (Janos Bolyai 1823 too)</h1>
+      <br>
       <ul>
         <li>Any two points lie on a unique line.</li>
         <li>Any straight line can be continued indefinitely in either direction.</li>
@@ -132,6 +139,7 @@
         <li><s>In a plane, through a point not on a given straight line, at most one line can be drawn that never meets the given line.</s></li>
         <li>For any given line R and point P not on R, in the plane containing both line R and point P there are at least two distinct lines through P that do not intersect R.</li>
       </ul>
+      <br><br>
       <img src="img/Poincare-n-parallel.svg" style="height:15em;">
       <footer class="reference">
         CC0 Wikipedia
@@ -274,7 +282,8 @@
       <img src="img/crochet_10.jpg"              style="height: 35%;float:left;">            
       <img src="img/hyperbolic-knit.jpg"         style="height: 35%;float:left;">      
       <footer class="reference">
-          CC0 Wikipedia<br>hyperbolic-crochet.blogspot.com
+          CC0 Wikipedia<br>
+          <a href="hyperbolic-crochet.blogspot.com">Daina Taimina</a>
       </footer>
     </div>
 
@@ -329,15 +338,15 @@
           height: 6em;
           max-width: none;
           max-height: none;
-          margin: -.2em auto;
+          margin: -.55em auto;
         }
         #bandimg {
           height: 4em;
-          margin:.5em auto;
+          margin:-.5em auto .5em auto;
         }
         #halfimg {
           height: 4em;
-          margin:.5em auto .1em auto;
+          margin:.5em auto;
         }
       </style>
 
@@ -346,17 +355,17 @@
         <div class="grid-item2 preser"></div>
         <div class="grid-item2 preser"></div>
         <div class="grid-item3 preser">Length</div>     
+        <div class="grid-item3 preser">Area</div>
         <div class="grid-item3 preser">Straightness</div>
-        <div class="grid-item3 preser">Angles</div>
-        <div class="grid-item3 preser">Areas</div>
-        <div class="grid-item3 preser">Circles</div>     
+        <div class="grid-item3 preser">Angle</div>        
+        <div class="grid-item3 preser">Circle</div>     
 
         <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageKleinBeltrami.svg.png"></div>        
         <div class="grid-item2">1871</div>
         <div class="grid-item2">Beltrami–Klein model</div>
         <div class="grid-item3">❌</div>     
-        <div class="grid-item3">✔️</div>
         <div class="grid-item3">❌</div>
+        <div class="grid-item3">✔️</div>        
         <div class="grid-item3">❌</div>
         <div class="grid-item3">❌</div>     
 
@@ -365,8 +374,8 @@
         <div class="grid-item2">Poincaré disk model</div>
         <div class="grid-item3">❌</div>     
         <div class="grid-item3">❌</div>
-        <div class="grid-item3">✔️</div>
         <div class="grid-item3">❌️</div>
+        <div class="grid-item3">✔️</div>
         <div class="grid-item3">✔️</div>
 
         <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageDemiPlanPoincare.svg.png" id="halfimg"></div>
@@ -374,8 +383,8 @@
         <div class="grid-item2">Poincaré half-plane model</div>
         <div class="grid-item3">❌</div>     
         <div class="grid-item3">❌</div>
-        <div class="grid-item3">✔️</div>
         <div class="grid-item3">❌️</div>
+        <div class="grid-item3">✔️</div>        
         <div class="grid-item3">✔️</div>
        
         <div class="grid-item2"><img src="img/heptagonaltiling/Band_Model.png" id="bandimg"></div>        
@@ -383,8 +392,8 @@
         <div class="grid-item2">Band model</div>        
         <div class="grid-item3">〰️</div>     
         <div class="grid-item3">❌️</div>
-        <div class="grid-item3">✔️️️️️️</div>
         <div class="grid-item3">❌️</div>
+        <div class="grid-item3">✔️️️️️️</div>        
         <div class="grid-item3">✔️</div>
 
         <div class="grid-item2"></div>        
@@ -440,13 +449,13 @@
       <p style="font-size:2em;">$$rotaion:\ \theta \in ℂ $$</p>      
       <p style="font-size:2em;">$$transformation:\ z_e = {\frac{\theta z_h + P}{1 + \overline{P} \theta z_h}}$$</p>
       <p style="font-size:2em;">$$inverse:\ z_h = {\frac{\overline{\theta} z_e + -\overline{\theta}P}{1 + \overline{-\overline{\theta}P} \overline{\theta} z_e}}$$</p>
-      <p style="font-size:2em;">$$\Big(P_1,\theta_1\Big)\circ\Big(P_2,\theta_2\Big) = \Big(\frac{\theta_2 P_1 + P_2}{\theta_2 P_1 \overline{P_2} + 1}, \frac{\theta_1\theta_2+\theta_1\overline{P_1}P_2}{\theta_2 P_1 \overline{P_2}+1}\Big)$$</p>
+      <p style="font-size:2em;">$$composition:\ \Big(P_1,\theta_1\Big)\circ\Big(P_2,\theta_2\Big) = \Big(\frac{\theta_2 P_1 + P_2}{\theta_2 P_1 \overline{P_2} + 1}, \frac{\theta_1\theta_2+\theta_1\overline{P_1}P_2}{\theta_2 P_1 \overline{P_2}+1}\Big)$$</p>
       
       <br>      
       <p style="font-size:2em;">$$identity\ transformation:\ \Big(P=0, \theta=1\Big) $$</p>
       <p style="font-size:2em;">$$focusing\ point\ \alpha_h:\ \Big(P=-\alpha_h, \theta=1\Big) $$</p>
       <footer class="reference">
-        [1] Henri Poincaré, 1873
+        Henri Poincaré, 1873
       </footer>
     </div>
 
@@ -485,18 +494,18 @@
     </div>    
 
     <div class="slide">
-        <h1>Poincaré Disk Model of Schläfli {7,3} Tiling</h1>        
-        <br><br><br><br><br>
-        <img src="img/1024px-Heptagonal_tiling.svg.png" height="65%">
+      <h1>Poincaré Disk Model of Schläfli {7,3} Tiling</h1>        
+      <br><br><br><br>
+      <img src="img/1024px-Heptagonal_tiling.svg.png" height="65%">
 
-        <footer class="reference">
-          CC0 Wikipedia
-        </footer>
+      <footer class="reference">
+        CC0 Wikipedia
+      </footer>
     </div>
 
     <div class="slide">
       <h1>Poincaré Disk Model and Hierarchies</h1>        
-      <br><br><br>
+      <br><br><br><br>
       <img src="img/1024px-Heptagonal_tiling-withtree.svg" height="65%">
 
       <footer class="reference">        
@@ -506,7 +515,7 @@
 
     <div class="slide">     
       <h1>Schläfli {∞,3} Tiling of ℍ²</h1>  
-      <br><br><br>
+      <br><br><br><br>
       <img src="img/1280px-H2_tiling_23i-1.png" height="65%"> 
       <footer class="reference">
           CC0 Wikipedia
@@ -557,7 +566,7 @@
         #ramana {
           position: absolute;
           left: 0;
-          right: 50%;
+          right: 50.5%;
           top: 9em;
           bottom: 10em;
         }
@@ -623,19 +632,19 @@
       <br><br>
       <div style="float:left;width:50%;margin-left:5em;">
           <h1>ℍ²</h1>
-          <ul>             
+          <ul>            
             <li>Xerox/Inxight <sub>(Lisp, C, Java)</sub>
               <ul>
                   <li>Deep Green</li>    
-                  <li>Lexisnexis</li>
-                  <li>Treebolic</li>        
+                  <li>Lexisnexis</li>                  
                   <li>MagniFind</li>
               </ul>
-            </li>        
+            </li>            
+            <li><a href="http://www.kinase.com/tools/HyperTree.html">HyperTree</a> <sub>(Java)</sub></li>    
             <li>HVS <sub>(Java)</sub></li>        
-            <li>HyperTree <sub>(Java)</sub></li>
-            <li>JIT JavaScript InfoVis Toolkit <sub>(JavaScript)</sub></li>
-            <li>d3-hypertree <sub>(JavaScript)</sub></li>
+            <li><a href="https://philogb.github.io/jit/">JIT JavaScript InfoVis Toolkit</a> <sub>(JavaScript)</sub></li>
+            <li><a href="http://treebolic.sourceforge.net/">Treebolic</a> <sub>(Java)</sub></li>     <!-- http://treebolic.sourceforge.net/ -->   
+            <li><a href="https://github.com/glouwa/d3-hypertree">d3-hypertree</a> <sub>(JavaScript)</sub></li>
             <!--<li>https://github.com/ItsNickBarry/hyperbolic-canvas <sub>(javascript)</sub></li>-->
           </ul>
       </div>
@@ -643,23 +652,31 @@
       <div style="float: left;">
           <h1>ℍ³</h1>      
           <ul>          
-            <li>H3</li>
-            <li>Walrus</li>
+            <li><a href="https://graphics.stanford.edu/~munzner/h3/">H3</a></li>
+            <li><a href="http://www.caida.org/tools/visualization/walrus/">Walrus</a></li>
           </ul>  
       </div>
     </div>
 
     <div class="slide">     
         <h1>Inxight Applications</h1>  
-        <img src="img/deep-green-s12.png" height="40%" style="float:left;">      
-        <img src="img/treebolic.gif" height="40%" style="float:left;">      
-        <img src="img/lexisnexis02.png" height="40%" style="float:left;">        
-        <img src="img/xerox-files.png" height="40%" style="float:left;">                
+        <br><br><br><br>
+        <img src="img/deep-green-s12.png" height="47%" style="float:left;">     
+        <img src="img/xerox-files.png" height="47%" style="float:left;">                
+        <img src="img/lexisnexis02.png" height="47%" style="float:left;">                
         <footer class="reference">
           Inxight 1997-2008
       </footer>
     </div>
 
+    <div class="slide">     
+        <h1>HyperTree</h1>       
+        <img src="img/hypertree-pfizrt.png" height="80%">      
+        <footer class="reference">
+            J. Bingham, S. Sudarsanam 2000
+      </footer>
+    </div>
+    
     <div class="slide">     
         <h1>Walrus</h1>  
         <img src="img/wal-ries-anim.gif" height="80%">      
@@ -684,22 +701,14 @@
         </footer>        
     </div>    
 
-    <div class="slide">
-        <h1>Hyperbolic Canvas</h1>  
-        <iframe width="100%" height="80%" style="margin:auto auto" src="https://itsnickbarry.github.io/hyperbolic-canvas/example.html?script=mouse-interaction" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
-        <footer class="reference">
-            Nick Barry 2015
-        </footer>
-    </div>
-
     <div class="slide">     
-        <h1>Hyperbolic Maze</h1>  
-        <iframe width="100%" height="80%" style="margin:auto auto" src="http://www.madore.org/~david/math/hyperbolic-maze.html" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
+        <h1>Treebolic</h1>       
+        <img src="img/treebolic.webp" height="80%">      
         <footer class="reference">
-            David Madore
-        </footer>
+            Bernard Bou 2018
+      </footer>
     </div>
-    
+  
     <div class="slide">
       <h1>d3-hypertree 2018</h1>
       <div id="tree2"></div>
@@ -742,6 +751,22 @@
     </div>   
 
     <div class="slide">
+        <h1>Hyperbolic Canvas</h1>  
+        <iframe width="100%" height="80%" style="margin:auto auto" src="https://itsnickbarry.github.io/hyperbolic-canvas/example.html?script=mouse-interaction" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
+        <footer class="reference">
+            Nick Barry 2015
+        </footer>
+    </div>
+
+    <div class="slide">     
+        <h1>Hyperbolic Maze</h1>  
+        <iframe width="100%" height="80%" style="margin:auto auto" src="http://www.madore.org/~david/math/hyperbolic-maze.html" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
+        <footer class="reference">
+            David Madore
+        </footer>
+    </div>
+
+    <div class="slide">
       <h1>Thank You For Your Attention</h1>
       <br><br>
       <ul style="list-style: none;">
@@ -767,18 +792,19 @@
     <div class="slide">
       <h1>Master Thesis Topics</h1>
       <ul>
-        <li>device testing</li>
-        <li>usability testing</li>
         <li>presets for devices with media queries</li>
         <li>save as svg</li>
         <li>text search</li>
-        <li>vega / vega-lite component </li>
         <li>scalability: numerical limits (floating point precision)</li>
-        <li>scalability: memory issues</li>
-        <li>scalability: high degree nodes (many siblings)</li>
         <li>weight culling strategies and metrics</li>
-        <li>application to graphs (tree + crosslinks)</li>
         <li>Other Projection(s) (halfplane, klein)</li>
+
+        <li>device testing</li>
+        <li>usability testing</li>        
+        <li>vega / vega-lite component </li>        
+        <li>scalability: memory issues</li>
+        <li>scalability: high degree nodes (many siblings)</li>        
+        <li>application to graphs (tree + crosslinks)</li>        
       </ul>
     </div>    
   -->
