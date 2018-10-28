@@ -81,6 +81,12 @@
         right: 1em;
         text-align: right;
       }
+      .credits {
+        position: absolute;
+        bottom: 2em;
+        left: 1em;
+        text-align: left;
+      }
       .rslidy-slide-thumbnail {
         background-color: #fff;
         border-radius: .3em;
@@ -158,28 +164,54 @@
     <div class="slide">
         <h1>What could this axioms be applyed to?</h1>
         <br><br><br><br>        
-        <a href="https://commons.wikimedia.org/w/index.php?curid=933876">
-          <img src="img/Triangle_esfèric.png" style="height:25em;float:left;" >
-        </a>
-        <img src="img/Poincare-n-parallel.svg" style="height:25em;float:left;">
-        <footer class="reference">
-          Public Domain
-          CC0 Wikipedia
-        </footer>
+        <style>
+            .gridapp-container {
+              width: 99%;
+              display: grid;          
+              grid-column-gap: 2em;
+              grid-row-gap: 1.5em;
+              grid-template-columns: 25% 25% 25%;
+              grid-template-rows: auto;          
+            }
+            .gridapp-item {
+              display: inline-grid;
+              font-size: 1.5em;
+              justify-content: center;
+              align-items: center;
+            }            
+          </style>
+    
+    
+          <div class="gridapp-container">
+              <h2></h2>
+              <h2>Spherical</h2>
+              <h2>Hyperbolic</h2>
+
+            <h2 style="margin: auto;">Embedding</h2>
+            <img class="gridapp-item" src="img/Triangle_esfèric.png" style="height:13em;float:left;" >            
+            <div></div>
+            <h2 style="margin: auto;">Projection</h2>
+            <img class="gridapp-item" src="img/Lagrange.png" style="height:12em;float:left;">        
+            <img class="gridapp-item" src="img/Poincare-n-parallel.svg" style="height:12em;float:left;">
+          </div>        
+        <div class="credits">
+            <a href=""></a><sup></sup>            
+            <a href="https://commons.wikimedia.org/w/index.php?curid=933876">Peter Mercator</a><sup>Public Domain</sup><br>
+            <a href="https://beta.observablehq.com/@glouwa/d3-lagrange">Glatzhofer Michael</a><sup>Obs</sup><br>
+            <a href="https://commons.wikimedia.org/w/index.php?curid=36685779">Trevorgoodchild</a><sup>Public Domain</sup>
+        </div>
+        <div class="credits">
+            <a href=""></a><sup></sup>                        
+        </div>
       </div>        
 
     <div class="slide" id="parts">
-        <style>
-            #parts            
-            {
-              text-align:center;
-            }            
+        <h1>Only Parts of ℍ² fit into ℝ³</h1>
+        <style>                        
         </style>
         <br><br><br><br><br><br>
-        <img src="img/Orange_important_icon.png" style="height:12em;" >
-        <br><br><br>
-        <h1>Only Parts of ℍ² fit into ℝ³</h1>
-        A Theorem of Hilbert states that it is not possible to place a full hyperbolc plane in ℝ<sup>3</sup>.                
+        <!--<img src="img/Orange_important_icon.png" style="height:12em;" >-->        
+        <h2>A Theorem of Hilbert states that it is not possible to place a full hyperbolc plane in ℝ<sup>3</sup>.</h2>                
     </div> 
         
     <div class="slide">
@@ -188,37 +220,51 @@
       <img src="img/construct-pos-curved.jpg" style="height: 30%;float:left;">
       <img src="img/football.jpg"             style="height: 30%;float:left;">      
       <img src="img/crochet_10.jpg"           style="height: 30%;float:left;">            
-      <img src="img/hyperbolic-knit.jpg"      style="height: 30%;float:left;">      
+      <img src="img/curvature.jpg"      style="height: 30%;float:left;">      
       <footer class="reference">
-          The Shape of Space: Jeffrey R. Weeks 1985
+          Kuiper 1955<br>
+          Weeks 1985<br>
+          Henderson and Taimina 2001
       </footer>
+      <div class="credits">
+          <a href=""> Jeffrey R. Weeks</a><sup>Book</sup><br>
+          <a href="http://www.math.tamu.edu/~sottile/research/stories/hyperbolic_football/">Frank Sottile</a><sup>CC3</sup><br>
+          <a href="http://hyperbolic-crochet.blogspot.com">Daina Taimina</a><sup>Web</sup>                        
+      </div>
     </div>
 
     <div class="slide">
       <h1>Parts of ℍ² in Reality</h1>
       <br><br><br>
-      <img src="img/Folded_Coral_Flynn_Reef.jpg" style="height: 40%;float:left;">          
-      <img src="img/lettuce2-700x525.jpg"        style="height: 40%;float:left;">
-      <img src="img/sparassi.jpg"                style="height: 40%;float:left;">      
-      <img src="img/nuss.jpg"                    style="height: 40%;float:left;">            
-      <footer class="reference">
-          CC0 Wikipedia<br>
-          <a href="hyperbolic-crochet.blogspot.com">Daina Taimina</a>
-      </footer>
+      <img src="img/Folded_Coral_Flynn_Reef.jpg" style="height: 30%;float:left;">          
+      <img src="img/lettuce2-700x525.jpg"        style="height: 30%;float:left;">
+      <img src="img/sparassi.jpg"                style="height: 30%;float:left;">      
+      <img src="img/nuss.jpg"                    style="height: 30%;float:left;">            
+      
+      <div class="credits">
+          <a href="https://commons.wikimedia.org/w/index.php?curid=4064729">Frank C. Müller</a><sup>CC4</sup><br>
+          <a href="https://commons.wikimedia.org/w/index.php?curid=11138546">Toby Hudson</a><sup>CC3</sup><br>
+          <a href="">Glatzhofer Michael</a><sup>CC4</sup>          
+      </div>
     </div>
 
     <div class="slide">
       <h1>Parts of ℍ² in ℝ³</h1>           
       <br><br><br><br><br><br><br><br>
-      <img src="img/monsad.gif"                   style="height: 34%;float:left;">  <!--Pseudosphere-->
-      <img src="img/Catenoid.png"                 style="height: 34%;float:left;">  <!--Pseudosphere-->      
-      <img src="img/flower2.png"                  style="height: 34%;float:left;">             <!--Dini's surface-->
-      <img src="img/0010_pseudosphere_01_720.png" style="height: 34%;float:left;">  <!--Pseudosphere-->      
-      <img src="img/kuensurface.png"              style="height: 34%;float:left;">  <!--Pseudosphere-->
+      <img src="img/monsad.gif"                   style="height: 30%;float:left;">  <!--Pseudosphere-->
+      <img src="img/Catenoid.png"                 style="height: 30%;float:left;">  <!--Pseudosphere-->      
+      <img src="img/flower2.png"                  style="height: 30%;float:left;">             <!--Dini's surface-->
+      <img src="img/0010_pseudosphere_01_720.png" style="height: 30%;float:left;">  <!--Pseudosphere-->      
+      <img src="img/kuensurface.png"              style="height: 30%;float:left;">  <!--Pseudosphere-->
 
       <footer class="reference">
           CC0 Wikipedia
       </footer>
+      <div class="credits">
+          <a href="http://www.maths.manchester.ac.uk/~kd/homepage/dodson.htm">1,2: C.T.J. Dodson</a><sup>Web</sup><br>
+          <a href="http://homepages.math.uic.edu/~ddumas/teaching/2007/spring/math18/">3: David Dumas</a><sup>Web</sup><br>
+          <a href="https://commons.wikimedia.org/w/index.php?curid=3682631">4,5: Ermishin Fedor</a><sup>CC3</sup>                    
+      </div>
     </div>  
 
     <div class="slide">
@@ -228,7 +274,7 @@
           width: 99%;
           display: grid;          
           grid-column-gap: 2em;
-          grid-row-gap: 1.5em;
+          grid-row-gap: 1em;
           grid-template-columns: 25% 25% 25% 25%;
           grid-template-rows: auto;          
         }
@@ -260,14 +306,21 @@
         <div class="grid-item"><img class="bigi" src="img/sperical-euclidien-diskmodel/2.png"></div>
         <div class="grid-item"><img class="bigi" src="img/sperical-euclidien-diskmodel/1.png"></div>
 
-        <div class="grid-item">Tiling:</div>
+        <div class="grid-item">Embedding:</div>
         <div class="grid-item"><img src="img/sperical-euclidien-diskmodel/Uniform_tiling_532-t0.png"></div>
         <div class="grid-item"><img src="img/sperical-euclidien-diskmodel/100px-Uniform_tiling_63-t0.png"></div>
+        <div class="grid-item"><img src="img/serf4-2.png"></div>
+        
+
+        <div class="grid-item">Projection:</div>
+        <div class="grid-item"><img src="img/Lagrange.png"></div>
+        <div class="grid-item"></div>
         <div class="grid-item"><img src="img/sperical-euclidien-diskmodel/100px-Heptagonal_tiling.svg.png"></div>
+        
 
         <div class="grid-item">Model:</div>
-        <div class="grid-item">surface of sphere</div>
-        <div class="grid-item">euclidean plane</div>
+        <div class="grid-item">𝕊</div>
+        <div class="grid-item">𝔼</div>
         <div class="grid-item">𝔻 or ℍ</div>
 
         <div class="grid-item">Lines:</div>        
@@ -303,163 +356,33 @@
       </div>
 
       <footer class="reference">
-          CC0 Wikipedia<br>
+          Cannon et al 1997<br>
           Hyperbolic geometry: Caroline Series 2010
       </footer>
+      <div class="credits">
+          <a href="https://commons.wikimedia.org/w/index.php?curid=44980291">Ag2gaeh</a><sup>CC4</sup><br>
+          <a href="https://commons.wikimedia.org/w/index.php?curid=17032865">Tomruen</a><sup>Public Domain</sup><br>
+          <a href="https://commons.wikimedia.org/w/index.php?curid=53853665">Lasunncty</a><sup>CC4</sup><br>
+          <a href="">Loren Serfass</a><sup>Web</sup><br>
+          <a href="">Michael Glatzhofer</a><sup>Observable</sup><br>
+          <a href="https://commons.wikimedia.org/w/index.php?curid=69910447">Parcly Taxel</a><sup>Public Domain</sup>
+
+      </div>
     </div>
 
     <div class="slide" id="length">      
-      <style>
-        #length > h1
-        {
-          text-align:center;
-        }
-      </style>
-
-      <br><br><br>
+      <h1>Length <b><i>Not</i></b> Preservable<!-- <img src="img/Orange_important_icon.png" style="height:2em;" >--></h1>
+      <br><br><br><br><br><br>
       <img src="img/always-overlap.jpg" style="max-width: 40%;max-height: 40%;">
 
       <br><br><br><br><br><br>
-      <img src="img/Orange_important_icon.png" style="height:12em;" >
+      
       <br><br><br>
-      <h1>Length <b><i>Not</i></b> Preservable</h1>
+      
 
-      <footer class="reference">
+      <div class="credits">
           The Shape of Space: Jeffrey R. Weeks 1985
-      </footer>
-    </div>
-
-    <div class="slide">
-      <h1>Models</h1>     
-      <style>
-        .grid-container2 {
-          width: 95%;
-          display: grid;          
-          grid-column-gap: 2em;
-          grid-row-gap: 1em;
-          grid-template-columns: 15% 10% 28% auto auto auto auto auto;
-          grid-template-rows: auto;          
-        }
-        .grid-item2 {
-          display: inline-grid;
-          font-size: 1.7em;          
-          /*justify-content: center;*/
-          align-items: center;
-        }
-        .grid-item3 {
-          display: inline-grid;
-          font-size: 1.7em;          
-          justify-content: center;
-          align-items: center;
-        }
-        .preser {
-          font-size: 1.1em;
-        }
-        .grid-item2 > img {          
-          height: 6em;
-          max-width: none;
-          max-height: none;
-          margin: -.55em auto;
-        }
-        #bandimg {
-          height: 4em;
-          margin:-.5em auto .5em auto;
-        }
-        #halfimg {
-          height: 4em;
-          margin:.5em auto;
-        }
-      </style>
-
-      <div class="grid-container2">
-        <div class="grid-item2 preser"></div>        
-        <div class="grid-item2 preser"></div>
-        <div class="grid-item2 preser"></div>
-        <div class="grid-item3 preser">Length</div>     
-        <div class="grid-item3 preser">Area</div>
-        <div class="grid-item3 preser">Straightness</div>
-        <div class="grid-item3 preser">Angle</div>        
-        <div class="grid-item3 preser">Circle</div>     
-
-        <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageKleinBeltrami.svg.png"></div>        
-        <div class="grid-item2">1871</div>
-        <div class="grid-item2">Beltrami–Klein model</div>
-        <div class="grid-item3">❌</div>     
-        <div class="grid-item3">❌</div>
-        <div class="grid-item3">✔️</div>        
-        <div class="grid-item3">❌</div>
-        <div class="grid-item3">❌</div>     
-
-        <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageHypPoincare2.svg.png"></div>        
-        <div class="grid-item2">1873</div>
-        <div class="grid-item2">Poincaré disk model</div>
-        <div class="grid-item3">❌</div>     
-        <div class="grid-item3">❌</div>
-        <div class="grid-item3">❌️</div>
-        <div class="grid-item3">✔️</div>
-        <div class="grid-item3">✔️</div>
-
-        <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageDemiPlanPoincare.svg.png" id="halfimg"></div>
-        <div class="grid-item2">1873</div>
-        <div class="grid-item2">Poincaré half-plane model</div>
-        <div class="grid-item3">❌</div>     
-        <div class="grid-item3">❌</div>
-        <div class="grid-item3">❌️</div>
-        <div class="grid-item3">✔️</div>        
-        <div class="grid-item3">✔️</div>
-       
-        <div class="grid-item2"><img src="img/heptagonaltiling/Band_Model.png" id="bandimg"></div>        
-        <div class="grid-item2"></div>
-        <div class="grid-item2">Band model</div>        
-        <div class="grid-item3">〰️</div>     
-        <div class="grid-item3">❌️</div>
-        <div class="grid-item3">❌️</div>
-        <div class="grid-item3">✔️️️️️️</div>        
-        <div class="grid-item3">✔️</div>
-
-        <div class="grid-item2"></div>        
-        <div class="grid-item2">1966</div>
-        <div class="grid-item2">Gans model</div>
-        <div class="grid-item3">❌</div>     
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-
-        <div class="grid-item2"></div>        
-        <div class="grid-item2"></div>
-        <div class="grid-item2">Hyperboloid model</div>
-        <div class="grid-item3">❌</div>     
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-
-        <div class="grid-item2"></div>        
-        <div class="grid-item2"></div>
-        <div class="grid-item2">Hemisphere model</div>
-        <div class="grid-item3">❌</div>     
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item3"></div>
-        
       </div>
-
-      <!--
-      image, year, name, lenghtP, straightnessP, anglesP, areasP, circlesP
- klein                   ❌        ✔              ❌       ❌       ❌️
-    dm                   ❌        ❌              ✔       ✔       ✔       
-   hpm                   ❌        ❌              ✔       ✔       
-   -->
-   
-
-      <style type="text/css">
-        
-      </style>
-      <footer class="reference">
-        Images CC0 Wikipedia
-      </footer>
     </div>
 
     <div class="slide">
@@ -492,13 +415,20 @@
       </style>
       <h1>Poincaré Disk Model Animation</h1>      
       <div id="lserfvideo">
-        <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/NN89X2u_eIU?start=7&end=16" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          <video width="100%" height="100%" >
+              <source src="video/huh3.mp4" type="video/mp4">                    
+          </video>
+        <!--<iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/NN89X2u_eIU?start=7&end=16" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>-->
       </div>
       <footer class="reference">
-        <a href="https://www.youtube.com/watch?v=NN89X2u_eIU">Youtube: Loren Serfass</a>
+        
       </footer>      
+      <div class="credits">
+          <a href="https://www.youtube.com/watch?v=NN89X2u_eIU">Loren Serfass</a><sup>Youtube</sup>
+      </div>
     </div>
 
+    <!--
     <div class="slide" id="lserfslide">       
       <style>
         #lserfslide > h1 {
@@ -513,7 +443,157 @@
         <a href="https://lserf.shinyapps.io/HyperbolicImagePicker/">Shinyapps: Loren Serfass</a>
       </footer>      
     </div>    
+    -->
 
+    <div class="slide">
+        <h1>Models</h1>     
+        <style>
+          .grid-container2 {
+            width: 95%;
+            display: grid;          
+            grid-column-gap: 2em;
+            grid-row-gap: 1em;
+            grid-template-columns: 15% 15% 10% 28% auto auto auto auto auto;
+            grid-template-rows: auto;          
+          }
+          .grid-item2 {
+            display: inline-grid;
+            font-size: 1.7em;          
+            /*justify-content: center;*/
+            align-items: center;
+          }
+          .grid-item3 {
+            display: inline-grid;
+            font-size: 1.7em;          
+            justify-content: center;
+            align-items: center;
+          }
+          .preser {
+            font-size: 1.1em;
+          }
+          .grid-item2 > img {          
+            height: 6em;
+            max-width: none;
+            max-height: none;
+            margin: -.55em auto;
+          }          
+          #bandimg {
+            height: 4em;
+            margin:-.5em auto .5em auto;
+          }
+          #halfimg {
+            height: 4em;
+            margin:.5em auto;
+          }
+        </style>
+  
+        <div class="grid-container2">
+          <div class="grid-item2 preser"></div>        
+          <div class="grid-item2 preser"></div>        
+          <div class="grid-item2 preser"></div>
+          <div class="grid-item2 preser"></div>
+          <div class="grid-item3 preser">Length</div>     
+          <div class="grid-item3 preser">Area</div>
+          <div class="grid-item3 preser">Straightness</div>
+          <div class="grid-item3 preser">Angle</div>        
+          <div class="grid-item3 preser">Circle</div>     
+  
+          <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageKleinBeltrami.svg.png"></div>        
+          <div class="grid-item2"><img style="height:5em;" src="img/segerman/1.png"></div>        
+          <div class="grid-item2">1871</div>
+          <div class="grid-item2">Beltrami–Klein model</div>
+          <div class="grid-item3">❌</div>     
+          <div class="grid-item3">❌</div>
+          <div class="grid-item3">✔️</div>        
+          <div class="grid-item3">❌</div>
+          <div class="grid-item3">❌</div>     
+  
+          <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageHypPoincare2.svg.png"></div>        
+          <div class="grid-item2"><img style="height:5em;" src="img/segerman/3.png"></div>        
+          <div class="grid-item2">1873</div>
+          <div class="grid-item2">Poincaré disk model</div>
+          <div class="grid-item3">❌</div>     
+          <div class="grid-item3">❌</div>
+          <div class="grid-item3">❌️</div>
+          <div class="grid-item3">✔️</div>
+          <div class="grid-item3">✔️</div>
+  
+          <div class="grid-item2"><img src="img/heptagonaltiling/1440px-PavageDemiPlanPoincare.svg.png" id="halfimg"></div>
+          <div class="grid-item2"><img style="height:5em;" src="img/segerman/5.png"></div>        
+          <div class="grid-item2">1873</div>
+          <div class="grid-item2">Poincaré half-plane model</div>
+          <div class="grid-item3">❌</div>     
+          <div class="grid-item3">❌</div>
+          <div class="grid-item3">❌️</div>
+          <div class="grid-item3">✔️</div>        
+          <div class="grid-item3">✔️</div>
+         
+          <div class="grid-item2"><img src="img/heptagonaltiling/Band_Model.png" id="bandimg"></div>        
+          <div class="grid-item2"></div>        
+          <div class="grid-item2"></div>
+          <div class="grid-item2">Band model</div>        
+          <div class="grid-item3">〰️</div>     
+          <div class="grid-item3">❌️</div>
+          <div class="grid-item3">❌️</div>
+          <div class="grid-item3">✔️️️️️️</div>        
+          <div class="grid-item3">✔️</div>
+        </div>
+  
+        <!--
+        image, year, name, lenghtP, straightnessP, anglesP, areasP, circlesP
+   klein                   ❌        ✔              ❌       ❌       ❌️
+      dm                   ❌        ❌              ✔       ✔       ✔       
+     hpm                   ❌        ❌              ✔       ✔       
+     -->
+     
+  
+        <style type="text/css">
+          
+        </style>        
+        <div class="credits">
+            <a href="https://commons.wikimedia.org/w/index.php?curid=25866960">Theon</a><sup>CC3</sup><br>
+            <a href="">Segerman Schleimer</a><sup>Youtube</sup>
+        </div>
+      </div>
+
+    <div class="slide">
+        <h1>Poincaré Disk Model of Schläfli {7,3} Tiling</h1>        
+        <br><br><br><br>
+        <img src="img/1024px-Heptagonal_tiling.svg.png" width="22%" style="float:left">
+        <img src="img/1024px-Heptagonal_tiling-withtree.png" width="22%" style="float:left">
+        <img src="img/1280px-H2_tiling_23i-1.png" width="22%" style="float:left">
+        <div id="tree0" style="position:relative;float:left;width:25%;height:26em;"></div>
+        <script>          
+          const component1 = new hyt.Hypertree(
+            { parent: document.querySelector('#tree0') }, 
+            { 
+               dataloader: hyt.loaders.generators.nT1,
+               layout: {                  
+                  rootWedge: {    
+                      orientation:    3*Math.PI/2,
+                      angle:          3.999999*Math.PI/2 
+                  }
+              },
+              geometry: {
+                layerOptions: {
+                  'stem-arc': {
+                    invisible: true,
+                    hideOnDrag: true
+                  }
+                },
+              }
+            }
+          )
+          component1.initPromise
+            .then(()=> new Promise((ok, err)=> component1.animateUp(ok, err)))
+            .then(()=> component1.drawDetailFrame())
+        </script>        
+        <div class="credits">
+            <a href="https://commons.wikimedia.org/w/index.php?curid=25866960">Theon</a><sup>CC3</sup><br>
+            <a href="https://commons.wikimedia.org/w/index.php?curid=13260274">Anton Sherwood</a><sup>Public Domain</sup>
+        </div>
+    </div>
+<!--
     <div class="slide">
       <h1>Poincaré Disk Model of Schläfli {7,3} Tiling</h1>        
       <br><br><br><br>
@@ -540,7 +620,7 @@
       <img src="img/1280px-H2_tiling_23i-1.png" height="65%"> 
       <footer class="reference">
           CC0 Wikipedia
-        <!--https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds-->
+        !--https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds--
       </footer>
     </div>
 
@@ -574,7 +654,7 @@
             .then(()=> component1.drawDetailFrame())
         </script>
       </div>
-      
+    -->
     <div class="slide">       
       <h1>Early Systems</h1>
       <style>
@@ -601,45 +681,37 @@
       </style>
       
       <div id="ramana">
-        <h2>Hyperbolic Browser: Lamping, Rao 1994</h2>
-        <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/8bhq08BQLDs" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+        <h2>Hyperbolic Browser: Lamping and Rao 1994</h2>
+        <video width="100%" height="100%" style="margin:auto auto">
+            <source src="video/rao.mp4" type="video/mp4">                    
+        </video>
+        <!--<iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/8bhq08BQLDs" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>-->
       </div>
       
       <div id="tamara">
-        <h2>H3: Munzner 1998</h2>
-        <iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/fhbQy_NCwWI" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>              
+        <h2>H3: Munzner 1997</h2>
+        <video width="100%" height="100%" style="margin:auto auto">
+            <source src="video/mz.mp4" type="video/mp4">                    
+        </video>
+        <!--<iframe width="100%" height="100%" style="margin:auto auto" src="https://www.youtube.com/embed/fhbQy_NCwWI" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
       </div>
             
       <footer class="reference">
-          <a href="https://www.youtube.com/channel/UCnuYznpiC6fO0XyLKGAGFng">YouTube: Tamara Munzner</a><br>
-          <a href="https://www.youtube.com/user/treerao">Youtube: Ramana Rao</a>
+          
+          
       </footer>
+      <div class="credits">
+          <a href="https://www.youtube.com/channel/UCnuYznpiC6fO0XyLKGAGFng">Tamara Munzner</a><sup>YouTube</sup><br>
+          <a href="https://www.youtube.com/user/treerao">Ramana Rao</a><sup>YouTube</sup>
+      </div>
     </div>
 
-    <div class="slide">       
-        <h1>Layout Algorithms</h1>
-        <br><br>
-        <ul>
-          <li>Rao, Lamping</li>
-          <li>Munzner</li>
-          <li>Bergé</li>
-        </ul>        
-    </div>
-
-    <div class="slide">       
-      <h1>Transformation Modifications</h1>
-      <br><br>
-      <ul>
-          <li>Panning</li>
-          <li>Zooming
-            <ul>
-              <li>Curvature</li>
-              <li>Link Length</li>          
-            </ul>
-          </li>
-          <li>Rotation correction</li>          
-          <li>Euclidean post transformations</li>
-        </ul>
+    <div class="slide">     
+        <h1>Pipeline</h1>  
+        <br>
+        <br>
+        <br>
+        <img src="img/pipeline.png">        
     </div>
 
     <!--
@@ -648,35 +720,68 @@
     </div>
     -->
 
-    <div class="slide">             
+    <div class="slide" id="compare">             
       <h1>Known Implementations and Applications</h1>
       <br><br>
       <div style="float:left;width:50%;margin-left:5em;">
-          <h1>ℍ²</h1>
+          <style>
+            #compare li {
+             margin: 0; 
+          }
+          </style>
+          <h1>ℍ² Layout Space</h1>
           <ul>            
             <li>Xerox/Inxight <sub>(Lisp, C, Java)</sub>
               <ul>
-                  <li>Deep Green</li>    
-                  <li>Lexisnexis</li>                  
-                  <li>MagniFind</li>
+                  <li>Deep Green</li>                      
+                  <li>Lexisnexis</li>                      
+                  <li>MagniFind</li>                      
               </ul>
             </li>            
+            
             <li><a href="http://www.kinase.com/tools/HyperTree.html">HyperTree</a> <sub>(Java)</sub></li>    
+            <li><a href="https://github.com/glouwa/d3-hypertree">HypTree</a> <sub></sub></li>
+            <li><a href="https://github.com/glouwa/d3-hypertree">HyperProf</a> <sub>(Java)</sub></li>
+            <li><a href="https://github.com/glouwa/d3-hypertree">Roget2000</a> <sub>(Java)</sub></li>
+
             <li>HVS <sub>(Java)</sub></li>        
+            <li><a href="https://github.com/glouwa/d3-hypertree">Ontologiy4us</a> <sub>(JavaScript)</sub></li>
+
             <li><a href="https://philogb.github.io/jit/">JIT JavaScript InfoVis Toolkit</a> <sub>(JavaScript)</sub></li>
             <li><a href="http://treebolic.sourceforge.net/">Treebolic</a> <sub>(Java)</sub></li>     <!-- http://treebolic.sourceforge.net/ -->   
+            <li><a href="https://github.com/glouwa/d3-hypertree">RougeVis</a> <sub></sub></li>
+
             <li><a href="https://github.com/glouwa/d3-hypertree">d3-hypertree</a> <sub>(JavaScript)</sub></li>
             <!--<li>https://github.com/ItsNickBarry/hyperbolic-canvas <sub>(javascript)</sub></li>-->
           </ul>
       </div>
 
       <div style="float: left;">
-          <h1>ℍ³</h1>      
+          <h1>ℍ³ Layout Space</h1>      
           <ul>          
-            <li><a href="https://graphics.stanford.edu/~munzner/h3/">H3</a></li>
-            <li><a href="http://www.caida.org/tools/visualization/walrus/">Walrus</a></li>
+            <li><a href="https://graphics.stanford.edu/~munzner/h3/">H3</a> <sub>(C++)</sub></li>
+            <li><a href="http://www.caida.org/tools/visualization/walrus/">Walrus</a> <sub>(Java)</sub></li>
+            <li><a href="https://github.com/buzzfeed/pyh3">h3py</a> <sub>(Python)</sub></li>
           </ul>  
       </div>
+    </div>
+
+        
+    <div class="slide">     
+        <h1>Walrus</h1>  
+        <img src="img/wal-ries-anim.gif" height="80%">        
+        <div class="credits">
+          <a href="https://www.caida.org/tools/visualization/walrus/">CAIDA / Young Hyun</a><sup></sup>
+        </div>
+    </div>
+
+        
+    <div class="slide">     
+        <h1>h3py</h1>  
+        <img src="img/impl/pyh3_orig.png" height="80%">              
+        <div class="credits">
+            <a href="https://github.com/buzzfeed/pyh3">Songxiao Zhang</a><sup>MIT</sup>                        
+        </div> 
     </div>
 
     <div class="slide">     
@@ -685,9 +790,10 @@
         <img src="img/deep-green-s12.png" height="47%" style="float:left;">     
         <img src="img/xerox-files.png" height="47%" style="float:left;">                
         <img src="img/lexisnexis02.png" height="47%" style="float:left;">                
-        <footer class="reference">
-          Inxight 1997-2008
-      </footer>
+        
+      <div class="credits">
+          <a href="">Keith Andrews</a><sup></sup>                        
+      </div>
     </div>
 
     <div class="slide">     
@@ -695,41 +801,78 @@
         <img src="img/hypertree-pfizrt.png" height="80%">      
         <footer class="reference">
             J. Bingham, S. Sudarsanam 2000
-      </footer>
+      </footer>    
+      <div class="credits">
+          <a href="http://kinase.com/web/current/hypertree/">Pfizer</a><sup></sup>                        
+      </div>
     </div>
-    
+
     <div class="slide">     
-        <h1>Walrus</h1>  
-        <img src="img/wal-ries-anim.gif" height="80%">      
+        <h1>HyperProf</h1>       
+        <img src="img/impl/prof.png" height="80%">      
+        
+      <div class="credits">
+          <a href="http://www.bulatov.org/HyperProf/index.html">Vladimir Bulatov</a><sup>Web</sup>                        
+      </div>
+    </div>
+
+    <div class="slide">     
+        <h1>Roget2000</h1>       
+        <img src="img/impl/roget1.png" height="80%">      
         <footer class="reference">
-          Munzner, Young 2001
-        </footer>        
+            Baumgartner and Waugh 2002
+      </footer>
     </div>
 
     <div class="slide">     
         <h1>HVS</h1>                
         <img src="img/hyp-hvs-talks-s01.png" height="80%">      
         <footer class="reference">
-            Nussbaumer, Putz 2005
+            Nussbaumer 2005
         </footer>
+        <div class="credits">
+            <a href=""></a><sup></sup>                        
+        </div>
+    </div>
+
+    <div class="slide">     
+        <h1>Ontology4us</h1>       
+        <img src="img/impl/o4us2.png" height="80%">              
+      <div class="credits">
+          <a href="https://www.ontology4.us">Ontology4us</a><sup>Web</sup>                        
+      </div>
     </div>
 
     <div class="slide">       
         <h1>JavaScript InfoVis Toolkit (JIT)</h1>
         <iframe width="100%" height="80%" style="margin:auto auto" src="https://philogb.github.io/jit/static/v20/Jit/Examples/Hypertree/example1.html" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
-        <footer class="reference">
-          Nicolas Garcia Belmonte 2005-2013
+        <footer class="reference">          
         </footer>        
+        <div class="credits">
+            <a href="https://philogb.github.io/jit/">Nicolas Garcia Belmonte</a><sup>Web</sup>                        
+        </div>
     </div>    
 
     <div class="slide">     
         <h1>Treebolic</h1>       
         <img src="img/treebolic.webp" height="80%">      
         <footer class="reference">
-            Bernard Bou 2018
+            
       </footer>
+      <div class="credits">
+          <a href="https://play.google.com/store/apps/developer?id=Bernard+Bou&hl=en">Bernard Bou</a><sup>Play</sup>                        
+      </div>
+    </div>
+
+    <div class="slide">     
+        <h1>RougeVis</h1>       
+        <img src="img/impl/rouge2.png" height="80%">        
+      <div class="credits">
+          <a href="http://roguetemple.com/z/hyper/rogueviz.php">RougeVis</a><sup>Web</sup>                        
+      </div>
     </div>
   
+    <!--
     <div class="slide">
       <h1>d3-hypertree 2018</h1>
       <div id="tree2"></div>
@@ -770,12 +913,16 @@
           .then(()=> component2.drawDetailFrame())
       </script>        
     </div>   
+    -->
 
+    <!--
     <div class="slide">
         <h1>Hyperbolic Tree of Life 2018</h1>
         <iframe width="100%" height="80%" src="http://localhost:3000/" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
       </div> 
+    -->
 
+    <!--
     <div class="slide">
         <h1>Hyperbolic Canvas</h1>  
         <iframe width="100%" height="80%" style="margin:auto auto" src="https://itsnickbarry.github.io/hyperbolic-canvas/example.html?script=mouse-interaction" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>    
@@ -791,6 +938,7 @@
             David Madore
         </footer>
     </div>
+    -->  
 
     <div class="slide">
       <h1>Thank You For Your Attention</h1>
@@ -815,6 +963,7 @@
       </ul>
     </div>    
 
+    <!--
     <div class="slide">
       <h1>Master Thesis Topics</h1>
       <ul>
@@ -830,16 +979,8 @@
         <li><s>scalability: memory issues</s></li>        
         <li><s>application to graphs (tree + crosslinks)</s></li>        
       </ul>
-    </div>    
-
-    <div class="slide">
-      <h1>More Stuff</h1>        
-        <a href="http://iv.slis.indiana.edu/sw/hyptree.html">hyptree</a><br>
-        <a href="https://www.ontology4.us/Ontology4/Visualization/Hyperbolic-Trees/index.html">ontology4us</a><br>
-        <a href="https://ontology4.us/download/presentations/140508_EnArgus_Suche_und_Visualisierung_DGI_Konferenz.pdf">ontology4us</a><br>
-        <a href="https://netnow.co/visualizing-hierarchical-data-with-the-hyperbolic-tree-widget">netnow</a><br>
-        <a href="http://www.bulatov.org/HyperProf/index.html">HyperProf</a><br>
-    </div>  
+    </div>    -->
+   
   </body>
 </html>
 
