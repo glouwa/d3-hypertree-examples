@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+    <title>Hyperbolic tree</title>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael">
+    
+    <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
+
+    <script src="d3-hypertree.js"></script>
+    </head>
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 200;
+            src: url('fonts/roboto/Roboto-Light.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'NotoColorEmoji';
+            src: url('fonts/noto/NotoColorEmoji.ttf') format('truetype');
+        }    
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 200;    
+            src: url('fonts/roboto/Roboto-Light.woff2') format('woff2');
+        }                    
+        body {
+            font-family: 'Roboto';
+            font-weight: lighter;
+        }
+    </style>
+    <body>        
+        <script>
+            const π = Math.PI
+
+            const hasLazy =        n=> (n.hasOutChildren && n.isOutλ)
+            const isLeaf =         n=> !n.children || !n.children.length
+            const isRoot =         n=> !n.parent 
+            
+            var nodeInitR =        (c)=> (ud, d)=> c * ((d.children && d.parent) ? innerNodeScale(d) : 1)     
+            var nodeInitRNoInner = (c)=> (ud, d)=> c
+            var nodeScale =        d=> d.distScale * (hasLazy(d) ? .8 : 1)    
+            var nodeScaleNoInner = d=> d.distScale    
+            var innerNodeScale =   d=> d.precalc.weightScale
+            var arcWidth =         d=> .025 * d.distScale * d.precalc.weightScale
+
+            const ht = new hyt.Hypertree(
+                { 
+                    parent: document.body 
+                },
+                { 
+                    dataloader: hyt.loaders.generators.nT1,
+
+                    dataInitBFS: (ht, n)=> {
+                        n.precalc.imageHref = 'img/example.png'                        
+                    },    
+                    langInitBFS: (ht, n)=> {
+                        n.precalc.label = "Label " + n.mergeId
+                    },
+                    layout: {
+                        type:               hyt.layouts.layoutBergé,
+                        weight:             n=> 1,                        
+                        rootWedge: {    
+                            orientation:    0,
+                            angle:          π*1.99999 
+                        }
+                    },
+                    filter: {                              
+                        focusExtension:     1.6,
+                        maxFocusRadius:     .95,
+                        wikiRadius:         .95,
+                        maxlabels:          30,
+                    },
+                    geometry: {
+                        layerOptions:       {
+                            'stem-arc': { invisible: true, hideOnDrag: true },
+                            'cells':    { invisible: true, hideOnDrag: true },
+                            'λ':        { invisible: true, hideOnDrag: true },
+                            'images': { 
+                                width:      .1,
+                                height:     .1                                
+                            }                            
+                        },
+                        clipRadius:         1,
+                        nodeFilter:         n=> false,
+                        nodeRadius:         n=> .07,
+                        nodeScale:          nodeScale,       
+                        nodeColor:          n=> n.data.value ? 'red' : 'blue',  // proposed
+                        nodeBorderColor:    n=> 'green',                        // proposed                        
+                        linkColor:          n=> 'red',                          // proposed
+                        linkBorderColor:    n=> 'red',                          // proposed
+                        linkWidth:          arcWidth,                                
+                        cellColor:          n=> 'gray',
+                        cellBorderColor:    n=> 'darkgray',
+                        captionBackground:  'all',
+                        captionFont:        '6.5px Roboto',
+                        captionHeight:       .04                        
+                    },
+                    interaction: {
+                        onNodeClick: (n, m, l)=> { 
+                            console.log('### EVENT: onNodeClick', n.mergeId, n)
+
+                            ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null)
+                                .then(()=> l.view.hypertree.drawDetailFrame())                            
+                        },
+                        onCenterNodeChange: n=> console.log('### EVENT: onCenterNodeChange', n.mergeId, n),
+                        onHoverNodeChange:  n=> console.log('### EVENT: onHoverNodeChange', n.mergeId, n),
+
+                        λbounds:            [ 1/8, .5 ],
+                        wheelFactor:        1.175,
+                    }
+                }
+            )
+            ht.initPromise
+                .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
+                .then(()=> ht.drawDetailFrame())
+        </script>
+    </body>
+</html>
