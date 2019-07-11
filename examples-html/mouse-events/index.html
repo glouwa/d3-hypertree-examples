@@ -31,6 +31,7 @@
         body {
             font-family: 'Roboto';
             font-weight: lighter;
+            touch-action: none;
         }
     </style>
     <body>        
@@ -70,10 +71,10 @@
                         }
                     },
                     filter: {                              
-                        focusExtension:     1.6,
+                        focusExtension:     2.7,
                         maxFocusRadius:     .95,
                         wikiRadius:         .95,
-                        maxlabels:          30,
+                        maxlabels:          50,
                     },
                     geometry: {
                         layerOptions:       {
@@ -87,7 +88,7 @@
                         },
                         clipRadius:         1,
                         nodeFilter:         n=> false,
-                        nodeRadius:         n=> .07,
+                        nodeRadius:         n=> .01,
                         nodeScale:          nodeScale,       
                         nodeColor:          n=> n.data.value ? 'red' : 'blue',  // proposed
                         nodeBorderColor:    n=> 'green',                        // proposed                        
