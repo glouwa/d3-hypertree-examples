@@ -181,21 +181,18 @@
             transition-duration: 0ms;
             transition-timing-function: ease-in-out;
             transition-delay: 150ms;   
-            */
-    animation: fade-in 750ms ease-in-out; }
+            */ }
   .unitdisk-nav svg .caption-icon {
     font-family: 'NotoColorEmoji', Roboto;
     font-size: .8;
     transition-property: none;
     transition-duration: 0ms; }
   .unitdisk-nav svg .caption-background {
-    pointer-events: none;
-    animation: fade-in 750ms ease-in-out; }
+    pointer-events: none; }
   .unitdisk-nav svg .label-link {
     stroke-width: .02;
     stroke-dasharray: .001;
-    stroke-linecap: round;
-    animation: fade-in 750ms ease-in-out; }
+    stroke-linecap: round; }
   .unitdisk-nav svg .background-circle {
     pointer-events: none; }
   .unitdisk-nav svg .mouse-circle {
