@@ -71,13 +71,14 @@
                     // should be set in this function.
                     // this way calculations are not necessary for each frame.
                     dataInitBFS: (ht, n)=> {
-                        //n.precalc.imageHref = 'img/example.png'         
+                        if (n.mergeId == 12)
+                            n.precalc.imageHref = 'img/example.png'         
                     }, 
 
                     // is called when language is changed, 
-                    // otherwise simmilar to dataInitBFS.
+                    // otherwise similar to dataInitBFS.
                     // typically node labels are calculated in this function.
-                    langInitBFS: (ht, n)=> {
+                    langInitBFS: (ht, n)=> {                        
                         n.precalc.label = `Label ${n.mergeId} / ${n.precalc.layoutWeight}`
                     },
 
@@ -178,7 +179,7 @@
                         // - hyt.labeloffsets.labeloffset: helicopter effect for labels 
                         // - hyt.labeloffsets.center:      place the label center over node center
                         // - 
-                        offsetLabels:       hyt.labeloffsets.center,
+                        offsetLabels:       hyt.labeloffsets.labeloffset,
 
                         // for label layout the bounding box of labels must be calculated.
                         // captionFont is used for this calculations. 
@@ -217,7 +218,7 @@
             var animationNode2 = ht.data.children[0].children[1]
             
             // after the component is created, 
-            // init promis can be used to set additional actions.
+            // init promise can be used to set additional actions.
             // since those are typically non blocking operations like
             // animations, javascript promises are used.
             ht.initPromise
