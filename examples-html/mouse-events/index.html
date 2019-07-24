@@ -123,7 +123,7 @@
                     // polar coordinates are useful in some cases, so check coordinate type 
                     // (Ck = cartesian, Cp = polar)
                     // all units specified in this section are relative to the unit disk.
-                    // i.e. a node radius of .1 means the node has a radius of 10% of the unit disc diameter.
+                    // i.e. a node radius of .1 means the node has a radius of 10% of the unit disc radius.
                     geometry: {
                         // is used to configure layers, including the layer visibility,
                         // and therefore also used to hide/show layers 
@@ -132,7 +132,20 @@
                             'cells':       { invisible: true, hideOnDrag: true },
                             'λ':           { invisible: true, hideOnDrag: true },
                             'center-node': { invisible: false, hideOnDrag: false },
-                            'images':      { width: .1, height: .1 }                            
+                            'images':      { width: .1, height: .1 },
+                            'link-arcs':   { 
+                                linkColor: n=> { // proposed
+                                    if (n.mergeId == 12) return 'orange'
+                                    return undefined
+                                },  
+                            }, 
+                            'nodes':   { 
+                                nodeColor: n=> { // proposed                                    
+                                    if (n.mergeId == 12) return 'yellow'
+                                    if (!n.children) return 'red'
+                                    return '#a5d6a7'
+                                },  
+                            }
                         },                        
 
                         // this function can be used to prefilter nodes.                        
@@ -157,7 +170,10 @@
 
                         // is called for each node when shown
                         // return the color for given node n
-                        nodeColor:          n=> n.data.value ? 'red' : 'blue',  // proposed
+                        nodeColor:          n=> { // proposed
+                            if (n.mergeId == 2) return 'yellow'
+                            return undefined
+                        },
                         nodeBorderColor:    n=> 'green',                        // proposed                        
                         linkColor:          n=> 'red',                          // proposed
                         linkBorderColor:    n=> 'red',                          // proposed

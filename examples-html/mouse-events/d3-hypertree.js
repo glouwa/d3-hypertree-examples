@@ -6096,15 +6096,15 @@ class LabelLayer {
             parent: () => this.attach(),
             data: () => {
                 this.d3updatePattern.update.data();
-                this.d3updatePattern2.update.data();
+                //this.d3updatePattern2.update.data()
             },
             transformation: () => {
                 this.d3updatePattern.update.transformation();
-                this.d3updatePattern2.update.transformation();
+                //this.d3updatePattern2.update.transformation()
             },
             style: () => {
                 this.d3updatePattern.update.style();
-                this.d3updatePattern2.update.style();
+                //this.d3updatePattern2.update.style()
             }
         };
         this.view = view;
@@ -6129,23 +6129,25 @@ class LabelLayer {
             updateTransform: s => s.attr("transform", (d, i, v) => this.args.transform(d, this.args.delta(d, i, v)))
             //                         .text(                   this.args.text)
         });
-        this.d3updatePattern2 = new d3updatePattern_1.D3UpdatePattern({
-            parent: this.view.parent,
-            layer: this,
-            clip: this.args.clip,
-            data: [],
-            name: 'label-link',
-            className: 'label-link',
-            elementType: 'line',
-            create: s => { },
-            updateColor: s => { },
-            updateTransform: s => s.attr('x1', d => d.forcepoints.x || 0)
-                .attr('y1', d => d.forcepoints.y || 0)
-                .attr('x2', d => d.forcepoints2.x || 0)
-                .attr('y2', d => d.forcepoints2.y || 0)
-                .attr("stroke-width", d => .002)
-                .attr("stroke-linecap", d => "round")
-        });
+        /*
+        this.d3updatePattern2 = new D3UpdatePattern({
+            parent:            this.view.parent,
+            layer:             this,
+            clip:              this.args.clip,
+            data:              [],//this.args.data,
+            name:              'label-link',
+            className:         'label-link',
+            elementType:       'line',
+            create:            s=> {},
+            updateColor:       s=> {},
+            updateTransform:   s=> s.attr('x1',             d=> d.forcepoints.x||0)
+                                    .attr('y1',             d=> d.forcepoints.y||0)
+                                    .attr('x2',             d=> d.forcepoints2.x||0)
+                                    .attr('y2',             d=> d.forcepoints2.y||0)
+                                    .attr("stroke-width",   d=> .002)
+                                    .attr("stroke-linecap", d=> "round")
+        })
+        */
     }
 }
 exports.LabelLayer = LabelLayer;
@@ -12348,7 +12350,8 @@ class ArcLayer {
             className: this.args.className,
             elementType: this.args.curvature === 'l' ? 'line' : 'path',
             create: s => { },
-            updateColor: s => this.args.classed(s, this.args.width),
+            //updateColor:       s=> this.args.classed(s, this.args.width),
+            updateColor: s => this.args.classed(s, this.args.width, this.args.linkColor),
             updateTransform: s => {
                 //const c = d=> d.height===0 ? '+' : '-'                 
                 const c = d => this.args.curvature;
@@ -12363,6 +12366,7 @@ class ArcLayer {
                     s.attr("d", d => this.arcOptions[c(d)](d))
                         .attr("stroke-width", d => this.args.width(d))
                         .attr("stroke-linecap", d => "round");
+                //this.args.classed(s, this.args.width)
             },
         });
     }
@@ -12433,10 +12437,11 @@ class NodeLayer {
                 && d.data && d.data.numLeafs),
             updateColor: s => s.classed("hovered", d => d.pathes && d.pathes.isPartOfAnyHoverPath)
                 .classed("selected", d => d.pathes && d.pathes.isPartOfAnySelectionPath)
-                .style("stroke", d => d.pathes && d.pathes.labelcolor),
+                .style("fill", d => (d.pathes && d.pathes.labelcolor) || this.args.nodeColor(d)),
             //updateColor:       s=> s.classed("hovered",   d=> d.isPartOfAnyHoverPath && d.parent)
             //                        .classed("selected",  d=> d.isPartOfAnySelectionPath && d.parent),
             updateTransform: s => s.attr("transform", d => this.args.transform(d))
+                .style("stroke", d => d.pathes && d.pathes.labelcolor)
                 .attr("r", d => this.args.r(d)),
         });
     }
@@ -12765,32 +12770,36 @@ exports.layerSrc = [
         center: () => '0 0'
     }),
     // CIRCLE STUFF END
-    (v, ud) => new node_layer_1.NodeLayer(v, {
-        invisible: true,
-        hideOnDrag: true,
-        name: 'weigths',
-        className: 'weigths',
-        data: () => ud.cache.weights,
-        r: d => ud.args.nodeRadius(ud, d),
-        transform: d => d.transformStrCache
-            + ` scale(${ud.args.nodeScale(d)})`,
-    }),
-    (v, ud) => new node_layer_1.NodeLayer(v, {
-        invisible: true,
-        hideOnDrag: true,
-        name: 'wedges',
-        className: 'wedges',
-        data: () => ud.cache.weights,
-        r: d => ud.args.nodeRadius(ud, d),
-        transform: d => d.transformStrCache
-            + ` scale(${ud.args.nodeScale(d)})`,
-    }),
+    /*
+        (v, ud:UnitDisk)=> new NodeLayer(v, {
+            invisible:  true,
+            hideOnDrag: true,
+            name:       'weigths',
+            className:  'weigths',
+            data:       ()=> ud.cache.weights,
+            r:          d=> ud.args.nodeRadius(ud, d),
+            transform:  d=> d.transformStrCache
+                            + ` scale(${ud.args.nodeScale(d)})`,
+        }),
+        (v, ud:UnitDisk)=> new NodeLayer(v, {
+            invisible:  true,
+            hideOnDrag: true,
+            name:       'wedges',
+            className:  'wedges',
+            data:       ()=> ud.cache.weights,
+            r:          d=> ud.args.nodeRadius(ud, d),
+            transform:  d=> d.transformStrCache
+                            + ` scale(${ud.args.nodeScale(d)})`,
+        }),
+    
+    */
     (v, ud) => new node_layer_1.NodeLayer(v, {
         invisible: true,
         hideOnDrag: true,
         name: 'center-node',
         className: 'center-node',
         //clip:       '#node-32-clip', centernode.id
+        nodeColor: n => undefined,
         data: () => ud.cache.centerNode ? [ud.cache.centerNode] : [],
         r: d => .1,
         transform: d => d.transformStrCache
@@ -12822,8 +12831,8 @@ exports.layerSrc = [
         nodePos: n => n.cache,
         nodePosStr: n => n.strCache,
         width: d => ud.args.linkWidth(d),
-        classed: (s, w) => s
-            .style("stroke", d => (d.pathes && d.pathes.isPartOfAnyHoverPath) ? d.pathes && d.pathes.finalcolor : d.pathes && d.pathes.finalcolor)
+        classed: (s, w, c) => s
+            .style("stroke", d => ((d.pathes && d.pathes.isPartOfAnyHoverPath) ? d.pathes && d.pathes.finalcolor : d.pathes && d.pathes.finalcolor) || c(d))
             .classed("hovered", d => d.pathes && d.pathes.isPartOfAnyHoverPath)
             .classed("selected", d => d.pathes && d.pathes.isPartOfAnySelectionPath)
         //.attr("stroke-width", d=> w(d))
