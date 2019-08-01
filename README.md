@@ -1,13 +1,11 @@
 # d3-hypertree-examples
 
-Get a quick overview ofd features:
-https://glouwa.github.io/d3-hypertree-examples/feature-slides/rslidy.html
+Before stat coding, a brief overview of [Hyperbolic Browsing](https://glouwa.github.io/d3-hypertree-examples/hyperbolictree-slides/)
 
+and the [Features of d3-hypertree](https://glouwa.github.io/d3-hypertree-examples/feature-slides/rslidy.html)
+might be useful.
 
-Get a quick overview of technology:
-https://glouwa.github.io/d3-hypertree-examples/d3-hypertree-examples/hyperbolictree-slides/
-
-## Plain HTML
+## Plain HTML Examples
 
 | Example       | Code          | Demo  |
 | ------------- |:-------------:| -----:|
@@ -17,9 +15,9 @@ https://glouwa.github.io/d3-hypertree-examples/d3-hypertree-examples/hyperbolict
 | Events        | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/mouse-events/index.html)    | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/mouse-events/) |
 
 
-## Webpack
+## Webpack Examples
 Comming soon
 
-## Jupyter Notebook
+## Jupyter Notebook Examples
 Comming later
 
