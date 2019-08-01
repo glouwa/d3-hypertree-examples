@@ -1,5 +1,11 @@
 # d3-hypertree-examples
 
+Get a quick overview ofd features:
+https://glouwa.github.io/d3-hypertree-examples/feature-slides/rslidy.html
+
+
+Get a quick overview of technology:
+https://glouwa.github.io/d3-hypertree-examples/d3-hypertree-examples/hyperbolictree-slides/
 
 ## Plain HTML
 
