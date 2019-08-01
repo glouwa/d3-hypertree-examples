@@ -13,9 +13,9 @@ The prebuilt javascript bundle can be downloaded here, but its suggested to get 
 | Example       | Code          | Demo  |
 | ------------- |:-------------:| -----:|
 | Minimal example, using a generated full binary tree.      | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/minimal-generated/index.html)    | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/minimal-generated/) |
-| Inline Data example, hierarchy is defined in HTML file.   | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/minimal-inlinedata/index.html)   | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/minimal-inlinedata/) |
-| AJAX example. Loads and displays a d3-hierarchy object.          | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/minimal-ajax/index.html)    | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/minimal-ajax/) |
-| Event examples. show a more complex configuration and mouse/touch event handling.        | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/mouse-events/index.html)    | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/mouse-events/) |
+| Inline Data example, hierarchy is defined within HTML file.   | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/minimal-inlinedata/index.html)   | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/minimal-inlinedata/) |
+| AJAX example, loads and displays a d3-hierarchy object.          | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/minimal-ajax/index.html)    | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/minimal-ajax/) |
+| Event examples. Shows a more complex configuration and mouse/touch event handling.        | [index.html](https://github.com/glouwa/d3-hypertree-examples/blob/master/examples-html/mouse-events/index.html)    | [View](https://glouwa.github.io/d3-hypertree-examples/examples-html/mouse-events/) |
 
 
 ## Webpack Examples

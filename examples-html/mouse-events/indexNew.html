@@ -158,7 +158,7 @@
                                             r: .025 * d.distScale * 1.5 
                                         }),
                                         hyt.CaddC(
-                                            hyt.bboxOffset(d)(v[i]),
+                                            hyt.bboxOffset(d/*, 'label'*/)(v[i]),
                                             { re:0, im:-.02*d.distScale }
                                         )
                                     )
@@ -178,7 +178,7 @@
                                             r: .025 * d.distScale * 1.5 
                                         }),
                                         hyt.CaddC(
-                                            hyt.bboxOffset(d)(v[i]),
+                                            hyt.bboxOffset(d/*, 'label2'*/)(v[i]),
                                             { re:0, im:.02*d.distScale }
                                         )                                       
                                     )
@@ -194,6 +194,7 @@
                         // is called for each node on node creation
                         // return the radius for the given node n.                        
                         nodeRadius: (ud, n) => {  
+                            //if (n.data.price < 20) return 0
                             if (n.mergeId == 1) return 0
                             if (n.mergeId == 2) return .025
                             if (n.mergeId == 3) return .033
@@ -219,28 +220,6 @@
                         cellColor:          n=> 'gray',                         // proposed
                         cellBorderColor:    n=> 'darkgray',                     // proposed
                         
-                        // and creates the 'helicopter' effect for labels.
-                        // valid values are:
-                        // - hyt.labeloffsets.labeloffset: helicopter effect for labels 
-                        // - hyt.labeloffsets.center:      place the label center over node center
-                        // - 
-                        //offsetLabels:       hyt.labeloffsets.labeloffset,
-                        offsetLabels:       ls=> d=> {
-                                            return hyt.CaddC(
-                                                hyt.CptoCk({ 
-                                                    θ: d.cachep.θ, 
-                                                    r: .025 * d.distScale * 1.5 
-                                                }),
-                                                { re:0, im:.01 }
-                                            )
-                                            /*
-                                            return CptoCk({ 
-                                                θ: d.cachep.θ, 
-                                                r: ls.args.nodeRadius(ls, d) * d.distScale * 1.2
-                                            })*/
-                                        }
-                        ,
-
                         // for label layout the bounding box of labels must be calculated.
                         // captionFont is used for this calculations. 
                         // is must be the same font size as used for labels. 
@@ -260,7 +239,11 @@
                         },
                         // is called when center node changes.
                         // the new center node is given by n
-                        onCenterNodeChange: n=> console.log('### EVENT: onCenterNodeChange', n.mergeId, n),                        
+                        onCenterNodeChange: n=> {
+                            console.log('### EVENT: onCenterNodeChange', n.mergeId, n)
+                            hypertree2.loadfile(customerX)
+                            hypertree2.gotoProduct(Y)
+                        },
                         // defines minimum and maximum link length
                         // default mouse wheel behavior is to change λ 
                         λbounds: [ .25, .5 ],

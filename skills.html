@@ -1,0 +1,161 @@
+<html>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <style>
+      body {
+        font-family: 'Roboto light', sans-serif;
+        font-size: 48px;
+      }
+    </style>
+  <body>
+    <svg id="vis" width="80%" height="200%">      
+    </svg>
+    <script>
+
+      xMax = 350
+      xMaxSkill = xMax/5*3
+
+      yMax = 1000
+
+      var svg = d3.select("#vis")      
+        .attr("viewBox", [0, -30, 500, 1560]);
+
+      var y = d3.scaleLinear()
+        .domain([1997, 2019])
+        .range([1000, 0]);
+
+      
+      var x = d3.scaleLinear()
+        .domain([0, 6])
+        .range([45, xMaxSkill]);
+
+      function drawYear(n, y, y_domain)
+      {
+        svg.append("line")        
+          .attr("x1", 0)
+          .attr("y1", y)
+          .attr("x2", xMax)
+          .attr("y2", y)
+          //.style("stroke", 'lightgray')
+          .style("stroke", 'gray')
+          .style("stroke-width",.2)
+          .style("stroke-dasharray", [30, 15])
+
+        svg.append("text")
+          .attr("x", 2)
+          .attr("y", y-5)          
+          .text(y_domain)
+          .style("fill", "gray")      
+          .style("font-size", "20")
+
+        svg.append("text")
+          .attr("x", xMax)
+          .attr("y", y-5)          
+          .text(n)
+          .style("text-anchor", "end")      
+          .style("fill", "gray")      
+          .style("font-size", "20")
+      }
+
+      function drawSkill(n, x, b, e)
+      {
+        r = 7
+        cc = '#0e5484'
+        lc = cc
+
+        g = svg.append("g")
+          .attr("transform", d=> `translate(${x},${0})`)
+
+        g.append("line")
+          .attr("x1", 0)
+          .attr("y1", b)
+          .attr("x2", 0)
+          .attr("y2", e)
+          .style("stroke", lc)
+          .style("stroke-width", 6)
+
+        g.append("circle")
+          .attr("cx", 0)
+          .attr("cy", b)
+          .attr("r", r)
+          .style("fill", cc)
+
+        g.append("circle")
+          .attr("cx", 0)
+          .attr("cy", e)
+          .attr("r", r)
+          .style("fill", cc)      
+
+        g.append("text")
+          .attr("x", -9)
+          .attr("y", b+31)          
+          .text(n)
+          .style("fill", "black")      
+          .style("font-size", "22")
+          
+      }
+
+      function drawSkillBar(n, v, p)
+      {
+        lc = '#0e5484'
+        y_ = 1110 + p * 60
+        v_ = v * xMax/10
+
+        svg.append("line")
+          .attr("x1", 0)
+          .attr("y1", y_)
+          .attr("x2", xMax)
+          .attr("y2", y_)
+          .style("stroke", 'lightgray')
+          .style("stroke-width", 8)
+          .style("stroke-linecap", "round")
+
+        svg.append("line")
+          .attr("x1", 0)
+          .attr("y1", y_)
+          .attr("x2", v_)
+          .attr("y2", y_)
+          .style("stroke", lc)
+          .style("stroke-width", 8)
+          .style("stroke-linecap", "round")
+
+        svg.append("text")
+          .attr("x", -5)
+          .attr("y", y_-10)          
+          .text(n)
+          .style("fill", "gray")      
+          .style("font-size", "22")
+      }
+
+      addSkill = (n, x_, b, e)=>  drawSkill(n, x(x_), y(b), y(e))
+      addYear = (n, y_)=>  drawYear(n, y(y_), y_===2002?2003:y_)
+
+      drawSkillBar('Software Engineering / Architecture', 8.7, 1)
+      drawSkillBar('Information Visualisation', 8, 2)
+      drawSkillBar('Data Science', 5.5, 3)
+
+      addYear('HTL', 1997)
+      addYear('iDat-Tech', 2002)
+      addYear('eurofunk', 2006)
+      addYear('TU Graz', 2012)
+      addYear('d3-hypertree', 2017)
+      addYear('', 2019)
+
+      addSkill('C++',          1, 1997, 2002)
+      addSkill('',             1, 2002, 2008)
+      addSkill('',             1, 2009, 2010)
+      addSkill('',             1, 2012, 2015.5)
+      addSkill('',             1, 2016.5, 2017)
+      
+      addSkill('C#',           2, 2004, 2006)
+      addSkill('',             2, 2008, 2012)
+      
+      addSkill('Project Lead', 3, 2007.5, 2012)
+
+      addSkill('Python',       4, 2014, 2015.5)
+      addSkill('',             4, 2016, 2019)
+      addSkill('TypeScript',   5, 2015, 2019)
+      addSkill('D3.js',        6, 2016, 2019)
+    </script>
+  </body>
+</html>
