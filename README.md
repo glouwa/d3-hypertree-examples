@@ -1,8 +1,6 @@
 # d3-hypertree-examples
 
-Before stat coding, a brief overview of [Hyperbolic Browsing](https://glouwa.github.io/d3-hypertree-examples/hyperbolictree-slides/)
-
-and the [Features of d3-hypertree](https://glouwa.github.io/d3-hypertree-examples/feature-slides/rslidy.html)
+Before start coding, a brief overview of [Hyperbolic Browsing](https://glouwa.github.io/d3-hypertree-examples/hyperbolictree-slides/) and the [Features of d3-hypertree](https://glouwa.github.io/d3-hypertree-examples/feature-slides/rslidy.html)
 might be useful.
 
 ## Plain HTML Examples
