@@ -8,7 +8,7 @@ might be useful.
 This most simple technique shows how to create a hypertree component 
 by simply adding the prebuilt javascript bundle and css to your HTML file.
 
-The prebuilt javascript bundle can be downloaded here, but its suggested to get it by npm.
+The prebuilt javascript bundle can be downloaded [here](https://cdn.jsdelivr.net/npm/d3-hypertree@1.1.0/dist/d3-hypertree.js), but its suggested to get it by npm.
 
 | Example       | Code          | Demo  |
 | ------------- |:-------------:| -----:|
