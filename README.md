@@ -6,10 +6,12 @@ might be useful.
 ## Plain HTML Examples
 
 This most simple technique shows how to create a hypertree component 
-by adding the prebuilt javascript bundle and css to your HTML file.
+by adding the prebuilt JavaScript bundle and css to your HTML file.
 
-The prebuilt javascript bundle can be downloaded [here](https://cdn.jsdelivr.net/npm/d3-hypertree@1.1.0/dist/d3-hypertree.js), but it is suggested to get it by using `npm i d3-hypertree`. This way `node_modules/d3-hypertree/dist` will contain all necessary files.
-The prebuilt bundle declares the global variable `hyt`, the TypeScript examples will import d3-hypertree as `hyt`, this way the examples codes work for both. 
+The prebuilt JavaScript bundle can be downloaded [here](https://cdn.jsdelivr.net/npm/d3-hypertree@1.1.0/dist/d3-hypertree.js), but it is suggested to get it by using `npm i d3-hypertree`. 
+
+`node_modules/d3-hypertree/dist` will contain all necessary files.
+The prebuilt bundle declares the global variable `hyt`, the TypeScript examples will import d3-hypertree as `hyt`, this way the Webpack example snippets work if the JavaScript bundle is used. 
 
 Add the following lines to your page: 
 ```
