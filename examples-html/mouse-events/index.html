@@ -129,26 +129,59 @@
                         // and therefore also used to hide/show layers 
                         layerOptions:       {
                             'stem-arc':    { invisible: true, hideOnDrag: true },
-                            'cells':       { invisible: true, hideOnDrag: true },
+                            'cells':       { 
+                                invisible: false, 
+                                hideOnDrag: true,
+                                fill: n=> undefined,  
+                                stroke: n=> undefined,
+                                strokeWidth: n=> 0,                                
+                            },
                             'λ':           { invisible: true, hideOnDrag: true },
                             'center-node': { invisible: false, hideOnDrag: false },
                             'images':      { width: .1, height: .1 },
                             'link-arcs':   { 
-                                linkColor: n=> { // proposed
+                                stroke: n=> { 
                                     if (n.mergeId == 12) return 'orange'
                                     return undefined
-                                },  
-                                linkBorderColor:    n=> 'red',                          // proposed
+                                },
+                                // is called for each node when shown
+                                // return the width of the edge for the given node n.
+                                strokeWidth: arcWidth,
+
+                                // valid values are:
+                                // '+': hyperbolic arc
+                                // '-': inverse hyperbolic arc 
+                                // 'l': straight line
+                                linkCurvature: 'l',  
                             }, 
                             'nodes':   { 
                                 // is called for each node when shown
                                 // return the color for given node n
-                                nodeColor: n=> { // proposed                                    
+                                fill: n=> { // proposed                                    
                                     if (n.mergeId == 12) return 'yellow'
                                     if (!n.children) return 'red'
                                     return '#a5d6a7'
                                 },  
-                                nodeBorderColor:    n=> 'green',                        // proposed                        
+                                stroke: n=> {
+                                    if (n.mergeId == 12) return 'orange'
+                                    else return '#999'
+                                },
+                                strokeWidth: n=> .005,
+                            },
+
+                            'labels':   {                                 
+                                // and creates the 'helicopter' effect for labels.
+                                // valid values are:
+                                // - hyt.labeloffsets.labeloffset: helicopter effect for labels 
+                                // - hyt.labeloffsets.center:      place the label center over node center
+                                // - 
+                                offsetLabels: hyt.labeloffsets.labeloffset,
+
+                                // for label layout the bounding box of labels must be calculated.
+                                // captionFont is used for this calculations. 
+                                // is must be the same font size as used for labels. 
+                                // unfortunately reading the css font size does not work.                        
+                                captionFont: '6.5px Roboto', 
                             }
                         },                        
 
@@ -171,31 +204,6 @@
                         // is called for each visible node for each frame.
                         // this factor in interval (0, 1) is applied to the nodeRadius                        
                         nodeScale:          nodeScale,       
-                       
-                        // is called for each node when shown
-                        // return the width of the edge for the given node n.
-                        linkWidth:          arcWidth,                        
-                        
-                        // valid values are:
-                        // '+': hyperbolic arc
-                        // '-': inverse hyperbolic arc 
-                        // 'l': straight line
-                        linkCurvature:      'l',             
-                        cellColor:          n=> 'gray',                         // proposed
-                        cellBorderColor:    n=> 'darkgray',                     // proposed
-                        
-                        // and creates the 'helicopter' effect for labels.
-                        // valid values are:
-                        // - hyt.labeloffsets.labeloffset: helicopter effect for labels 
-                        // - hyt.labeloffsets.center:      place the label center over node center
-                        // - 
-                        offsetLabels:       hyt.labeloffsets.labeloffset,
-
-                        // for label layout the bounding box of labels must be calculated.
-                        // captionFont is used for this calculations. 
-                        // is must be the same font size as used for labels. 
-                        // unfortunately reading the css font size does not work.                        
-                        captionFont:        '6.5px Roboto',                        
                     },
                     interaction: {
                         // the node click area is the voronoi cell in euclidean space.

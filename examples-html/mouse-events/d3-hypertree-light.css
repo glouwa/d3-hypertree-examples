@@ -278,6 +278,9 @@
     paint-order: stroke;
     stroke-width: .04; }
 
+.hypertree-background {
+  background-color: white; }
+
 .unitdisk-nav svg .cell {
   /*stroke: rgba($leafcolor, .25);            
             fill: rgba($leafcolor, .2);
@@ -316,7 +319,7 @@
 
 .unitdisk-nav svg .label-link {
   /*stroke: #2196F3;            */
-  stroke: #0f0;
+  stroke: #195e04;
   opacity: .6;
   stroke-width: .001;
   stroke-dasharray: .018, .015; }
@@ -439,6 +442,7 @@
 .unitdisk-nav svg .nav-background-disc .arc {
   stroke: #aaa; }
 
+
 .layer-info.data {
   bottom: 1.2em; }
 
@@ -529,7 +533,6 @@
       opacity: .75; }
   .layer-info .ping1 {
     background-color: #ccc; }
-
 
 .render-info.data {
   bottom: 1em; }

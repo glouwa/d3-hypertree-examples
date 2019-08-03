@@ -274,6 +274,9 @@
     paint-order: stroke;
     stroke-width: .04; }
 
+.hypertree-background {
+  background-color: #1f1f1f; }
+
 .unitdisk-nav svg .cell {
   fill: rgba(165, 214, 167, 0);
   stroke: rgba(0, 0, 0, 0.15);
@@ -422,6 +425,7 @@
   stroke-width: .02;
   font-weight: 300; }
 
+
 .layer-info.data {
   bottom: 1.2em; }
 
@@ -510,7 +514,6 @@
     background-color: #2b2929; }
   .layer-info .ping1 {
     background-color: #666; }
-
 
 .render-info.data {
   bottom: 1em; }

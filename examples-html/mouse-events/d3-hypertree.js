@@ -680,7 +680,8 @@ class D3UpdatePattern {
         // extrashit
         if (this.args.name === 'labels-force' && true)
             this.addTextBackgroundRects();
-        //if (this.args.name === 'labels' && true)       this.addTextBackgroundRects()
+        if (this.args.name === 'labels' && true)
+            this.addTextBackgroundRects();
     }
     addTextBackgroundRects() {
         this.mainSvgGroup.selectAll('rect').remove();
@@ -3383,7 +3384,10 @@ function layoutBergé(n, λ, noRecursion = false) {
         if (n.parent) {
             const angleWidth = hyperbolic_math_6.πify(wedge.Ω - wedge.α);
             const bisectionAngle = wedge.α + (angleWidth / 2.0);
-            const nz1 = hyperbolic_math_2.CptoCk({ θ: bisectionAngle, r: λ * (1 + L || 1) });
+            let deflen = 1;
+            if (!n.parent.parent)
+                deflen = .5;
+            const nz1 = hyperbolic_math_2.CptoCk({ θ: bisectionAngle, r: λ * (deflen + L || 1) });
             setZ(n, hyperbolic_math_5.h2e(hyperbolic_math_1.makeT(n.parent.layout.z, hyperbolic_math_1.one), nz1));
             wedgeTranslate(wedge, n.parent.layout.z);
             wedgeTranslate(wedge, hyperbolic_math_3.Cneg(n.layout.z));
@@ -6067,9 +6071,15 @@ class CellLayer {
             elementType: 'polygon',
             create: s => s.attr('id', d => 'cell-' + d.data.mergeId)
                 .classed("leaf", false) /*s.classed("root",      d=> !d.data.parent)   */
-                .classed("lazy", true),
+                .classed("lazy", true)
+                .style("stroke", d => (d.pathes && d.pathes.labelcolor) || this.args.stroke(d))
+                .style("stroke-width", d => (d.pathes && d.pathes.labelcolor) || this.args.strokeWidth(d)),
+            /*
+            .classed("lazy",      d=> d.data.hasOutChildren)
+            .classed("leaf",      d=> !d.data.children),*/
             updateColor: s => //s.classed("lazy",      d=> d.data.hasOutChildren),
-             s.classed("hovered", d => d.data.isPartOfAnyHoverPath && d.data.parent),
+             s.classed("hovered", d => d.data.isPartOfAnyHoverPath && d.data.parent)
+                .style("fill", d => (d.pathes && d.pathes.labelcolor) || this.args.fill(d)),
             //.classed("selected",  d=> d.data.isPartOfAnySelectionPath && d.data.parent),
             updateTransform: s => s //.classed("lazy",      d=> d.data.hasOutChildren)                                 
                 .attr("points", d => {
@@ -12358,7 +12368,7 @@ class ArcLayer {
             elementType: this.args.curvature === 'l' ? 'line' : 'path',
             create: s => { },
             //updateColor:       s=> this.args.classed(s, this.args.width),
-            updateColor: s => this.args.classed(s, this.args.width, this.args.linkColor),
+            updateColor: s => this.args.classed(s, this.args.width, this.args.stroke),
             updateTransform: s => {
                 //const c = d=> d.height===0 ? '+' : '-'                 
                 const c = d => this.args.curvature;
@@ -12367,11 +12377,11 @@ class ArcLayer {
                         .attr('y1', d => this.args.nodePos(d).im)
                         .attr('x2', d => this.args.nodePos(d.parent).re)
                         .attr('y2', d => this.args.nodePos(d.parent).im)
-                        .attr("stroke-width", d => this.args.width(d))
+                        .attr("stroke-width", d => this.args.strokeWidth(d))
                         .attr("stroke-linecap", d => "round");
                 else
                     s.attr("d", d => this.arcOptions[c(d)](d))
-                        .attr("stroke-width", d => this.args.width(d))
+                        .attr("stroke-width", d => this.args.strokeWidth(d))
                         .attr("stroke-linecap", d => "round");
                 //this.args.classed(s, this.args.width)
             },
@@ -12441,14 +12451,16 @@ class NodeLayer {
                 .classed("lazy", d => d.hasOutChildren)
                 .classed("leaf", d => d.parent)
                 .classed("exit", d => (!d.children || !d.children.length)
-                && d.data && d.data.numLeafs),
+                && d.data && d.data.numLeafs)
+                .style("stroke", d => (d.pathes && d.pathes.labelcolor) || this.args.stroke(d))
+                .style("stroke-width", d => (d.pathes && d.pathes.labelcolor) || this.args.strokeWidth(d)),
             updateColor: s => s.classed("hovered", d => d.pathes && d.pathes.isPartOfAnyHoverPath)
                 .classed("selected", d => d.pathes && d.pathes.isPartOfAnySelectionPath)
-                .style("fill", d => (d.pathes && d.pathes.labelcolor) || this.args.nodeColor(d)),
+                .style("fill", d => (d.pathes && d.pathes.labelcolor) || this.args.fill(d)),
             //updateColor:       s=> s.classed("hovered",   d=> d.isPartOfAnyHoverPath && d.parent)
             //                        .classed("selected",  d=> d.isPartOfAnySelectionPath && d.parent),
             updateTransform: s => s.attr("transform", d => this.args.transform(d))
-                .style("stroke", d => d.pathes && d.pathes.labelcolor)
+                //.style("stroke",      d=> d.pathes && d.pathes.labelcolor)
                 .attr("r", d => this.args.r(d)),
         });
     }
@@ -12733,6 +12745,9 @@ exports.layerSrc = [
         hideOnDrag: true,
         clip: '#circle-clip' + ud.args.clipRadius,
         data: () => ud.cache.cells,
+        fill: n => undefined,
+        stroke: n => undefined,
+        strokeWidth: n => undefined,
     }),
     (v, ud) => new focus_layer_1.FocusLayer(v, {
         invisible: true,
@@ -12806,7 +12821,9 @@ exports.layerSrc = [
         name: 'center-node',
         className: 'center-node',
         //clip:       '#node-32-clip', centernode.id
-        nodeColor: n => undefined,
+        fill: n => undefined,
+        stroke: n => undefined,
+        strokeWidth: n => undefined,
         data: () => ud.cache.centerNode ? [ud.cache.centerNode] : [],
         r: d => .1,
         transform: d => d.transformStrCache
@@ -12822,8 +12839,8 @@ exports.layerSrc = [
         data: () => ud.cache.paths,
         nodePos: n => n.cache,
         nodePosStr: n => n.strCache,
-        linkColor: n => undefined,
-        width: d => ud.args.linkWidth(d) + (.013 * d.dampedDistScale),
+        stroke: n => undefined,
+        strokeWidth: d => ud.args.linkWidth(d) + (.013 * d.dampedDistScale),
         classed: s => s.classed("hovered-path", d => d.pathes && d.pathes.isPartOfAnyHoverPath)
             .classed("selected-path", d => d.pathes && d.pathes.isPartOfAnySelectionPath)
             .style("stroke", d => d.pathes && d.pathes.finalcolor)
@@ -12838,8 +12855,8 @@ exports.layerSrc = [
         data: () => ud.cache.links,
         nodePos: n => n.cache,
         nodePosStr: n => n.strCache,
-        linkColor: n => undefined,
-        width: d => ud.args.linkWidth(d),
+        stroke: n => undefined,
+        strokeWidth: d => ud.args.linkWidth(d),
         classed: (s, w, c) => s
             .style("stroke", d => ((d.pathes && d.pathes.isPartOfAnyHoverPath) ? d.pathes && d.pathes.finalcolor : d.pathes && d.pathes.finalcolor) || c(d))
             .classed("hovered", d => d.pathes && d.pathes.isPartOfAnyHoverPath)
@@ -12877,7 +12894,9 @@ exports.layerSrc = [
         name: 'nodes',
         className: 'node',
         data: () => ud.cache.leafOrLazy,
-        nodeColor: n => undefined,
+        fill: n => undefined,
+        stroke: n => undefined,
+        strokeWidth: n => undefined,
         r: d => ud.args.nodeRadius(ud, d),
         transform: d => d.transformStrCache
             + ` scale(${ud.args.nodeScale(d)})`,
@@ -13402,15 +13421,37 @@ class Hypertree {
             || (this.virtualCanvasContext = canvas.getContext("2d"));
         context.font = this.args.geometry.captionFont;
         //context.textBaseLine = 'middle'
-        //context.textAlign = 'center'
-        this.data.each(n => {
+        //context.textAlign = 'center' 
+        const updateLabelLen_ = (txtprop, lenprop) => {
+            this.data.each(n => {
+                if (n.precalc[txtprop]) {
+                    const metrics = context.measureText(n.precalc[txtprop]);
+                    n.precalc[lenprop] = metrics.width / 200 / window.devicePixelRatio;
+                }
+                else
+                    n.precalc[lenprop] = undefined;
+            });
+        };
+        updateLabelLen_('label', 'labellen');
+        updateLabelLen_('label2', 'label2len');
+        /*
+        this.data.each(n=> {
             if (n.precalc.label) {
-                const metrics = context.measureText(n.precalc.label);
-                n.precalc.labellen = metrics.width / 200 / window.devicePixelRatio;
+                const metrics = context.measureText(n.precalc.label)
+                n.precalc.labellen = metrics.width/200/window.devicePixelRatio
             }
             else
-                n.precalc.labellen = 0;
-        });
+                n.precalc.labellen = 0
+        })
+
+        this.data.each(n=> {
+            if (n.precalc.label2) {
+                const metrics = context.measureText(n.precalc.label2)
+                n.precalc.label2len = metrics.width/200/window.devicePixelRatio
+            }
+            else
+                n.precalc.label2len = undefined
+        })*/
     }
     updateLayoutPath_(preservingnode) {
         const t = this.args.geometry.transformation;
@@ -18315,7 +18356,7 @@ exports.presets = {
             interaction: {
                 onNodeSelect: s => { console.log('###########', s); },
                 onNodeHover: s => { console.log('########onnodehover', s); },
-                λbounds: [1 / 5, .75],
+                λbounds: [.25, .6],
             },
             langInitBFS: (ht, n) => {
                 const id = n.data.name;
