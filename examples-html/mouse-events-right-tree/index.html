@@ -226,7 +226,19 @@
                             ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null)
                                 .then(()=> l.view.hypertree.drawDetailFrame())                            
 
-                            createOrReplaceRightTree('data/mammalia.d3.json')
+                            files = [
+                                'data/mammalia.d3.json',
+                                'data/acrogymnospermae.d3.json',
+                                'data/carnivora.d3.json',
+                                'data/araneae.d3.json',
+                                'data/crocodylia.d3.json',
+                                'data/dikarya.d3.json',
+                                'data/LDA24.d3.json',                                
+                                'data/PCA12.d3.json'
+                            ]
+
+                            const randidx = Math.floor(Math.random*files.length)
+                            createOrReplaceRightTree(file[randidx])
                         },
 
                         // is called when center node changes.
