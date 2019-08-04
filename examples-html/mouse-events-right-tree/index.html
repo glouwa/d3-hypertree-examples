@@ -290,10 +290,15 @@
                             }
                         }
                     )
-                    var animationNode1 = rightTree.data.children[1]
-                    var animationNode2 = rightTree.data.children[0].children[1]
+                    var animationNode1 = undefined
+                    var animationNode2 = undefined
                     rightTree.initPromise
                     .then(()=> new Promise((ok, err)=> rightTree.animateUp(ok, err)))
+                    .then(()=> new Promise((ok, err)=> {
+                        animationNode1 = rightTree.data.children[1]
+                        animationNode2 = rightTree.data.children[0].children[1]
+                        ok()
+                    })
                     .then(()=> rightTree.api.gotoNode(animationNode1))
                     .then(()=> rightTree.api.gotoNode(animationNode2))
                     .then(()=> rightTree.api.gotoHome())
