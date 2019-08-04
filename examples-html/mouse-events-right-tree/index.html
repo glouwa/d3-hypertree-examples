@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+    <title>Hyperbolic tree</title>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="dcterms.rightsHolder" content="Copyright © 2018 Glatzhofer Michael">
+    
+    <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
+
+    <script src="d3-hypertree.js"></script>
+    </head>
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 200;
+            src: url('fonts/roboto/Roboto-Light.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'NotoColorEmoji';
+            src: url('fonts/noto/NotoColorEmoji.ttf') format('truetype');
+        }    
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 200;    
+            src: url('fonts/roboto/Roboto-Light.woff2') format('woff2');
+        }                    
+        body {
+            font-family: 'Roboto';
+            font-weight: lighter;
+            touch-action: none;
+        }
+    </style>
+    <body>        
+        <div style="touch-action:none; font-family:Roboto; display:grid; grid-template-columns:1fr 1fr" >
+            <div style="background-image:linear-gradient(to right, #f5f5f5, #fff, #fafafa); height:45em; position:relative;"></div>
+            <div style="background-image:linear-gradient(to right, #f5f5f5, #fff, #fafafa); height:45em; position:relative;"></div>
+        </div>
+
+        <script>            
+            const π = Math.PI
+
+            // helper functions. used to calculate node size (radius)
+            const hasLazy =        n=> (n.hasOutChildren && n.isOutλ)
+            const isLeaf =         n=> !n.children || !n.children.length
+            const isRoot =         n=> !n.parent 
+            
+            var nodeInitR =        (c)=> (ud, d)=> c * ((d.children && d.parent) ? innerNodeScale(d) : 1)     
+            var nodeInitRNoInner = (c)=> (ud, d)=> c
+            var nodeScale =        d=> d.distScale * (hasLazy(d) ? .8 : 1)    
+            var nodeScaleNoInner = d=> d.distScale    
+            var innerNodeScale =   d=> d.precalc.weightScale
+            var arcWidth =         d=> .025 * d.distScale * d.precalc.weightScale
+
+            // constructs a new hypertree component.
+            // ht variable can be used later on to modify component
+            // or start animations
+            const ht = new hyt.Hypertree(
+                { 
+                    // parent html element of the component
+                    // existing children of the parent element are removed.
+                    // this way, it is simple to replace a hypertree by another
+                    parent: document.body.firstElementChild.firstElementChild 
+                },
+                { 
+                    // this function is called on initialization.
+                    // the function must return a d3-hierarchy object
+                    // https://github.com/d3/d3-hierarchy
+                    dataloader: hyt.loaders.generators.nT1,
+
+                    // dataInitBFS is called each time after data is set.
+                    // node properties which do not change during runtime, 
+                    // should be set in this function.
+                    // this way calculations are not necessary for each frame.
+                    dataInitBFS: (ht, n)=> {
+                        if (n.mergeId == 12)
+                            n.precalc.imageHref = 'img/example.png'         
+                    }, 
+
+                    // is called when language is changed, 
+                    // otherwise similar to dataInitBFS.
+                    // typically node labels are calculated in this function.
+                    langInitBFS: (ht, n)=> {                        
+                        n.precalc.label = `Label ${n.mergeId} / ${n.precalc.layoutWeight}`
+                    },
+
+                    // calculates hyperbolic node coordinates.
+                    layout: {                        
+                        type:               hyt.layouts.layoutBergé,                        
+                        // the wegde (see lamping rao 95 for definition) must be 
+                        // given by developer
+                        rootWedge: {                                        
+                            // defines the rotation of the tree
+                            // valid values are 0 <= angle < 2π
+                            orientation:    0,
+                            // valid values are 0 < angle < 2π
+                            // a value of π*1.99999 lays out the children of the root node 
+                            // on a full circle
+                            angle:          π*1.99999     
+                        },
+                        // defines the layout weight for each node,
+                        // this means the function is called for each node.
+                        // return the weight for the given node n.
+                        // if not specified, sibling will receive the same space 
+                        // (wedge angle).
+                        // if weight is specified, the angles of sibling wedges will 
+                        // be proportional to to the weight of the nodes.
+                        weight: (n)=> {                             
+                            //if (n.data.productname == "XXX")                            
+                            if (n.mergeId == 4) return 16000
+                            return 1
+                        },
+                        
+                    },
+                    
+                    // removes unimportant nodes to achieve scalability for small λ values.
+                    // if no type is specified, no node filter is applied.                    
+                    filter: {                        
+                        maxlabels:          20,  // number of visible labels.                        
+                        focusExtension:     2.7, // labels outside of focusExtension*λ are always hidden 
+                    },
+                    
+                    // all rendered objects are placed n a unit disc. 
+                    // complex numbers are used to describe points. (x = re, y = im)
+                    // polar coordinates are useful in some cases, so check coordinate type 
+                    // (Ck = cartesian, Cp = polar)
+                    // all units specified in this section are relative to the unit disk.
+                    // i.e. a node radius of .1 means the node has a radius of 10% of the unit disc radius.
+                    geometry: {
+                        // is used to configure layers, including the layer visibility,
+                        // and therefore also used to hide/show layers 
+                        layerOptions:       {
+                            'stem-arc':    { invisible: true, hideOnDrag: true },
+                            'cells':       { 
+                                invisible: false, 
+                                hideOnDrag: true,
+                                fill: n=> undefined,  
+                                stroke: n=> undefined,
+                                strokeWidth: n=> 0,                                
+                            },
+                            'λ':           { invisible: true, hideOnDrag: true },
+                            'center-node': { invisible: false, hideOnDrag: false },
+                            'images':      { width: .1, height: .1 },
+                            'link-arcs':   { 
+                                stroke: n=> { 
+                                    if (n.mergeId == 12) return 'orange'
+                                    return undefined
+                                },
+                                // is called for each node when shown
+                                // return the width of the edge for the given node n.
+                                strokeWidth: arcWidth,
+
+                                // valid values are:
+                                // '+': hyperbolic arc
+                                // '-': inverse hyperbolic arc 
+                                // 'l': straight line
+                                linkCurvature: 'l',  
+                            }, 
+                            'nodes':   { 
+                                // is called for each node when shown
+                                // return the color for given node n
+                                fill: n=> { // proposed                                    
+                                    if (n.mergeId == 12) return 'yellow'
+                                    if (!n.children) return 'red'
+                                    return '#a5d6a7'
+                                },  
+                                stroke: n=> {
+                                    if (n.mergeId == 12) return 'orange'
+                                    else return '#999'
+                                },
+                                strokeWidth: n=> .005,
+                            },
+
+                            'labels':   {                                 
+                                // and creates the 'helicopter' effect for labels.
+                                // valid values are:
+                                // - hyt.labeloffsets.labeloffset: helicopter effect for labels 
+                                // - hyt.labeloffsets.center:      place the label center over node center
+                                // - 
+                                offsetLabels: hyt.labeloffsets.labeloffset,
+
+                                // for label layout the bounding box of labels must be calculated.
+                                // captionFont is used for this calculations. 
+                                // is must be the same font size as used for labels. 
+                                // unfortunately reading the css font size does not work.                        
+                                captionFont: '6.5px Roboto', 
+
+                                // return undefined for no background rect
+                                // return color to draw background rect
+                                background: n=> true
+                            }
+                        },                        
+
+                        // this function can be used to prefilter nodes.                        
+                        // it is called for each frame, 
+                        // therefore a fast implementation is important.
+                        // if the prefilter is the same for each frame, 
+                        // please consider to filter in the dataloader function.
+                        nodeFilter:         n=> true,
+
+                        // is called for each node on node creation
+                        // return the radius for the given node n.                        
+                        nodeRadius: (ud, n) => {  
+                            if (n.mergeId == 1) return 0
+                            if (n.mergeId == 2) return .1
+                            if (n.mergeId == 12) return .1
+                            return .025
+                        },
+                                                
+                        // is called for each visible node for each frame.
+                        // this factor in interval (0, 1) is applied to the nodeRadius                        
+                        nodeScale:          nodeScale,       
+                    },
+                    interaction: {
+                        // the node click area is the voronoi cell in euclidean space.
+                        // this way, wherever the user clicks, a node can be associated
+                        // n: clicked node
+                        // m: click coordinates
+                        // l: event source layer
+                        onNodeClick: (n, m, l)=> { 
+                            console.log('### EVENT: onNodeClick', n.mergeId, n)
+
+                            ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null)
+                                .then(()=> l.view.hypertree.drawDetailFrame())                            
+
+                                createOrReplaceRightTree('data/mammalia.d3.json')
+                        },
+
+                        // is called when center node changes.
+                        // the new center node is given by n
+                        onCenterNodeChange: n=> {
+                            console.log('### EVENT: onCenterNodeChange', n.mergeId, n)
+                            // createOrReplaceRightTree('filename') to slow here, onCenterNodeChange will be called while moving
+                        },
+
+                        // defines minimum and maximum link length
+                        // default mouse wheel behavior is to change λ 
+                        λbounds: [ .25, .5 ],
+
+                        // mouse wheel speed
+                        wheelFactor: 1.175,
+                    }
+                }
+            )
+
+            var animationNode1 = ht.data.children[1]
+            var animationNode2 = ht.data.children[0].children[1]
+            
+            // after the component is created, 
+            // init promise can be used to set additional actions.
+            // since those are typically non blocking operations like
+            // animations, javascript promises are used.
+            ht.initPromise
+                .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))
+                .then(()=> ht.api.gotoNode(animationNode1))
+                .then(()=> ht.api.gotoNode(animationNode2))
+                .then(()=> ht.api.gotoHome())
+                .then(()=> ht.api.gotoλ(.25))
+                .then(()=> ht.api.gotoλ(.5))
+                .then(()=> ht.drawDetailFrame())
+
+                function createOrReplaceRightTree(filename)
+                {
+                    const rightTree = new hyt.Hypertree(
+                        { parent:  document.body.firstElementChild.lastElementChild },
+                        { 
+                            dataloader: hyt.loaders.fromFile(filename),            
+                            langInitBFS: (ht, n)=> n.precalc.label = `Label ${n.mergeId}`,      
+                            layout: {
+                                rootWedge: {           
+                                    orientation:    0,
+                                    angle:          Math.PI*1.99999
+                                }
+                            },
+                            geometry: {
+                                layerOptions: {              
+                                    'stem-arc': { invisible: true, hideOnDrag: true },
+                                    cells:   { invisible:false, hideOnDrag:true, strokeWidth: n=> 0 },                
+                                    λ:       { invisible:true, hideOnDrag:true },                
+                                    labels:  { background: n=> true }
+                                },
+                                nodeFilter: n=> n.precalc.imageHref || n.hasOutChildren || !n.children,
+                                nodeRadius: (ud, n) => .04,
+                            },      
+                            interaction: {              
+                                λbounds: [.25, .6],            
+                            }
+                        }
+                    )
+                    var animationNode1 = rightTree.data.children[1]
+                    var animationNode2 = rightTree.data.children[0].children[1]
+                    rightTree.initPromise
+                    .then(()=> new Promise((ok, err)=> rightTree.animateUp(ok, err)))
+                    .then(()=> rightTree.api.gotoNode(animationNode1))
+                    .then(()=> rightTree.api.gotoNode(animationNode2))
+                    .then(()=> rightTree.api.gotoHome())
+                    .then(()=> rightTree.api.gotoλ(.5))                    
+                    .then(()=> rightTree.drawDetailFrame())
+                }
+        </script>
+    </body>
+</html>
