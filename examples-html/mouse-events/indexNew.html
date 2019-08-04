@@ -169,7 +169,7 @@
                                             r: .025 * d.distScale * 1.5 
                                         }),
                                         hyt.CaddC(
-                                            hyt.bboxOffset(d, 'labellen')(v[i]),
+                                            hyt.bboxOval(d, 'labelslen'),
                                             { re:0, im:-.02*d.distScale }
                                         )
                                     )
@@ -178,7 +178,11 @@
                                 // captionFont is used for this calculations. 
                                 // is must be the same font size as used for labels. 
                                 // unfortunately reading the css font size does not work.                        
-                                captionFont: '6.5px Roboto',
+                                captionFont: '6.5px Roboto',                               
+                                
+                                //captionHeight: 
+
+                                background: n=> true
                             },
                             'labels2': {
                                 invisible: false, 
@@ -186,29 +190,21 @@
                                 text:  (d)=> d.precalc.label2, 
                                 color: d=> (d.mergeId == 12?'red':undefined),
                                 captionFont: '6.5px Roboto',
+                                labelHeight: 0.2,
                                 delta: (d, i, v)=> 
                                 {
                                     const specialv = { θ: d.cachep.θ, r: .025 * d.distScale * 1.5 }
                                     const specialvCk = hyt.CptoCk(specialv)
 
-                                    const bbo = hyt.bboxOffset(d, 'label2len')(v[i])
-                                    const twolinetrick = { re:0, im:.02*d.distScale }
+                                    const bbo = hyt.bboxOval(d, 'labels2len')
+                                    const twolinetrick = { re:-.0015, im:.02*d.distScale }
                                     const staticOffset = hyt.CaddC(bbo, twolinetrick)
                                     return hyt.CaddC(specialvCk, staticOffset)
-                                    
-                                    return hyt.CaddC(
-                                        hyt.CptoCk({ 
-                                            θ: d.cachep.θ, 
-                                            r: .025 * d.distScale * 1.5 
-                                        }),
-                                        hyt.CaddC(
-                                            hyt.bboxOffset(d, 'labellen')(v[i]),
-                                            { re:0, im:.02*d.distScale }
-                                        )                                       
-                                    )
                                 }
                             }
-                        },                        
+                        },     
+                        
+                        captionHeight: 0.1,
                         // this function can be used to prefilter nodes.                        
                         // it is called for each frame, 
                         // therefore a fast implementn=> .5mportant.
