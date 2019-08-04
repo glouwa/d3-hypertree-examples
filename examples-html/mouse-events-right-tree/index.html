@@ -134,13 +134,13 @@
                         // and therefore also used to hide/show layers 
                         layerOptions:       {
                             'stem-arc':    { invisible: true, hideOnDrag: true },
-                            'cells':       { 
+                            /*'cells':       { 
                                 invisible: false, 
                                 hideOnDrag: true,
                                 fill: n=> undefined,  
                                 stroke: n=> undefined,
                                 strokeWidth: n=> 0,                                
-                            },
+                            },*/
                             'λ':           { invisible: true, hideOnDrag: true },
                             'center-node': { invisible: false, hideOnDrag: false },
                             'images':      { width: .1, height: .1 },
@@ -226,7 +226,7 @@
                             ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null)
                                 .then(()=> l.view.hypertree.drawDetailFrame())                            
 
-                                createOrReplaceRightTree('data/mammalia.d3.json')
+                            createOrReplaceRightTree('data/mammalia.d3.json')
                         },
 
                         // is called when center node changes.
