@@ -45,10 +45,10 @@
       position: absolute;
       /*left: calc(50% - 1.5em);
             top: calc(50% - 1.5em);*/
-      left: calc(50% - 3em);
-      top: calc(50% - .4em);
-      width: 3em;
-      height: 3em; }
+      left: 45%;
+      top: 45%;
+      width: 10%;
+      height: 10%; }
   .unitdisk-nav .spinner {
     width: 100px;
     height: 100px;
@@ -425,7 +425,6 @@
   stroke-width: .02;
   font-weight: 300; }
 
-
 .layer-info.data {
   bottom: 1.2em; }
 
@@ -514,6 +513,7 @@
     background-color: #2b2929; }
   .layer-info .ping1 {
     background-color: #666; }
+
 
 .render-info.data {
   bottom: 1em; }
