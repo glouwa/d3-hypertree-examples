@@ -227,10 +227,11 @@
                         // l: event source layer
                         onNodeClick: (n, m, l)=> { 
                             console.log('### EVENT: onNodeClick', n.mergeId, n)
-
-                            l.ripple(n, m, ()=>{})
+                            
                             ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null)
                                 .then(()=> l.view.hypertree.drawDetailFrame())
+
+                            l.ripple(n, m, ()=>{})
 
                             files = [
                                 'data/mammalia.d3.json',
