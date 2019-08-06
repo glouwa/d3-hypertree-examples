@@ -20736,8 +20736,8 @@ class InteractionLayer2 {
         return true;
     }
     //-----------------------------------------------------------------------------------------
-    ripple(n, m, ok) {
-        if (!this.view.unitdisk.layerStack.layers['cells'].args.invisible) {
+    ripple(n, m, ok, useClip = true) {
+        if (useClip && !this.view.unitdisk.layerStack.layers['cells'].args.invisible) {
             const rippleClip = this.view.parent
                 .append('clipPath')
                 .attr('id', `cell-clip-${n.mergeId}`)
