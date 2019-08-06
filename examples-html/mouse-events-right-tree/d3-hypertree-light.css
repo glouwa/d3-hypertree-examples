@@ -213,7 +213,7 @@
     pointer-events: none;
     cursor: crosshair;
     opacity: 0;
-    animation: ripple 750ms ease-out; }
+    animation: ripple 500ms ease-out; }
 
 @keyframes ripple {
   0% {
@@ -442,6 +442,7 @@
 .unitdisk-nav svg .nav-background-disc .arc {
   stroke: #aaa; }
 
+
 .layer-info.data {
   bottom: 1.2em; }
 
@@ -532,7 +533,6 @@
       opacity: .75; }
   .layer-info .ping1 {
     background-color: #ccc; }
-
 
 .render-info.data {
   bottom: 1em; }

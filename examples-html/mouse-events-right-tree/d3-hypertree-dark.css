@@ -209,7 +209,7 @@
     pointer-events: none;
     cursor: crosshair;
     opacity: 0;
-    animation: ripple 750ms ease-out; }
+    animation: ripple 500ms ease-out; }
 
 @keyframes ripple {
   0% {
@@ -425,6 +425,7 @@
   stroke-width: .02;
   font-weight: 300; }
 
+
 .layer-info.data {
   bottom: 1.2em; }
 
@@ -513,7 +514,6 @@
     background-color: #2b2929; }
   .layer-info .ping1 {
     background-color: #666; }
-
 
 .render-info.data {
   bottom: 1em; }

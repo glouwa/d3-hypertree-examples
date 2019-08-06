@@ -228,10 +228,9 @@
                         onNodeClick: (n, m, l)=> { 
                             console.log('### EVENT: onNodeClick', n.mergeId, n)
                             
-                            ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null)
+                            new Promise(ok=> l.ripple(n, m, ok, false))
+                                .then(ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null))                            
                                 .then(()=> l.view.hypertree.drawDetailFrame())
-
-                            l.ripple(n, m, ()=>{}, false)
 
                             files = [
                                 'data/mammalia.d3.json',
