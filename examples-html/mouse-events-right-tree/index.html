@@ -223,6 +223,7 @@
                         onNodeClick: (n, m, l)=> { 
                             console.log('### EVENT: onNodeClick', n.mergeId, n)
 
+                            l.ripple(n, m, ()=>{})
                             ht.api.goto({ re:-n.layout.z.re, im:-n.layout.z.im }, null)
                                 .then(()=> l.view.hypertree.drawDetailFrame())
 
