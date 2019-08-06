@@ -132,7 +132,12 @@
                     geometry: {
                         // is used to configure layers, including the layer visibility,
                         // and therefore also used to hide/show layers 
-                        layerOptions:       {
+                        layerOptions: {
+                            'cells': {
+                                hideOnDrag: true,
+                                invisible: false,
+                                strokeWidth: n=> 0
+                            },
                             'stem-arc':    { invisible: true, hideOnDrag: true },
                             /*'cells':       { 
                                 invisible: false, 
